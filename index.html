@@ -3,67 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Server Minecraft Kami</title>
+    <title>Cafaalia SMP | Official Website</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #121212;
-            color: #e0e0e0;
-            text-align: center;
+        body, html {
             margin: 0;
             padding: 0;
-        }
-        header {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://wallpaperaccess.com/full/1126773.jpg');
-            background-size: cover;
-            padding: 100px 20px;
-            border-bottom: 5px solid #388e3c;
-        }
-        .container { padding: 50px 20px; }
-        .ip-box {
-            background-color: #1e1e1e;
-            padding: 20px;
-            display: inline-block;
-            border-radius: 10px;
-            border: 2px dashed #388e3c;
-            margin: 20px 0;
-        }
-        .ip-text { font-size: 24px; font-weight: bold; color: #4caf50; }
-        .status { color: #8bc34a; font-weight: bold; }
-        .btn {
-            background-color: #388e3c;
+            height: 100%;
+            font-family: 'Segoe UI', sans-serif;
+            background: #1a1a1a;
             color: white;
-            padding: 15px 30px;
-            text-decoration: none;
+            overflow-x: hidden;
+        }
+
+        /* Background Gambar Minecraft */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.alphacoders.com/132/1327534.png'); /* Gambar Minecraft keren */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Panel Informasi */
+        .info-panel {
+            background: rgba(30, 30, 30, 0.9);
+            border: 4px solid #388e3c;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            max-width: 500px;
+            width: 90%;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 3px 3px #000;
+            color: #4caf50;
+            letter-spacing: 2px;
+        }
+
+        .server-status {
+            background: #2e7d32;
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .ip-section {
+            background: #000;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .ip-text {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.2rem;
+            color: #8bc34a;
+        }
+
+        button.copy-btn {
+            background: #4caf50;
+            border: none;
+            color: white;
+            padding: 8px 15px;
             border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button.copy-btn:hover { background: #66bb6a; }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .stat-card {
+            background: rgba(255,255,255,0.1);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .stat-val { font-weight: bold; display: block; color: #4caf50; }
+
+        .discord-btn {
+            display: block;
+            margin-top: 25px;
+            background: #5865F2;
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 8px;
             font-weight: bold;
             transition: 0.3s;
         }
-        .btn:hover { background-color: #45a049; }
-        footer { padding: 20px; font-size: 12px; color: #777; }
+
+        .discord-btn:hover { background: #4752C4; }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Selamat Datang di Server Kami</h1>
-    <p>Survival - Creative - Minigames</p>
-</header>
+<div class="hero">
+    <div class="info-panel">
+        <h1>CAFAALIA SMP</h1>
+        <div class="server-status">● SERVER ONLINE</div>
+        
+        <p>Ayo bergabung di petualangan survival terbaik!</p>
 
-<div class="container">
-    <h2>Main Sekarang!</h2>
-    <div class="ip-box">
-        <div class="status">● Server Online (Java 25)</div>
-        <div class="ip-text">mc.serverkamu.com</div>
-        <p>Versi: 26.1.2</p>
+        <div class="ip-section">
+            <span class="ip-text" id="serverIP">play.cafaalia.com</span>
+            <button class="copy-btn" onclick="copyIP()">COPY IP</button>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-val">26.1.2</span>
+                Versi Game
+            </div>
+            <div class="stat-card">
+                <span class="stat-val">Java & Bedrock</span>
+                Platform
+            </div>
+        </div>
+
+        <a href="https://discord.gg/link-kamu" class="discord-btn">JOIN DISCORD</a>
     </div>
-    <br><br>
-    <a href="https://discord.gg/link-discord-kamu" class="btn">Join Discord Kami</a>
 </div>
 
-<footer>
-    &copy; 2026 Minecraft Server Info - Made with wit by Gemini
-</footer>
+<script>
+    function copyIP() {
+        const ipText = document.getElementById("serverIP").innerText;
+        navigator.clipboard.writeText(ipText);
+        alert("IP Server berhasil disalin: " + ipText);
+    }
+</script>
 
 </body>
 </html>
