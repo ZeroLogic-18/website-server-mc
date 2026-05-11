@@ -75,7 +75,6 @@
 </head>
 <body class="selection:bg-emerald-500/30 selection:text-emerald-400">
 
-    <!-- Navbar -->
     <nav class="fixed top-0 w-full z-50 glass border-b border-white/5 px-6 py-4 transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <div class="flex items-center space-x-3 cursor-pointer" onclick="window.scrollTo(0,0)">
@@ -103,9 +102,7 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="home" class="pt-40 pb-24 px-6 relative overflow-hidden min-h-screen flex items-center">
-        <!-- Animated Background Decor -->
         <div class="absolute top-0 left-0 w-full h-full -z-10 opacity-30 overflow-hidden">
             <div class="float-slow absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-emerald-600/30 rounded-full blur-[120px]"></div>
             <div class="float-med absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-blue-600/20 rounded-full blur-[150px]"></div>
@@ -113,7 +110,6 @@
         </div>
 
         <div class="max-w-6xl mx-auto text-center reveal w-full">
-            <!-- Dynamic Status Badge -->
             <div id="serverStatusBadge" class="inline-flex items-center space-x-2 px-5 py-2 rounded-full bg-slate-800/50 border border-white/10 text-slate-300 text-sm font-bold uppercase tracking-wider mb-8 transition-all duration-500 hover:scale-105 cursor-default backdrop-blur-sm">
                 <span class="relative flex h-3 w-3">
                     <span id="statusPing" class="absolute inline-flex h-full w-full rounded-full bg-slate-500 opacity-75"></span>
@@ -132,10 +128,8 @@
                 Selamat datang di <span class="text-white font-bold">Cafaalia SMP</span>. Gabung dengan <span id="onlinePlayerCount" class="text-emerald-400 font-bold px-2 py-1 bg-emerald-500/10 rounded-lg">...</span> pemain lainnya di server Bedrock & Java kami.
             </p>
 
-            <!-- IP Cards (Interactive) -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
                 
-                <!-- Java Edition -->
                 <div class="interactive-card glass rounded-3xl p-6 border-t-2 border-emerald-500/40 relative overflow-hidden group">
                     <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     <div class="flex items-center justify-center space-x-3 mb-6 relative z-10">
@@ -164,7 +158,6 @@
                     </div>
                 </div>
 
-                <!-- Bedrock Edition -->
                 <div class="interactive-card glass rounded-3xl p-6 border-t-2 border-blue-500/40 relative overflow-hidden group">
                     <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     <div class="flex items-center justify-center space-x-3 mb-6 relative z-10">
@@ -202,7 +195,6 @@
         </div>
     </section>
 
-    <!-- Ranks Section -->
     <section id="ranks" class="py-24 px-6 relative">
         <div class="absolute inset-0 bg-slate-950/80 -z-10"></div>
         <div class="max-w-7xl mx-auto">
@@ -215,7 +207,6 @@
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <!-- Rank Wanderer -->
                 <div class="interactive-card glass rounded-3xl p-8 border-l-4 border-l-slate-400 reveal" style="--hover-color: #94a3b8; --hover-shadow: rgba(148, 163, 184, 0.15);">
                     <div class="flex justify-between items-start mb-6">
                         <div>
@@ -246,7 +237,6 @@
                     </div>
                 </div>
 
-                <!-- Rank Gladiator -->
                 <div class="interactive-card glass rounded-3xl p-8 border-l-4 border-l-yellow-400 reveal" style="--hover-color: #facc15; --hover-shadow: rgba(250, 204, 21, 0.15); transition-delay: 100ms;">
                     <div class="flex justify-between items-start mb-6">
                         <div>
@@ -276,7 +266,6 @@
                     </div>
                 </div>
 
-                <!-- Rank Conqueror -->
                 <div class="interactive-card glass rounded-3xl p-8 border-l-4 border-l-cyan-400 reveal" style="--hover-color: #22d3ee; --hover-shadow: rgba(34, 211, 238, 0.15);">
                     <div class="flex justify-between items-start mb-6">
                         <div>
@@ -306,9 +295,7 @@
                     </div>
                 </div>
 
-                <!-- Rank Overlord -->
                 <div class="interactive-card glass rounded-3xl p-8 border-l-4 border-l-red-500 relative overflow-hidden reveal" style="--hover-color: #ef4444; --hover-shadow: rgba(239, 68, 68, 0.2); transition-delay: 100ms;">
-                    <!-- Special Overlord Glow -->
                     <div class="absolute -top-20 -right-20 w-64 h-64 bg-red-600/20 rounded-full blur-[80px]"></div>
                     
                     <div class="flex justify-between items-start mb-6 relative z-10">
@@ -342,10 +329,8 @@
         </div>
     </section>
 
-    <!-- Interactive Community Section -->
     <section id="community" class="py-24 px-6 relative">
         <div class="max-w-5xl mx-auto glass rounded-[40px] p-10 md:p-20 text-center overflow-hidden relative reveal">
-            <!-- Background effects -->
             <div class="absolute top-0 right-0 w-full h-full -z-10 bg-gradient-to-b from-transparent to-slate-900/50"></div>
             <div class="absolute -top-20 -left-20 w-64 h-64 bg-[#5865F2] rounded-full blur-[100px] opacity-30"></div>
             <div class="absolute -bottom-20 -right-20 w-64 h-64 bg-[#25D366] rounded-full blur-[100px] opacity-20"></div>
@@ -361,13 +346,11 @@
             </p>
             
             <div class="flex flex-col md:flex-row items-center justify-center gap-5">
-                <!-- Discord Button -->
                 <a href="https://discord.gg/GHAcsV8wJ7" target="_blank" class="group relative w-full md:w-auto bg-[#5865F2] hover:bg-[#4752c4] text-white px-8 py-4 rounded-2xl font-bold text-lg flex items-center justify-center overflow-hidden transition-all transform hover:-translate-y-1 hover:shadow-xl hover:shadow-[#5865F2]/30">
                     <div class="absolute inset-0 w-full h-full bg-white/20 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
                     <i class="fab fa-discord mr-3 text-2xl"></i> Join Discord
                 </a>
                 
-                <!-- WhatsApp Button -->
                 <a href="https://chat.whatsapp.com/BhoykUfcf705rxdFJDSGDt" target="_blank" class="group relative w-full md:w-auto bg-[#25D366] hover:bg-[#1DA851] text-white px-8 py-4 rounded-2xl font-bold text-lg flex items-center justify-center overflow-hidden transition-all transform hover:-translate-y-1 hover:shadow-xl hover:shadow-[#25D366]/30">
                     <div class="absolute inset-0 w-full h-full bg-white/20 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
                     <i class="fab fa-whatsapp mr-3 text-2xl"></i> Group WhatsApp
@@ -383,11 +366,10 @@
         <div class="flex justify-center space-x-6 text-slate-500">
             <a href="https://chat.whatsapp.com/BhoykUfcf705rxdFJDSGDt" target="_blank" class="hover:text-[#25D366] hover:-translate-y-1 transition-all text-xl"><i class="fab fa-whatsapp"></i></a>
             <a href="https://discord.gg/GHAcsV8wJ7" target="_blank" class="hover:text-[#5865F2] hover:-translate-y-1 transition-all text-xl"><i class="fab fa-discord"></i></a>
-            <a href="#" class="hover:text-pink-500 hover:-translate-y-1 transition-all text-xl"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="hover:text-emerald-500 hover:-translate-y-1 transition-all text-xl"><i class="fas fa-cube"></i></a>
         </div>
     </footer>
 
-    <!-- Interactive Toast Notification -->
     <div id="toast" class="toast-hidden fixed bottom-10 left-1/2 -translate-x-1/2 z-[100] bg-slate-900/90 backdrop-blur-md px-6 py-4 rounded-2xl border border-emerald-500/50 flex items-center space-x-4 transition-all duration-400 shadow-2xl shadow-emerald-500/20">
         <div class="w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center shadow-inner">
             <i class="fas fa-check text-white"></i>
@@ -403,9 +385,9 @@
     </style>
 
     <script>
-        // --- 1. Server Status Fetcher ---
+        // --- 1. Server Status Fetcher (ANTI-BLOCK / DUAL API VERSION) ---
         const SERVER_IP = "cafaaliasmp.hopto.org";
-        const JAVA_PORT = "25571"; // API will check this port
+        const JAVA_PORT = "25571"; 
 
         async function updateServerStatus() {
             const statusText = document.getElementById('statusText');
@@ -414,54 +396,88 @@
             const badge = document.getElementById('serverStatusBadge');
             const playerCountEl = document.getElementById('onlinePlayerCount');
 
+            let isOnline = false;
+            let onlinePlayers = 0;
+            let maxPlayers = 0;
+
             try {
-                // Fetch using API v3
-                const response = await fetch(`https://api.mcsrvstat.us/3/${SERVER_IP}:${JAVA_PORT}`);
-                const data = await response.json();
-
-                if (data.online) {
-                    const online = data.players.online;
-                    const max = data.players.max;
-
-                    statusText.innerText = `${online}/${max} Player Online`;
-                    playerCountEl.innerText = `${online}`;
+                // Percobaan 1: Coba tembus pakai MCAPI.us
+                try {
+                    const res1 = await fetch(`https://mcapi.us/server/status?ip=${SERVER_IP}&port=${JAVA_PORT}`);
+                    const data1 = await res1.json();
                     
-                    // Update to Online Theme
+                    if (data1.status === "success" && data1.online) {
+                        isOnline = true;
+                        onlinePlayers = data1.players.now;
+                        maxPlayers = data1.players.max;
+                    }
+                } catch (err1) {
+                    console.log("MCAPI diblokir/gagal, beralih ke Minetools...");
+                }
+
+                // Percobaan 2: Kalau MCAPI gagal (entah CORS, timeout, atau diblokir Firewall Nexus), tembak pakai Minetools
+                if (!isOnline) {
+                    const res2 = await fetch(`https://api.minetools.eu/ping/${SERVER_IP}/${JAVA_PORT}`);
+                    const data2 = await res2.json();
+                    
+                    if (!data2.error) {
+                        isOnline = true;
+                        onlinePlayers = data2.players.online;
+                        maxPlayers = data2.players.max;
+                    }
+                }
+
+                // Terapkan Hasil ke Tampilan Website
+                if (isOnline) {
+                    statusText.innerText = `${onlinePlayers}/${maxPlayers} Player Online`;
+                    playerCountEl.innerText = `${onlinePlayers}`;
+                    
+                    // Set Tema Online (Hijau)
                     statusPing.classList.replace('bg-slate-500', 'bg-emerald-400');
                     statusPing.classList.add('status-pulse');
                     statusDot.classList.replace('bg-slate-600', 'bg-emerald-500');
                     badge.classList.replace('text-slate-300', 'text-emerald-400');
                     badge.classList.replace('border-white/10', 'border-emerald-500/30');
                     badge.classList.replace('bg-slate-800/50', 'bg-emerald-500/10');
-                } else {
-                    statusText.innerText = "Server Sedang Offline";
-                    playerCountEl.innerText = "0";
                     
-                    // Update to Offline Theme
-                    statusPing.classList.remove('status-pulse', 'bg-emerald-400');
-                    statusPing.classList.add('bg-red-500');
-                    statusDot.classList.replace('bg-emerald-500', 'bg-red-500');
-                    statusDot.classList.replace('bg-slate-600', 'bg-red-500');
-                    badge.classList.replace('text-emerald-400', 'text-red-400');
-                    badge.classList.replace('text-slate-300', 'text-red-400');
-                    badge.classList.replace('border-emerald-500/30', 'border-red-500/30');
-                    badge.classList.replace('border-white/10', 'border-red-500/30');
-                    badge.classList.replace('bg-emerald-500/10', 'bg-red-500/10');
-                    badge.classList.replace('bg-slate-800/50', 'bg-red-500/10');
+                    // Bersihkan class merah (jika sebelumnya offline)
+                    statusPing.classList.remove('bg-red-500');
+                    statusDot.classList.remove('bg-red-500');
+                    badge.classList.remove('text-red-400', 'border-red-500/30', 'bg-red-500/10');
+                } else {
+                    // Kalau kedua API gagal
+                    throw new Error("Server benar-benar offline atau semua API diblokir");
                 }
+                
             } catch (error) {
-                console.error("Gagal mendapatkan status:", error);
-                statusText.innerText = "Gagal Memuat Status";
+                console.error("Status Server:", error.message);
+                statusText.innerText = "Server Sedang Offline";
+                playerCountEl.innerText = "0";
+                
+                // Set Tema Offline (Merah)
+                statusPing.classList.remove('status-pulse', 'bg-emerald-400', 'bg-slate-500');
+                statusPing.classList.add('bg-red-500');
+                
+                statusDot.classList.remove('bg-emerald-500', 'bg-slate-600');
+                statusDot.classList.add('bg-red-500');
+                
+                badge.classList.remove('text-emerald-400', 'text-slate-300');
+                badge.classList.add('text-red-400');
+                
+                badge.classList.remove('border-emerald-500/30', 'border-white/10');
+                badge.classList.add('border-red-500/30');
+                
+                badge.classList.remove('bg-emerald-500/10', 'bg-slate-800/50');
+                badge.classList.add('bg-red-500/10');
             }
         }
 
         // --- 2. Copy functionality with interactive Toast ---
         function copyContent(id, label) {
             const text = document.getElementById(id).innerText;
-            navigator.clipboard.writeText(text).then(() => {
-                showToast(label);
-            }).catch(err => {
-                // Fallback for older browsers
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(text).then(() => showToast(label));
+            } else {
                 const dummy = document.createElement("textarea");
                 document.body.appendChild(dummy);
                 dummy.value = text;
@@ -469,7 +485,7 @@
                 document.execCommand("copy");
                 document.body.removeChild(dummy);
                 showToast(label);
-            });
+            }
         }
 
         function showToast(label) {
@@ -479,7 +495,6 @@
             toast.classList.remove('toast-hidden');
             toast.classList.add('toast-visible');
 
-            // Add a little pop effect
             setTimeout(() => { toast.style.transform = "translate(-50%, -5px) scale(1.05)"; }, 50);
             setTimeout(() => { toast.style.transform = "translate(-50%, 0) scale(1)"; }, 200);
 
@@ -495,7 +510,7 @@
             for (let i = 0; i < reveals.length; i++) {
                 const windowHeight = window.innerHeight;
                 const elementTop = reveals[i].getBoundingClientRect().top;
-                const elementVisible = 100; // when to trigger
+                const elementVisible = 100;
 
                 if (elementTop < windowHeight - elementVisible) {
                     reveals[i].classList.add("active");
@@ -523,8 +538,8 @@
         
         window.addEventListener("load", () => {
             updateServerStatus();
-            reveal(); // Trigger reveal on load
-            setInterval(updateServerStatus, 30000);
+            reveal();
+            setInterval(updateServerStatus, 30000); // Auto-refresh tiap 30 detik
         });
     </script>
 </body>
