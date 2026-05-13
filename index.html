@@ -4,72 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cafaalia SMP | Official Server Info</title>
+    
+    <!-- External Libraries (Tailwind & Fonts) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Lexend:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #020617;
-            color: #f8fafc;
-            overflow-x: hidden;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        .font-lexend { font-family: 'Lexend', sans-serif; }
-        
-        .glass {
-            background: rgba(15, 23, 42, 0.4);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .interactive-card {
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        .interactive-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            border-color: var(--hover-color);
-            box-shadow: 0 20px 40px -10px var(--hover-shadow);
-        }
-
-        .float-slow { animation: float 15s ease-in-out infinite; }
-        .float-med { animation: float 10s ease-in-out infinite reverse; }
-        
-        @keyframes float {
-            0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            33% { transform: translate(30px, -50px) rotate(10deg); }
-            66% { transform: translate(-30px, 20px) rotate(-10deg); }
-        }
-
-        .status-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
-        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .3; } }
-
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #0f172a; }
-        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 10px; }
-        ::-webkit-scrollbar-thumb:hover { background: #475569; }
-
-        .toast-hidden { opacity: 0; transform: translate(-50%, 20px) scale(0.9); pointer-events: none; }
-        .toast-visible { opacity: 1; transform: translate(-50%, 0) scale(1); }
-        
-        .copy-btn { transition: all 0.2s; }
-        .copy-btn:active { transform: scale(0.8); }
-
-        @keyframes fadeInSlide {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-tab {
-            animation: fadeInSlide 0.5s ease-out forwards;
-        }
-
-        .nav-scroll::-webkit-scrollbar { display: none; }
-        .nav-scroll { -ms-overflow-style: none; scrollbar-width: none; }
-    </style>
+    <!-- Custom CSS kita sendiri -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="selection:bg-emerald-500/30 selection:text-emerald-400">
 
@@ -83,6 +25,7 @@
     <!-- Navbar -->
     <nav class="fixed top-0 w-full z-50 glass border-b border-white/5 px-4 md:px-6 py-4 transition-all duration-300 bg-slate-950/80 shadow-xl">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <!-- Logo -->
             <div class="flex items-center space-x-3 cursor-pointer" onclick="switchTab('home')">
                 <div class="w-10 h-10 bg-gradient-to-br from-emerald-400 to-cyan-500 rounded-xl flex items-center justify-center shadow-lg shadow-emerald-500/20 transform hover:rotate-12 transition-transform min-w-[40px]">
                     <i class="fas fa-cube text-white text-lg"></i>
@@ -90,6 +33,7 @@
                 <span class="font-lexend font-bold text-2xl tracking-tight hidden lg:block">Cafaalia<span class="text-emerald-400">SMP</span></span>
             </div>
             
+            <!-- Navigation Links -->
             <div class="nav-scroll flex space-x-4 md:space-x-8 text-sm md:text-base font-bold overflow-x-auto whitespace-nowrap px-2">
                 <a href="#home" onclick="switchTab('home', event)" class="nav-link text-emerald-400 hover:text-emerald-300 transition-colors">Home</a>
                 <a href="#ranks" onclick="switchTab('ranks', event)" class="nav-link text-slate-400 hover:text-emerald-300 transition-colors">Ranks</a>
@@ -97,6 +41,7 @@
                 <a href="#community" onclick="switchTab('community', event)" class="nav-link text-slate-400 hover:text-emerald-300 transition-colors">Community</a>
             </div>
 
+            <!-- Socials -->
             <div class="hidden md:flex space-x-3">
                 <a href="https://chat.whatsapp.com/DVxDPtshA4jDTKAxglTQMt" target="_blank" class="flex items-center justify-center w-10 h-10 rounded-full bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366] hover:text-white transition-colors">
                     <i class="fab fa-whatsapp text-xl"></i>
@@ -360,7 +305,7 @@
             </div>
         </section>
 
-        <!-- ================= 3. GUIDE TAB (KODEK EKSKLUSIF) ================= -->
+        <!-- ================= 3. GUIDE TAB ================= -->
         <section id="guide" class="tab-content hidden w-full px-6 max-w-5xl mx-auto">
             <div class="text-center mb-12">
                 <div class="inline-block p-3 rounded-2xl bg-white/5 mb-4">
@@ -524,129 +469,7 @@
         </div>
     </div>
 
-    <script>
-        // --- 0. Tab Switching Logic ---
-        function switchTab(tabId, event) {
-            if (event) event.preventDefault();
-            
-            const tabs = document.querySelectorAll('.tab-content');
-            tabs.forEach(tab => {
-                tab.classList.add('hidden');
-                tab.classList.remove('animate-tab');
-            });
-            
-            const targetTab = document.getElementById(tabId);
-            if(targetTab) {
-                targetTab.classList.remove('hidden');
-                void targetTab.offsetWidth; 
-                targetTab.classList.add('animate-tab');
-            }
-
-            const navLinks = document.querySelectorAll('.nav-link');
-            navLinks.forEach(link => {
-                link.classList.remove('text-emerald-400');
-                link.classList.add('text-slate-400');
-            });
-
-            const activeLink = document.querySelector(`.nav-link[href="#${tabId}"]`);
-            if (activeLink) {
-                activeLink.classList.remove('text-slate-400');
-                activeLink.classList.add('text-emerald-400');
-            }
-
-            if(history.pushState) {
-                history.pushState(null, null, `#${tabId}`);
-            } else {
-                location.hash = `#${tabId}`;
-            }
-
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        // --- 1. Server Status Fetcher ---
-        const SERVER_IP = "cafaaliasmp.hopto.org";
-        const JAVA_PORT = "25571"; 
-
-        async function updateServerStatus() {
-            const statusText = document.getElementById('statusText');
-            const statusPing = document.getElementById('statusPing');
-            const statusDot = document.getElementById('statusDot');
-            const badge = document.getElementById('serverStatusBadge');
-            const playerCountEl = document.getElementById('onlinePlayerCount');
-
-            let isOnline = false; let onlinePlayers = 0; let maxPlayers = 0;
-
-            try {
-                try {
-                    const res1 = await fetch(`https://mcapi.us/server/status?ip=${SERVER_IP}&port=${JAVA_PORT}`);
-                    const data1 = await res1.json();
-                    if (data1.status === "success" && data1.online) {
-                        isOnline = true; onlinePlayers = data1.players.now; maxPlayers = data1.players.max;
-                    }
-                } catch (err1) { console.log("Beralih ke Minetools..."); }
-
-                if (!isOnline) {
-                    const res2 = await fetch(`https://api.minetools.eu/ping/${SERVER_IP}/${JAVA_PORT}`);
-                    const data2 = await res2.json();
-                    if (!data2.error) {
-                        isOnline = true; onlinePlayers = data2.players.online; maxPlayers = data2.players.max;
-                    }
-                }
-
-                if (isOnline) {
-                    statusText.innerText = `${onlinePlayers}/${maxPlayers} Player Online`;
-                    playerCountEl.innerText = `${onlinePlayers}`;
-                    statusPing.classList.replace('bg-slate-500', 'bg-emerald-400');
-                    statusPing.classList.add('status-pulse');
-                    statusDot.classList.replace('bg-slate-600', 'bg-emerald-500');
-                    badge.classList.replace('text-slate-300', 'text-emerald-400');
-                    badge.classList.replace('border-white/10', 'border-emerald-500/30');
-                    badge.classList.replace('bg-slate-800/50', 'bg-emerald-500/10');
-                    statusPing.classList.remove('bg-red-500'); statusDot.classList.remove('bg-red-500');
-                    badge.classList.remove('text-red-400', 'border-red-500/30', 'bg-red-500/10');
-                } else { throw new Error("Offline"); }
-            } catch (error) {
-                statusText.innerText = "Server Sedang Offline";
-                playerCountEl.innerText = "0";
-                statusPing.classList.remove('status-pulse', 'bg-emerald-400', 'bg-slate-500');
-                statusPing.classList.add('bg-red-500');
-                statusDot.classList.remove('bg-emerald-500', 'bg-slate-600');
-                statusDot.classList.add('bg-red-500');
-                badge.classList.remove('text-emerald-400', 'text-slate-300', 'border-emerald-500/30', 'border-white/10', 'bg-emerald-500/10', 'bg-slate-800/50');
-                badge.classList.add('text-red-400', 'border-red-500/30', 'bg-red-500/10');
-            }
-        }
-
-        // --- 2. Copy functionality ---
-        function copyContent(id, label) {
-            const text = document.getElementById(id).innerText;
-            if (navigator.clipboard && window.isSecureContext) {
-                navigator.clipboard.writeText(text).then(() => showToast(label));
-            } else {
-                const dummy = document.createElement("textarea");
-                document.body.appendChild(dummy);
-                dummy.value = text; dummy.select(); document.execCommand("copy");
-                document.body.removeChild(dummy);
-                showToast(label);
-            }
-        }
-
-        function showToast(label) {
-            const toast = document.getElementById('toast');
-            document.getElementById('toastTitle').innerText = `${label} Disalin!`;
-            toast.classList.remove('toast-hidden'); toast.classList.add('toast-visible');
-            setTimeout(() => { toast.style.transform = "translate(-50%, -5px) scale(1.05)"; }, 50);
-            setTimeout(() => { toast.style.transform = "translate(-50%, 0) scale(1)"; }, 200);
-            setTimeout(() => { toast.classList.add('toast-hidden'); toast.classList.remove('toast-visible'); }, 3000);
-        }
-
-        // --- 3. Initialize App ---
-        window.addEventListener("load", () => {
-            const initialTab = window.location.hash.substring(1) || 'home';
-            switchTab(initialTab);
-            updateServerStatus();
-            setInterval(updateServerStatus, 30000);
-        });
-    </script>
+    <!-- Panggil File Eksternal JS -->
+    <script src="script.js"></script>
 </body>
 </html>
