@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id" class="scroll-smooth">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +14,9 @@
             background-color: #020617;
             color: #f8fafc;
             overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         .font-lexend { font-family: 'Lexend', sans-serif; }
         
@@ -24,7 +27,6 @@
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        /* Interactive Hover Effects */
         .interactive-card {
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
@@ -34,18 +36,6 @@
             box-shadow: 0 20px 40px -10px var(--hover-shadow);
         }
 
-        /* Scroll Reveal Animation */
-        .reveal {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Floating Animations for Background */
         .float-slow { animation: float 15s ease-in-out infinite; }
         .float-med { animation: float 10s ease-in-out infinite reverse; }
         
@@ -58,58 +48,71 @@
         .status-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
         @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .3; } }
 
-        /* Custom scrollbar */
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #0f172a; }
         ::-webkit-scrollbar-thumb { background: #334155; border-radius: 10px; }
         ::-webkit-scrollbar-thumb:hover { background: #475569; }
 
-        /* Toast */
         .toast-hidden { opacity: 0; transform: translate(-50%, 20px) scale(0.9); pointer-events: none; }
         .toast-visible { opacity: 1; transform: translate(-50%, 0) scale(1); }
         
-        /* Interactive Copy Button */
         .copy-btn { transition: all 0.2s; }
         .copy-btn:active { transform: scale(0.8); }
+
+        @keyframes fadeInSlide {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-tab {
+            animation: fadeInSlide 0.5s ease-out forwards;
+        }
+
+        .nav-scroll::-webkit-scrollbar { display: none; }
+        .nav-scroll { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
 <body class="selection:bg-emerald-500/30 selection:text-emerald-400">
 
-    <nav class="fixed top-0 w-full z-50 glass border-b border-white/5 px-6 py-4 transition-all duration-300" id="navbar">
+    <!-- Global Background Decor -->
+    <div class="fixed top-0 left-0 w-full h-full -z-10 opacity-30 overflow-hidden pointer-events-none">
+        <div class="float-slow absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-emerald-600/30 rounded-full blur-[120px]"></div>
+        <div class="float-med absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-blue-600/20 rounded-full blur-[150px]"></div>
+        <div class="float-slow absolute top-1/2 right-1/3 w-[300px] h-[300px] bg-cyan-500/20 rounded-full blur-[100px]" style="animation-delay: -5s;"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 glass border-b border-white/5 px-4 md:px-6 py-4 transition-all duration-300 bg-slate-950/80 shadow-xl">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="flex items-center space-x-3 cursor-pointer" onclick="window.scrollTo(0,0)">
-                <div class="w-10 h-10 bg-gradient-to-br from-emerald-400 to-cyan-500 rounded-xl flex items-center justify-center shadow-lg shadow-emerald-500/20 transform hover:rotate-12 transition-transform">
+            <div class="flex items-center space-x-3 cursor-pointer" onclick="switchTab('home')">
+                <div class="w-10 h-10 bg-gradient-to-br from-emerald-400 to-cyan-500 rounded-xl flex items-center justify-center shadow-lg shadow-emerald-500/20 transform hover:rotate-12 transition-transform min-w-[40px]">
                     <i class="fas fa-cube text-white text-lg"></i>
                 </div>
-                <span class="font-lexend font-bold text-2xl tracking-tight">Cafaalia<span class="text-emerald-400">SMP</span></span>
+                <span class="font-lexend font-bold text-2xl tracking-tight hidden lg:block">Cafaalia<span class="text-emerald-400">SMP</span></span>
             </div>
-            <div class="hidden md:flex space-x-8 text-sm font-bold text-slate-400">
-                <a href="#home" class="hover:text-emerald-400 transition-colors">Home</a>
-                <a href="#ranks" class="hover:text-emerald-400 transition-colors">Rank Guide</a>
-                <a href="#community" class="hover:text-emerald-400 transition-colors">Community</a>
+            
+            <div class="nav-scroll flex space-x-4 md:space-x-8 text-sm md:text-base font-bold overflow-x-auto whitespace-nowrap px-2">
+                <a href="#home" onclick="switchTab('home', event)" class="nav-link text-emerald-400 hover:text-emerald-300 transition-colors">Home</a>
+                <a href="#ranks" onclick="switchTab('ranks', event)" class="nav-link text-slate-400 hover:text-emerald-300 transition-colors">Ranks</a>
+                <a href="#guide" onclick="switchTab('guide', event)" class="nav-link text-slate-400 hover:text-emerald-300 transition-colors">Guide</a>
+                <a href="#community" onclick="switchTab('community', event)" class="nav-link text-slate-400 hover:text-emerald-300 transition-colors">Community</a>
             </div>
-            <div class="flex space-x-3">
-                <a href="https://chat.whatsapp.com/DVxDPtshA4jDTKAxglTQMt" target="_blank" class="hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366] hover:text-white transition-colors">
+
+            <div class="hidden md:flex space-x-3">
+                <a href="https://chat.whatsapp.com/DVxDPtshA4jDTKAxglTQMt" target="_blank" class="flex items-center justify-center w-10 h-10 rounded-full bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366] hover:text-white transition-colors">
                     <i class="fab fa-whatsapp text-xl"></i>
                 </a>
-                <a href="https://discord.gg/GHAcsV8wJ7" target="_blank" class="hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-[#5865F2]/10 text-[#5865F2] hover:bg-[#5865F2] hover:text-white transition-colors">
+                <a href="https://discord.gg/GHAcsV8wJ7" target="_blank" class="flex items-center justify-center w-10 h-10 rounded-full bg-[#5865F2]/10 text-[#5865F2] hover:bg-[#5865F2] hover:text-white transition-colors">
                     <i class="fab fa-discord text-xl"></i>
-                </a>
-                <a href="#community" class="bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-400 hover:to-cyan-400 text-white px-6 py-2 rounded-full text-sm font-bold transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-emerald-500/25">
-                    Join Sekarang
                 </a>
             </div>
         </div>
     </nav>
 
-    <section id="home" class="pt-40 pb-24 px-6 relative overflow-hidden min-h-screen flex items-center">
-        <div class="absolute top-0 left-0 w-full h-full -z-10 opacity-30 overflow-hidden">
-            <div class="float-slow absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-emerald-600/30 rounded-full blur-[120px]"></div>
-            <div class="float-med absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-blue-600/20 rounded-full blur-[150px]"></div>
-            <div class="float-slow absolute top-1/2 right-1/3 w-[300px] h-[300px] bg-cyan-500/20 rounded-full blur-[100px]" style="animation-delay: -5s;"></div>
-        </div>
+    <!-- Main Content Area -->
+    <main class="flex-grow pt-32 pb-12 flex flex-col items-center justify-center w-full">
 
-        <div class="max-w-6xl mx-auto text-center reveal w-full">
+        <!-- ================= 1. HOME TAB ================= -->
+        <section id="home" class="tab-content w-full px-6 max-w-6xl mx-auto text-center animate-tab">
             <div id="serverStatusBadge" class="inline-flex items-center space-x-2 px-5 py-2 rounded-full bg-slate-800/50 border border-white/10 text-slate-300 text-sm font-bold uppercase tracking-wider mb-8 transition-all duration-500 hover:scale-105 cursor-default backdrop-blur-sm">
                 <span class="relative flex h-3 w-3">
                     <span id="statusPing" class="absolute inline-flex h-full w-full rounded-full bg-slate-500 opacity-75"></span>
@@ -120,16 +123,15 @@
 
             <h1 class="font-lexend text-5xl md:text-7xl lg:text-8xl font-black mb-6 leading-tight tracking-tight">
                 Jelajahi Dunia <br>
-                <span class="bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent animate-gradient">
+                <span class="bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
                     OneBlock & Survival
                 </span>
             </h1>
             <p class="text-slate-400 text-lg md:text-2xl max-w-3xl mx-auto mb-14 font-light">
-                Selamat datang di <span class="text-white font-bold">Cafaalia SMP</span>. Gabung dengan <span id="onlinePlayerCount" class="text-emerald-400 font-bold px-2 py-1 bg-emerald-500/10 rounded-lg">...</span> pemain lainnya di server Bedrock & Java kami.
+                Selamat datang di <span class="text-white font-bold">Cafaalia SMP</span>. Gabung dengan <span id="onlinePlayerCount" class="text-emerald-400 font-bold px-2 py-1 bg-emerald-500/10 rounded-lg">...</span> pemain lainnya.
             </p>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-                
                 <div class="interactive-card glass rounded-3xl p-6 border-t-2 border-emerald-500/40 relative overflow-hidden group">
                     <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     <div class="flex items-center justify-center space-x-3 mb-6 relative z-10">
@@ -186,192 +188,334 @@
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="mt-12 flex justify-center animate-bounce">
-                <a href="#ranks" class="text-slate-500 hover:text-emerald-400 transition-colors">
-                    <i class="fas fa-chevron-down text-2xl"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section id="ranks" class="py-24 px-6 relative">
-        <div class="absolute inset-0 bg-slate-950/80 -z-10"></div>
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16 reveal">
+        <!-- ================= 2. RANKS TAB ================= -->
+        <section id="ranks" class="tab-content hidden w-full px-6 max-w-7xl mx-auto">
+            <div class="text-center mb-12">
                 <div class="inline-block p-3 rounded-2xl bg-white/5 mb-4">
                     <i class="fas fa-crown text-3xl text-yellow-400"></i>
                 </div>
-                <h2 class="font-lexend text-4xl md:text-5xl font-extrabold mb-4">Panduan Rank Server</h2>
-                <p class="text-slate-400 text-lg">Pilih jalurmu dan kuasai fitur eksklusif di setiap tingkatan.</p>
+                <h2 class="font-lexend text-4xl md:text-5xl font-extrabold mb-4">BAB VIII: Tingkatan Kasta</h2>
+                <p class="text-slate-400 text-lg">Keuntungan dan fitur eksklusif di setiap tingkatan kasta Cafaalia SMP.</p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div class="interactive-card glass rounded-3xl p-8 border-l-4 border-l-slate-400 reveal" style="--hover-color: #94a3b8; --hover-shadow: rgba(148, 163, 184, 0.15);">
+                <!-- Rank Wanderer -->
+                <div class="interactive-card glass rounded-3xl p-8 border-l-4 border-l-slate-400" style="--hover-color: #94a3b8; --hover-shadow: rgba(148, 163, 184, 0.15);">
                     <div class="flex justify-between items-start mb-6">
                         <div>
-                            <span class="px-3 py-1 bg-slate-800 rounded-lg text-slate-400 font-bold uppercase tracking-widest text-[10px] mb-3 inline-block">Pangkat Awal</span>
+                            <span class="px-3 py-1 bg-slate-800 rounded-lg text-slate-400 font-bold uppercase tracking-widest text-[10px] mb-3 inline-block">Rank Dasar</span>
                             <h3 class="font-lexend text-3xl font-black text-slate-200">⚓ Wanderer</h3>
                         </div>
                         <div class="w-14 h-14 rounded-2xl bg-slate-800/50 flex items-center justify-center border border-slate-700">
                             <i class="fas fa-hiking text-2xl text-slate-400"></i>
                         </div>
                     </div>
-                    <div class="grid md:grid-cols-2 gap-6 mt-8">
-                        <div class="bg-black/20 p-5 rounded-2xl border border-white/5">
-                            <h4 class="text-emerald-400 font-bold text-sm mb-3 flex items-center"><i class="fas fa-coins mr-2"></i>EKONOMI</h4>
-                            <ul class="text-sm text-slate-300 space-y-3">
-                                <li class="flex items-start"><code class="text-xs bg-slate-800 px-1.5 py-0.5 rounded mr-2 mt-0.5 text-emerald-300">/bal</code> Cek saldo uangmu.</li>
-                                <li class="flex items-start"><code class="text-xs bg-slate-800 px-1.5 py-0.5 rounded mr-2 mt-0.5 text-emerald-300">/baltop</code> Daftar sultan server.</li>
-                                <li class="flex items-start"><code class="text-xs bg-slate-800 px-1.5 py-0.5 rounded mr-2 mt-0.5 text-emerald-300">/pay</code> Transfer ke pemain.</li>
-                            </ul>
-                        </div>
-                        <div class="bg-black/20 p-5 rounded-2xl border border-white/5">
-                            <h4 class="text-emerald-400 font-bold text-sm mb-3 flex items-center"><i class="fas fa-map-marked-alt mr-2"></i>NAVIGASI</h4>
-                            <ul class="text-sm text-slate-300 space-y-3">
-                                <li class="flex items-start"><code class="text-xs bg-slate-800 px-1.5 py-0.5 rounded mr-2 mt-0.5 text-emerald-300">/spawn</code> Kembali ke Lobby.</li>
-                                <li class="flex items-start"><code class="text-xs bg-slate-800 px-1.5 py-0.5 rounded mr-2 mt-0.5 text-emerald-300">/sethome</code> Tandai titik rumah.</li>
-                                <li class="flex items-start"><code class="text-xs bg-slate-800 px-1.5 py-0.5 rounded mr-2 mt-0.5 text-emerald-300">/ob home</code> Masuk ke OneBlock.</li>
-                            </ul>
-                        </div>
+                    <div class="mb-4">
+                        <p class="text-sm text-slate-300"><i class="fas fa-home text-slate-400 mr-2 text-xs"></i> <strong>Home:</strong> Maksimal 1 lokasi | <i class="fas fa-box text-slate-400 ml-2 mr-1 text-xs"></i> <strong>Kit:</strong> <code>/kit wanderer</code></p>
+                    </div>
+                    <div class="bg-black/20 p-5 rounded-2xl border border-white/5 mt-4">
+                        <h4 class="text-emerald-400 font-bold text-sm mb-3 flex items-center"><i class="fas fa-check-circle mr-2"></i>FITUR DASAR</h4>
+                        <ul class="text-sm text-slate-300 space-y-3">
+                            <li class="flex items-start"><i class="fas fa-check text-emerald-400 mt-1 mr-2 text-xs"></i> Akses dasar Survival.</li>
+                            <li class="flex items-start"><i class="fas fa-check text-emerald-400 mt-1 mr-2 text-xs"></i> Akses OneBlock & Shop.</li>
+                            <li class="flex items-start"><i class="fas fa-check text-emerald-400 mt-1 mr-2 text-xs"></i> Akses RTP & Klaim Tanah.</li>
+                        </ul>
                     </div>
                 </div>
 
-                <div class="interactive-card glass rounded-3xl p-8 border-l-4 border-l-yellow-400 reveal" style="--hover-color: #facc15; --hover-shadow: rgba(250, 204, 21, 0.15); transition-delay: 100ms;">
+                <!-- Rank Gladiator -->
+                <div class="interactive-card glass rounded-3xl p-8 border-l-4 border-l-yellow-400" style="--hover-color: #facc15; --hover-shadow: rgba(250, 204, 21, 0.15);">
                     <div class="flex justify-between items-start mb-6">
                         <div>
-                            <span class="px-3 py-1 bg-yellow-500/10 border border-yellow-500/20 rounded-lg text-yellow-500 font-bold uppercase tracking-widest text-[10px] mb-3 inline-block">Pangkat Premium</span>
+                            <span class="px-3 py-1 bg-yellow-500/10 border border-yellow-500/20 rounded-lg text-yellow-500 font-bold uppercase tracking-widest text-[10px] mb-3 inline-block">VIP I</span>
                             <h3 class="font-lexend text-3xl font-black text-yellow-400">⚔ Gladiator</h3>
+                            <p class="text-xs text-slate-400 mt-1 italic">(Memiliki semua kemampuan Wanderer)</p>
                         </div>
                         <div class="w-14 h-14 rounded-2xl bg-yellow-500/10 flex items-center justify-center border border-yellow-500/20">
                             <i class="fas fa-shield-halved text-2xl text-yellow-400"></i>
                         </div>
                     </div>
-                    <div class="grid md:grid-cols-2 gap-6 mt-8">
+                    <div class="mb-4">
+                        <p class="text-sm text-slate-300"><i class="fas fa-home text-yellow-400 mr-2 text-xs"></i> <strong>Home:</strong> Maksimal 3 lokasi | <i class="fas fa-box text-yellow-400 ml-2 mr-1 text-xs"></i> <strong>Kit:</strong> <code>/kit gladiator</code></p>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-6 mt-4">
                         <div class="bg-black/20 p-5 rounded-2xl border border-white/5">
-                            <h4 class="text-yellow-400 font-bold text-sm mb-3 flex items-center"><i class="fas fa-tools mr-2"></i>PORTABLE</h4>
+                            <h4 class="text-yellow-400 font-bold text-sm mb-3 flex items-center"><i class="fas fa-tools mr-2"></i>KENYAMANAN</h4>
                             <ul class="text-sm text-slate-300 space-y-3">
-                                <li class="flex items-start"><code class="text-xs bg-slate-800 px-1.5 py-0.5 rounded mr-2 mt-0.5 text-yellow-300">/craft</code> Workbench virtual.</li>
-                                <li class="flex items-start"><code class="text-xs bg-slate-800 px-1.5 py-0.5 rounded mr-2 mt-0.5 text-yellow-300">/anvil</code> Anvil dimana saja.</li>
+                                <li class="flex items-start"><code class="text-xs bg-slate-800 px-1.5 py-0.5 rounded mr-2 mt-0.5 text-yellow-300">/feed</code> Kenyang instan.</li>
+                                <li class="flex items-start"><code class="text-xs bg-slate-800 px-1.5 py-0.5 rounded mr-2 mt-0.5 text-yellow-300">/workbench</code> Buka meja rakit.</li>
+                                <li class="flex items-start"><code class="text-xs bg-slate-800 px-1.5 py-0.5 rounded mr-2 mt-0.5 text-yellow-300">/anvil</code> Buka anvil virtual.</li>
                             </ul>
                         </div>
                         <div class="bg-black/20 p-5 rounded-2xl border border-white/5">
-                            <h4 class="text-yellow-400 font-bold text-sm mb-3 flex items-center"><i class="fas fa-star mr-2"></i>FEATURES</h4>
+                            <h4 class="text-yellow-400 font-bold text-sm mb-3 flex items-center"><i class="fas fa-star mr-2"></i>GAYA</h4>
                             <ul class="text-sm text-slate-300 space-y-3">
-                                <li class="flex items-start"><code class="text-xs bg-slate-800 px-1.5 py-0.5 rounded mr-2 mt-0.5 text-yellow-300">/feed</code> Kenyang instan.</li>
-                                <li class="flex items-start"><code class="text-xs bg-slate-800 px-1.5 py-0.5 rounded mr-2 mt-0.5 text-yellow-300">/hat</code> Blok jadi topi gaya.</li>
-                                <li class="flex items-start"><code class="text-xs bg-slate-800 px-1.5 py-0.5 rounded mr-2 mt-0.5 text-yellow-300">/sit & /lay</code> Animasi duduk/rebahan.</li>
+                                <li class="flex items-start"><code class="text-xs bg-slate-800 px-1.5 py-0.5 rounded mr-2 mt-0.5 text-yellow-300">/hat</code> Pakai blok jadi topi.</li>
+                                <li class="flex items-start"><code class="text-xs bg-slate-800 px-1.5 py-0.5 rounded mr-2 mt-0.5 text-yellow-300">/lay</code> Rebahan/tiduran.</li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <div class="interactive-card glass rounded-3xl p-8 border-l-4 border-l-cyan-400 reveal" style="--hover-color: #22d3ee; --hover-shadow: rgba(34, 211, 238, 0.15);">
+                <!-- Rank Conqueror -->
+                <div class="interactive-card glass rounded-3xl p-8 border-l-4 border-l-cyan-400" style="--hover-color: #22d3ee; --hover-shadow: rgba(34, 211, 238, 0.15);">
                     <div class="flex justify-between items-start mb-6">
                         <div>
-                            <span class="px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 rounded-lg text-cyan-400 font-bold uppercase tracking-widest text-[10px] mb-3 inline-block">Pangkat Elit</span>
+                            <span class="px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 rounded-lg text-cyan-400 font-bold uppercase tracking-widest text-[10px] mb-3 inline-block">VIP II</span>
                             <h3 class="font-lexend text-3xl font-black text-cyan-400">⚜ Conqueror</h3>
+                            <p class="text-xs text-slate-400 mt-1 italic">(Memiliki semua kemampuan Gladiator)</p>
                         </div>
                         <div class="w-14 h-14 rounded-2xl bg-cyan-500/10 flex items-center justify-center border border-cyan-500/20">
                             <i class="fas fa-chess-knight text-2xl text-cyan-400"></i>
                         </div>
                     </div>
-                    <div class="grid md:grid-cols-2 gap-6 mt-8">
+                    <div class="mb-4">
+                        <p class="text-sm text-slate-300"><i class="fas fa-home text-cyan-400 mr-2 text-xs"></i> <strong>Home:</strong> Maksimal 5 lokasi | <i class="fas fa-box text-cyan-400 ml-2 mr-1 text-xs"></i> <strong>Kit:</strong> <code>/kit conqueror</code></p>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-6 mt-4">
                         <div class="bg-black/20 p-5 rounded-2xl border border-white/5">
-                            <h4 class="text-cyan-400 font-bold text-sm mb-3 flex items-center"><i class="fas fa-id-card mr-2"></i>IDENTITY</h4>
+                            <h4 class="text-cyan-400 font-bold text-sm mb-3 flex items-center"><i class="fas fa-bolt mr-2"></i>DEWA SURVIVAL</h4>
                             <ul class="text-sm text-slate-300 space-y-3">
-                                <li class="flex items-start"><code class="text-xs bg-slate-800 px-1.5 py-0.5 rounded mr-2 mt-0.5 text-cyan-300">/nick</code> Ganti nama panggilan.</li>
-                                <li class="flex items-start"><code class="text-xs bg-slate-800 px-1.5 py-0.5 rounded mr-2 mt-0.5 text-cyan-300">/echest</code> Akses brankas virtual.</li>
+                                <li class="flex items-start"><code class="text-xs bg-slate-800 px-1.5 py-0.5 rounded mr-2 mt-0.5 text-cyan-300">/heal</code> Pulihkan darah.</li>
+                                <li class="flex items-start"><code class="text-xs bg-slate-800 px-1.5 py-0.5 rounded mr-2 mt-0.5 text-cyan-300">/repair</code> Perbaiki alat GRATIS!</li>
+                                <li class="flex items-start"><code class="text-xs bg-slate-800 px-1.5 py-0.5 rounded mr-2 mt-0.5 text-cyan-300">/tp</code> Instant TP ke pemain.</li>
                             </ul>
                         </div>
                         <div class="bg-black/20 p-5 rounded-2xl border border-white/5">
-                            <h4 class="text-cyan-400 font-bold text-sm mb-3 flex items-center"><i class="fas fa-bolt mr-2"></i>GOD MODE</h4>
+                            <h4 class="text-cyan-400 font-bold text-sm mb-3 flex items-center"><i class="fas fa-id-card mr-2"></i>AKSES & ANIMASI</h4>
                             <ul class="text-sm text-slate-300 space-y-3">
-                                <li class="flex items-start"><code class="text-xs bg-slate-800 px-1.5 py-0.5 rounded mr-2 mt-0.5 text-cyan-300">/repair</code> Perbaiki item 100%.</li>
-                                <li class="flex items-start"><code class="text-xs bg-slate-800 px-1.5 py-0.5 rounded mr-2 mt-0.5 text-cyan-300">/heal</code> Pulihkan darah (HP).</li>
-                                <li class="flex items-start"><code class="text-xs bg-slate-800 px-1.5 py-0.5 rounded mr-2 mt-0.5 text-cyan-300">/crawl</code> Melewati area sempit.</li>
+                                <li class="flex items-start"><code class="text-xs bg-slate-800 px-1.5 py-0.5 rounded mr-2 mt-0.5 text-cyan-300">/echest</code> (Brankas portabel) & <code class="text-xs bg-slate-800 px-1.5 py-0.5 rounded mr-2 mt-0.5 text-cyan-300">/nick</code></li>
+                                <li class="flex items-start"><code class="text-xs bg-slate-800 px-1.5 py-0.5 rounded mr-2 mt-0.5 text-cyan-300">/crawl</code> Merangkak.</li>
+                                <li class="flex items-start"><i class="fas fa-info-circle text-cyan-400 mt-1 mr-2 text-xs"></i> Klik kanan pundak pemain.</li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <div class="interactive-card glass rounded-3xl p-8 border-l-4 border-l-red-500 relative overflow-hidden reveal" style="--hover-color: #ef4444; --hover-shadow: rgba(239, 68, 68, 0.2); transition-delay: 100ms;">
+                <!-- Rank Overlord -->
+                <div class="interactive-card glass rounded-3xl p-8 border-l-4 border-l-red-500 relative overflow-hidden" style="--hover-color: #ef4444; --hover-shadow: rgba(239, 68, 68, 0.2);">
                     <div class="absolute -top-20 -right-20 w-64 h-64 bg-red-600/20 rounded-full blur-[80px]"></div>
                     
                     <div class="flex justify-between items-start mb-6 relative z-10">
                         <div>
-                            <span class="px-3 py-1 bg-red-500/10 border border-red-500/20 rounded-lg text-red-500 font-bold uppercase tracking-widest text-[10px] mb-3 inline-block animate-pulse">Pangkat Tertinggi</span>
+                            <span class="px-3 py-1 bg-red-500/10 border border-red-500/20 rounded-lg text-red-500 font-bold uppercase tracking-widest text-[10px] mb-3 inline-block animate-pulse">Kasta Tertinggi</span>
                             <h3 class="font-lexend text-3xl font-black text-red-500 drop-shadow-md">♛ Overlord</h3>
+                            <p class="text-xs text-red-300 mt-1 italic">(Memiliki semua kemampuan Conqueror)</p>
                         </div>
                         <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-red-500 to-orange-600 flex items-center justify-center shadow-lg shadow-red-500/30">
                             <i class="fas fa-dragon text-2xl text-white"></i>
                         </div>
                     </div>
-                    <div class="grid md:grid-cols-2 gap-6 mt-8 relative z-10">
+                    <div class="mb-4 relative z-10">
+                        <p class="text-sm text-slate-300"><i class="fas fa-home text-red-400 mr-2 text-xs"></i> <strong>Home:</strong> Maksimal 10 lokasi | <i class="fas fa-box text-red-400 ml-2 mr-1 text-xs"></i> <strong>Kit:</strong> <code>/kit overlord</code></p>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-6 mt-4 relative z-10">
                         <div class="bg-black/20 p-5 rounded-2xl border border-white/5">
-                            <h4 class="text-red-500 font-bold text-sm mb-3 flex items-center"><i class="fas fa-plane-up mr-2"></i>ULTIMATE</h4>
+                            <h4 class="text-red-500 font-bold text-sm mb-3 flex items-center"><i class="fas fa-plane-up mr-2"></i>MOBILITAS & CHAT</h4>
                             <ul class="text-sm text-slate-300 space-y-3">
-                                <li class="flex items-start"><code class="text-xs bg-slate-800 px-1.5 py-0.5 rounded mr-2 mt-0.5 text-red-400">/fly</code> Terbang bebas seperti dewa.</li>
-                                <li class="flex items-start"><code class="text-xs bg-slate-800 px-1.5 py-0.5 rounded mr-2 mt-0.5 text-red-400">/nick</code> Nama warna-warni (Bold).</li>
+                                <li class="flex items-start"><code class="text-xs bg-slate-800 px-1.5 py-0.5 rounded mr-2 mt-0.5 text-red-400">/fly</code> Terbang bebas (Anti-Jatuh di Oneblock!).</li>
+                                <li class="flex items-start"><code class="text-xs bg-slate-800 px-1.5 py-0.5 rounded mr-2 mt-0.5 text-red-400">/nick color</code> Nama warna-warni & tebal.</li>
                             </ul>
                         </div>
                         <div class="bg-black/20 p-5 rounded-2xl border border-white/5">
-                            <h4 class="text-red-500 font-bold text-sm mb-3 flex items-center"><i class="fas fa-magic mr-2"></i>COSMETICS</h4>
+                            <h4 class="text-red-500 font-bold text-sm mb-3 flex items-center"><i class="fas fa-magic mr-2"></i>RAJA KOSMETIK</h4>
                             <ul class="text-sm text-slate-300 space-y-3">
-                                <li class="flex items-start"><i class="fas fa-check text-emerald-400 mt-1 mr-2 text-xs"></i> Full Access ke semua kategori /gmenu.</li>
-                                <li class="flex items-start"><i class="fas fa-check text-emerald-400 mt-1 mr-2 text-xs"></i> Pets, Particles, Gadgets & Suits.</li>
-                                <li class="flex items-start"><i class="fas fa-check text-emerald-400 mt-1 mr-2 text-xs"></i> Tanpa Cooldown pemakaian.</li>
+                                <li class="flex items-start"><i class="fas fa-check text-emerald-400 mt-1 mr-2 text-xs"></i> Akses penuh /gmenu (Pets, Mounts, Suits).</li>
+                                <li class="flex items-start"><i class="fas fa-check text-emerald-400 mt-1 mr-2 text-xs"></i> Bebas Cooldown saat pakai Gadget!</li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <section id="community" class="py-24 px-6 relative">
-        <div class="max-w-5xl mx-auto glass rounded-[40px] p-10 md:p-20 text-center overflow-hidden relative reveal">
-            <div class="absolute top-0 right-0 w-full h-full -z-10 bg-gradient-to-b from-transparent to-slate-900/50"></div>
-            <div class="absolute -top-20 -left-20 w-64 h-64 bg-[#5865F2] rounded-full blur-[100px] opacity-30"></div>
-            <div class="absolute -bottom-20 -right-20 w-64 h-64 bg-[#25D366] rounded-full blur-[100px] opacity-20"></div>
-            
-            <div class="inline-flex space-x-4 mb-8">
-                <i class="fab fa-discord text-5xl md:text-6xl text-[#5865F2] hover:scale-110 transition-transform"></i>
-                <i class="fab fa-whatsapp text-5xl md:text-6xl text-[#25D366] hover:scale-110 transition-transform"></i>
-            </div>
-            
-            <h2 class="font-lexend text-4xl md:text-5xl font-extrabold mb-6">Masuk ke Komunitas Kami</h2>
-            <p class="text-slate-400 text-lg md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
-                Temukan teman bermain baru, dapatkan informasi event eksklusif, dan laporkan keluhan langsung ke tim Staff Cafaalia SMP.
-            </p>
-            
-            <div class="flex flex-col md:flex-row items-center justify-center gap-5">
-                <a href="https://discord.gg/GHAcsV8wJ7" target="_blank" class="group relative w-full md:w-auto bg-[#5865F2] hover:bg-[#4752c4] text-white px-8 py-4 rounded-2xl font-bold text-lg flex items-center justify-center overflow-hidden transition-all transform hover:-translate-y-1 hover:shadow-xl hover:shadow-[#5865F2]/30">
-                    <div class="absolute inset-0 w-full h-full bg-white/20 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
-                    <i class="fab fa-discord mr-3 text-2xl"></i> Join Discord
-                </a>
+            <!-- Beli Rank Panel -->
+            <div class="mt-16 glass rounded-3xl p-8 md:p-12 text-center border-t-2 border-emerald-500/50 relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-b from-emerald-500/10 to-transparent pointer-events-none"></div>
+                <h3 class="font-lexend text-3xl font-bold mb-4 relative z-10">Tertarik Membeli Rank? 💎</h3>
+                <p class="text-slate-400 mb-8 max-w-2xl mx-auto relative z-10">Hubungi Owner atau Developer kami melalui WhatsApp untuk informasi harga, promo, dan proses pembelian Rank.</p>
                 
-                <a href="https://chat.whatsapp.com/DVxDPtshA4jDTKAxglTQMt" target="_blank" class="group relative w-full md:w-auto bg-[#25D366] hover:bg-[#1DA851] text-white px-8 py-4 rounded-2xl font-bold text-lg flex items-center justify-center overflow-hidden transition-all transform hover:-translate-y-1 hover:shadow-xl hover:shadow-[#25D366]/30">
-                    <div class="absolute inset-0 w-full h-full bg-white/20 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
-                    <i class="fab fa-whatsapp mr-3 text-2xl"></i> Group WhatsApp
-                </a>
+                <div class="flex flex-col md:flex-row justify-center gap-6 relative z-10">
+                    <a href="https://wa.me/6283845844378" target="_blank" class="flex items-center justify-center px-6 py-4 rounded-2xl bg-black/40 hover:bg-emerald-500/20 border border-white/10 hover:border-emerald-500/50 transition-all group">
+                        <div class="w-12 h-12 rounded-full bg-[#25D366]/20 flex items-center justify-center text-[#25D366] mr-4 group-hover:scale-110 transition-transform">
+                            <i class="fab fa-whatsapp text-2xl"></i>
+                        </div>
+                        <div class="text-left">
+                            <p class="text-xs text-slate-400 font-bold uppercase tracking-wider">Hubungi Owner</p>
+                            <p class="text-white font-bold text-lg">0838 4584 4378</p>
+                        </div>
+                    </a>
+                    
+                    <a href="https://wa.me/6285156621544" target="_blank" class="flex items-center justify-center px-6 py-4 rounded-2xl bg-black/40 hover:bg-emerald-500/20 border border-white/10 hover:border-emerald-500/50 transition-all group">
+                        <div class="w-12 h-12 rounded-full bg-[#25D366]/20 flex items-center justify-center text-[#25D366] mr-4 group-hover:scale-110 transition-transform">
+                            <i class="fab fa-whatsapp text-2xl"></i>
+                        </div>
+                        <div class="text-left">
+                            <p class="text-xs text-slate-400 font-bold uppercase tracking-wider">Hubungi Developer</p>
+                            <p class="text-white font-bold text-lg">0851 5662 1544</p>
+                        </div>
+                    </a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer class="py-12 px-6 border-t border-white/5 bg-slate-950 text-center">
-        <p class="text-slate-500 text-sm mb-6 font-medium">
-            © 2026 Cafaalia SMP Team. Not an official Minecraft product.<br>Not approved by or associated with Mojang.
+        <!-- ================= 3. GUIDE TAB (KODEK EKSKLUSIF) ================= -->
+        <section id="guide" class="tab-content hidden w-full px-6 max-w-5xl mx-auto">
+            <div class="text-center mb-12">
+                <div class="inline-block p-3 rounded-2xl bg-white/5 mb-4">
+                    <i class="fas fa-book-open text-3xl text-emerald-400"></i>
+                </div>
+                <h2 class="font-lexend text-4xl md:text-5xl font-extrabold mb-4">Kodek Eksklusif Cafaalia</h2>
+                <p class="text-slate-400 text-lg">Panduan lengkap menguasai sistem OneBlock, Survival, dan Ekonomi server.</p>
+            </div>
+
+            <div class="space-y-6">
+                <!-- BAB I -->
+                <div class="glass rounded-3xl p-8 border-l-4 border-emerald-400">
+                    <h3 class="font-lexend text-2xl font-bold mb-4 text-emerald-400">BAB I: Informasi Server & Akun</h3>
+                    <p class="text-slate-300 mb-4 text-sm leading-relaxed">Server ini mendukung fitur Cross-Play (Bedrock & Java) dan Voice Chat. Gunakan plugin Simple Voice Chat, lalu tekan tombol <kbd class="bg-slate-800 px-2 py-1 rounded text-white">V</kbd> di PC untuk berbicara langsung.</p>
+                    <div class="bg-black/20 p-4 rounded-xl border border-white/5">
+                        <h4 class="font-bold text-sm text-slate-200 mb-2">Keamanan Akun (SimpleLogin):</h4>
+                        <ul class="text-sm text-slate-400 space-y-2">
+                            <li><code class="text-emerald-300">/register &lt;password&gt; &lt;password&gt;</code> - Mendaftaran akun.</li>
+                            <li><code class="text-emerald-300">/login &lt;password&gt;</code> - Masuk ke server.</li>
+                            <li><code class="text-emerald-300">/changepassword &lt;pass_lama&gt; &lt;pass_baru&gt;</code> - Mengganti sandi.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- BAB II -->
+                <div class="glass rounded-3xl p-8 border-l-4 border-cyan-400">
+                    <h3 class="font-lexend text-2xl font-bold mb-4 text-cyan-400">BAB II: Sistem OneBlock</h3>
+                    <p class="text-slate-300 mb-4 text-sm leading-relaxed">Kembangkan pulaumu dari 1 blok menjadi kerajaan raksasa.</p>
+                    <div class="grid md:grid-cols-2 gap-4 text-sm text-slate-400">
+                        <ul class="space-y-2">
+                            <li><code class="text-cyan-300">/ob</code> - Buka Panel utama.</li>
+                            <li><code class="text-cyan-300">/ob home</code> - Kembali ke titik aman.</li>
+                            <li><code class="text-cyan-300">/ob challenges</code> - Misi/tantangan pulau.</li>
+                            <li><code class="text-cyan-300">/ob biomes</code> - Ubah bioma (rumput & mob).</li>
+                        </ul>
+                        <ul class="space-y-2">
+                            <li><code class="text-cyan-300">/ob level</code> - Hitung level pulau.</li>
+                            <li><code class="text-cyan-300">/ob top</code> - Papan peringkat pulau.</li>
+                            <li><code class="text-cyan-300">/ob team</code> - Kelola tim (Invite/Kick).</li>
+                            <li><code class="text-cyan-300">/ob warp &lt;nama&gt;</code> - Kunjung pulau lain.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- BAB III & IV Grid -->
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- BAB III -->
+                    <div class="glass rounded-3xl p-8 border-t-4 border-red-400">
+                        <h3 class="font-lexend text-xl font-bold mb-4 text-red-400">BAB III: Survival & Mining</h3>
+                        <ul class="text-sm text-slate-300 space-y-3 leading-relaxed list-disc list-inside">
+                            <li><strong>Aturan Mining:</strong> Barang tambang TIDAK BISA dibawa keluar dari world Mining! Jual semua hasil tambangmu di <code class="text-red-300">/warp mining</code>.</li>
+                            <li><strong>Timber:</strong> Hancurkan blok kayu paling bawah dengan kapak, pohon rubuh seketika.</li>
+                            <li><strong>Tidur Cepat:</strong> Cukup 1 orang tidur, waktu berganti pagi.</li>
+                            <li><strong>ClearLag:</strong> Hati-hati! Item di tanah otomatis dihapus berkala.</li>
+                        </ul>
+                    </div>
+
+                    <!-- BAB IV -->
+                    <div class="glass rounded-3xl p-8 border-t-4 border-yellow-400">
+                        <h3 class="font-lexend text-xl font-bold mb-4 text-yellow-400">BAB IV: Proteksi Tanah</h3>
+                        <p class="text-xs text-slate-400 mb-3">Wajib digunakan agar rumahmu aman dari Griefing!</p>
+                        <ul class="text-sm text-slate-300 space-y-2">
+                            <li><code class="text-yellow-300">/claim</code> - Klaim otomatis area sekitarmu.</li>
+                            <li><strong>Sekop Emas:</strong> Klik kanan 2 sudut diagonal memagari tanah.</li>
+                            <li><strong>Tongkat:</strong> Klik kanan tanah untuk melihat pemilik.</li>
+                        </ul>
+                        <div class="mt-3 text-xs text-slate-400 border-t border-white/10 pt-3">
+                            <span class="block mb-1"><strong>Izin Teman:</strong></span>
+                            <code class="text-yellow-300">/trust</code> (Izin Penuh) | <code class="text-yellow-300">/containertrust</code> (Peti) | <code class="text-yellow-300">/accesstrust</code> (Pintu)
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BAB V & VI Grid -->
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- BAB V -->
+                    <div class="glass rounded-3xl p-8 border-t-4 border-purple-400">
+                        <h3 class="font-lexend text-xl font-bold mb-4 text-purple-400">BAB V: Ekonomi & Toko</h3>
+                        <ul class="text-sm text-slate-300 space-y-2">
+                            <li><code class="text-purple-300">/shop</code> - Beli Resource & Spawner.</li>
+                            <li><code class="text-purple-300">/bal</code> - Cek saldo uangmu.</li>
+                            <li><code class="text-purple-300">/baltop</code> - Peringkat sultan.</li>
+                            <li><code class="text-purple-300">/pay &lt;nama&gt; &lt;jml&gt;</code> - Transfer uang.</li>
+                        </ul>
+                        <p class="text-xs text-slate-400 mt-3 italic">Investasi terbaik adalah Meta Spawner! Harga bervariasi dari $1 Juta - $20 Juta.</p>
+                    </div>
+
+                    <!-- BAB VI -->
+                    <div class="glass rounded-3xl p-8 border-t-4 border-blue-400">
+                        <h3 class="font-lexend text-xl font-bold mb-4 text-blue-400">BAB VI: Navigasi Server</h3>
+                        <ul class="text-sm text-slate-300 space-y-2">
+                            <li><code class="text-blue-300">/spawn</code> - Ke Lobby utama.</li>
+                            <li><code class="text-blue-300">/rtp</code> - Teleport acak di Survival.</li>
+                            <li><code class="text-blue-300">/warp &lt;nama&gt;</code> - Lokasi penting.</li>
+                            <li><code class="text-blue-300">/tpa &lt;nama&gt;</code> - Minta izin teleport.</li>
+                            <li><code class="text-blue-300">/sethome &lt;nama&gt;</code> - Tandai rumah.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- BAB VII -->
+                <div class="glass rounded-3xl p-8 border-l-4 border-pink-400">
+                    <h3 class="font-lexend text-xl font-bold mb-4 text-pink-400">BAB VII: Kosmetik & Hadiah</h3>
+                    <div class="flex flex-wrap gap-3 text-sm text-slate-300">
+                        <span class="bg-black/30 px-3 py-2 rounded-lg border border-white/5"><code class="text-pink-300">/skin &lt;nama&gt;</code> Ganti skin karakter</span>
+                        <span class="bg-black/30 px-3 py-2 rounded-lg border border-white/5"><code class="text-pink-300">/glow</code> Efek bersinar di tubuh</span>
+                        <span class="bg-black/30 px-3 py-2 rounded-lg border border-white/5"><code class="text-pink-300">/sit</code> Duduk santai</span>
+                    </div>
+                    <div class="mt-4 p-4 bg-pink-500/10 border border-pink-500/30 rounded-xl text-center">
+                        <p class="text-pink-300 font-bold"><i class="fas fa-gift mr-2"></i>Ketik <code class="bg-slate-800 px-2 py-1 rounded text-white mx-1">/vote</code> setiap hari untuk mendapatkan hadiah Crate & Uang Gratis!</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= 4. COMMUNITY TAB ================= -->
+        <section id="community" class="tab-content hidden w-full px-6">
+            <div class="max-w-4xl mx-auto glass rounded-[40px] p-10 md:p-20 text-center overflow-hidden relative">
+                <div class="absolute -top-20 -left-20 w-64 h-64 bg-[#5865F2] rounded-full blur-[100px] opacity-30"></div>
+                <div class="absolute -bottom-20 -right-20 w-64 h-64 bg-[#25D366] rounded-full blur-[100px] opacity-20"></div>
+                
+                <div class="inline-flex space-x-4 mb-8 relative z-10">
+                    <i class="fab fa-discord text-5xl md:text-6xl text-[#5865F2]"></i>
+                    <i class="fab fa-whatsapp text-5xl md:text-6xl text-[#25D366]"></i>
+                </div>
+                
+                <h2 class="font-lexend text-4xl md:text-5xl font-extrabold mb-6 relative z-10">Komunitas Kami</h2>
+                <p class="text-slate-400 text-lg md:text-xl mb-12 max-w-2xl mx-auto relative z-10">
+                    Temukan teman bermain baru, dapatkan informasi event, dan laporkan keluhan langsung ke tim Staff Cafaalia SMP.
+                </p>
+                
+                <div class="flex flex-col md:flex-row items-center justify-center gap-5 relative z-10">
+                    <a href="https://discord.gg/GHAcsV8wJ7" target="_blank" class="w-full md:w-auto bg-[#5865F2] hover:bg-[#4752c4] text-white px-8 py-4 rounded-2xl font-bold text-lg flex items-center justify-center transition-transform transform hover:-translate-y-1 hover:shadow-xl hover:shadow-[#5865F2]/30">
+                        <i class="fab fa-discord mr-3 text-2xl"></i> Join Discord
+                    </a>
+                    <a href="https://chat.whatsapp.com/DVxDPtshA4jDTKAxglTQMt" target="_blank" class="w-full md:w-auto bg-[#25D366] hover:bg-[#1DA851] text-white px-8 py-4 rounded-2xl font-bold text-lg flex items-center justify-center transition-transform transform hover:-translate-y-1 hover:shadow-xl hover:shadow-[#25D366]/30">
+                        <i class="fab fa-whatsapp mr-3 text-2xl"></i> Group WhatsApp
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 px-6 border-t border-white/5 bg-slate-950/50 text-center mt-auto w-full">
+        <p class="text-slate-500 text-sm font-medium">
+            © 2026 Cafaalia SMP Team. Not associated with Mojang.
         </p>
-        <div class="flex justify-center space-x-6 text-slate-500">
-            <a href="https://chat.whatsapp.com/DVxDPtshA4jDTKAxglTQMt" target="_blank" class="hover:text-[#25D366] hover:-translate-y-1 transition-all text-xl"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://discord.gg/GHAcsV8wJ7" target="_blank" class="hover:text-[#5865F2] hover:-translate-y-1 transition-all text-xl"><i class="fab fa-discord"></i></a>
-            <a href="#" class="hover:text-emerald-500 hover:-translate-y-1 transition-all text-xl"><i class="fas fa-cube"></i></a>
-        </div>
     </footer>
 
-    <div id="toast" class="toast-hidden fixed bottom-10 left-1/2 -translate-x-1/2 z-[100] bg-slate-900/90 backdrop-blur-md px-6 py-4 rounded-2xl border border-emerald-500/50 flex items-center space-x-4 transition-all duration-400 shadow-2xl shadow-emerald-500/20">
-        <div class="w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center shadow-inner">
+    <!-- Interactive Toast Notification -->
+    <div id="toast" class="toast-hidden fixed bottom-10 left-1/2 -translate-x-1/2 z-[100] bg-slate-900/90 backdrop-blur-md px-6 py-4 rounded-2xl border border-emerald-500/50 flex items-center space-x-4 transition-all duration-400 shadow-2xl shadow-emerald-500/20 w-max max-w-[90vw]">
+        <div class="w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center shadow-inner shrink-0">
             <i class="fas fa-check text-white"></i>
         </div>
         <div class="text-left pr-4">
@@ -380,12 +524,46 @@
         </div>
     </div>
 
-    <style>
-        @keyframes shimmer { 100% { transform: translateX(100%); } }
-    </style>
-
     <script>
-        // --- 1. Server Status Fetcher (ANTI-BLOCK / DUAL API VERSION) ---
+        // --- 0. Tab Switching Logic ---
+        function switchTab(tabId, event) {
+            if (event) event.preventDefault();
+            
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => {
+                tab.classList.add('hidden');
+                tab.classList.remove('animate-tab');
+            });
+            
+            const targetTab = document.getElementById(tabId);
+            if(targetTab) {
+                targetTab.classList.remove('hidden');
+                void targetTab.offsetWidth; 
+                targetTab.classList.add('animate-tab');
+            }
+
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.classList.remove('text-emerald-400');
+                link.classList.add('text-slate-400');
+            });
+
+            const activeLink = document.querySelector(`.nav-link[href="#${tabId}"]`);
+            if (activeLink) {
+                activeLink.classList.remove('text-slate-400');
+                activeLink.classList.add('text-emerald-400');
+            }
+
+            if(history.pushState) {
+                history.pushState(null, null, `#${tabId}`);
+            } else {
+                location.hash = `#${tabId}`;
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // --- 1. Server Status Fetcher ---
         const SERVER_IP = "cafaaliasmp.hopto.org";
         const JAVA_PORT = "25571"; 
 
@@ -396,83 +574,50 @@
             const badge = document.getElementById('serverStatusBadge');
             const playerCountEl = document.getElementById('onlinePlayerCount');
 
-            let isOnline = false;
-            let onlinePlayers = 0;
-            let maxPlayers = 0;
+            let isOnline = false; let onlinePlayers = 0; let maxPlayers = 0;
 
             try {
-                // Percobaan 1: Coba tembus pakai MCAPI.us
                 try {
                     const res1 = await fetch(`https://mcapi.us/server/status?ip=${SERVER_IP}&port=${JAVA_PORT}`);
                     const data1 = await res1.json();
-                    
                     if (data1.status === "success" && data1.online) {
-                        isOnline = true;
-                        onlinePlayers = data1.players.now;
-                        maxPlayers = data1.players.max;
+                        isOnline = true; onlinePlayers = data1.players.now; maxPlayers = data1.players.max;
                     }
-                } catch (err1) {
-                    console.log("MCAPI diblokir/gagal, beralih ke Minetools...");
-                }
+                } catch (err1) { console.log("Beralih ke Minetools..."); }
 
-                // Percobaan 2: Kalau MCAPI gagal (entah CORS, timeout, atau diblokir Firewall Nexus), tembak pakai Minetools
                 if (!isOnline) {
                     const res2 = await fetch(`https://api.minetools.eu/ping/${SERVER_IP}/${JAVA_PORT}`);
                     const data2 = await res2.json();
-                    
                     if (!data2.error) {
-                        isOnline = true;
-                        onlinePlayers = data2.players.online;
-                        maxPlayers = data2.players.max;
+                        isOnline = true; onlinePlayers = data2.players.online; maxPlayers = data2.players.max;
                     }
                 }
 
-                // Terapkan Hasil ke Tampilan Website
                 if (isOnline) {
                     statusText.innerText = `${onlinePlayers}/${maxPlayers} Player Online`;
                     playerCountEl.innerText = `${onlinePlayers}`;
-                    
-                    // Set Tema Online (Hijau)
                     statusPing.classList.replace('bg-slate-500', 'bg-emerald-400');
                     statusPing.classList.add('status-pulse');
                     statusDot.classList.replace('bg-slate-600', 'bg-emerald-500');
                     badge.classList.replace('text-slate-300', 'text-emerald-400');
                     badge.classList.replace('border-white/10', 'border-emerald-500/30');
                     badge.classList.replace('bg-slate-800/50', 'bg-emerald-500/10');
-                    
-                    // Bersihkan class merah (jika sebelumnya offline)
-                    statusPing.classList.remove('bg-red-500');
-                    statusDot.classList.remove('bg-red-500');
+                    statusPing.classList.remove('bg-red-500'); statusDot.classList.remove('bg-red-500');
                     badge.classList.remove('text-red-400', 'border-red-500/30', 'bg-red-500/10');
-                } else {
-                    // Kalau kedua API gagal
-                    throw new Error("Server benar-benar offline atau semua API diblokir");
-                }
-                
+                } else { throw new Error("Offline"); }
             } catch (error) {
-                console.error("Status Server:", error.message);
                 statusText.innerText = "Server Sedang Offline";
                 playerCountEl.innerText = "0";
-                
-                // Set Tema Offline (Merah)
                 statusPing.classList.remove('status-pulse', 'bg-emerald-400', 'bg-slate-500');
                 statusPing.classList.add('bg-red-500');
-                
                 statusDot.classList.remove('bg-emerald-500', 'bg-slate-600');
                 statusDot.classList.add('bg-red-500');
-                
-                badge.classList.remove('text-emerald-400', 'text-slate-300');
-                badge.classList.add('text-red-400');
-                
-                badge.classList.remove('border-emerald-500/30', 'border-white/10');
-                badge.classList.add('border-red-500/30');
-                
-                badge.classList.remove('bg-emerald-500/10', 'bg-slate-800/50');
-                badge.classList.add('bg-red-500/10');
+                badge.classList.remove('text-emerald-400', 'text-slate-300', 'border-emerald-500/30', 'border-white/10', 'bg-emerald-500/10', 'bg-slate-800/50');
+                badge.classList.add('text-red-400', 'border-red-500/30', 'bg-red-500/10');
             }
         }
 
-        // --- 2. Copy functionality with interactive Toast ---
+        // --- 2. Copy functionality ---
         function copyContent(id, label) {
             const text = document.getElementById(id).innerText;
             if (navigator.clipboard && window.isSecureContext) {
@@ -480,9 +625,7 @@
             } else {
                 const dummy = document.createElement("textarea");
                 document.body.appendChild(dummy);
-                dummy.value = text;
-                dummy.select();
-                document.execCommand("copy");
+                dummy.value = text; dummy.select(); document.execCommand("copy");
                 document.body.removeChild(dummy);
                 showToast(label);
             }
@@ -491,55 +634,18 @@
         function showToast(label) {
             const toast = document.getElementById('toast');
             document.getElementById('toastTitle').innerText = `${label} Disalin!`;
-            
-            toast.classList.remove('toast-hidden');
-            toast.classList.add('toast-visible');
-
+            toast.classList.remove('toast-hidden'); toast.classList.add('toast-visible');
             setTimeout(() => { toast.style.transform = "translate(-50%, -5px) scale(1.05)"; }, 50);
             setTimeout(() => { toast.style.transform = "translate(-50%, 0) scale(1)"; }, 200);
-
-            setTimeout(() => {
-                toast.classList.add('toast-hidden');
-                toast.classList.remove('toast-visible');
-            }, 3000);
+            setTimeout(() => { toast.classList.add('toast-hidden'); toast.classList.remove('toast-visible'); }, 3000);
         }
 
-        // --- 3. Scroll Reveal Animation Logic ---
-        function reveal() {
-            const reveals = document.querySelectorAll(".reveal");
-            for (let i = 0; i < reveals.length; i++) {
-                const windowHeight = window.innerHeight;
-                const elementTop = reveals[i].getBoundingClientRect().top;
-                const elementVisible = 100;
-
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add("active");
-                }
-            }
-        }
-
-        // --- 4. Navbar Background Logic ---
-        function handleNavbar() {
-            const nav = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                nav.classList.add('bg-slate-950/80', 'shadow-xl');
-                nav.classList.remove('border-white/5');
-            } else {
-                nav.classList.remove('bg-slate-950/80', 'shadow-xl');
-                nav.classList.add('border-white/5');
-            }
-        }
-
-        // Event Listeners
-        window.addEventListener("scroll", () => {
-            reveal();
-            handleNavbar();
-        });
-        
+        // --- 3. Initialize App ---
         window.addEventListener("load", () => {
+            const initialTab = window.location.hash.substring(1) || 'home';
+            switchTab(initialTab);
             updateServerStatus();
-            reveal();
-            setInterval(updateServerStatus, 30000); // Auto-refresh tiap 30 detik
+            setInterval(updateServerStatus, 30000);
         });
     </script>
 </body>
