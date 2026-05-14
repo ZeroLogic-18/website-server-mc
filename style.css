@@ -5,7 +5,7 @@ body {
     font-family: 'Inter', sans-serif;
     background-color: #020617; /* Warna cadangan jika gambar gagal dimuat */
     
-    /* Overlay Gelap (85%) + Gambar Minecraft Background */
+    /* Overlay Gelap (Lebih Terang: 65% - 75%) + Gambar Minecraft Background */
     background-image: linear-gradient(rgba(2, 6, 23, 0.65), rgba(2, 6, 23, 0.75)), url('main.jpg');
     background-size: cover;
     background-position: center;
@@ -25,10 +25,10 @@ body {
 
 /* 2. Desain Efek Kaca (Glassmorphism) */
 .glass {
-    background: rgba(15, 23, 42, 0.45);
+    background: rgba(15, 23, 42, 0.55); /* Sedikit ditambah biar kontras teks tetap aman */
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08); /* Border sedikit dipertegas */
 }
 
 /* 3. Kartu Interaktif & Hover */
