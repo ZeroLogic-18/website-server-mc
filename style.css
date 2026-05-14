@@ -1,8 +1,17 @@
-/* style.css - Cafaalia SMP Custom Styles */
+/* style.css - CAFAALIA SMP OFFICIAL STYLES (COMPLETE VERSION) */
 
+/* 1. Pengaturan Utama & Background */
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #020617;
+    background-color: #020617; /* Warna cadangan jika gambar gagal dimuat */
+    
+    /* Overlay Gelap (85%) + Gambar Minecraft Background */
+    background-image: linear-gradient(rgba(2, 6, 23, 0.85), rgba(2, 6, 23, 0.95)), url('minecraft-2025-games-5k-3840x2160-21988.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Bikin background diam saat scroll */
+    background-repeat: no-repeat;
+    
     color: #f8fafc;
     overflow-x: hidden;
     display: flex;
@@ -14,13 +23,15 @@ body {
     font-family: 'Lexend', sans-serif; 
 }
 
+/* 2. Desain Efek Kaca (Glassmorphism) */
 .glass {
-    background: rgba(15, 23, 42, 0.4);
+    background: rgba(15, 23, 42, 0.45);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+/* 3. Kartu Interaktif & Hover */
 .interactive-card {
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -31,6 +42,7 @@ body {
     box-shadow: 0 20px 40px -10px var(--hover-shadow);
 }
 
+/* 4. Animasi Latar Belakang (Floating) */
 .float-slow { animation: float 15s ease-in-out infinite; }
 .float-med { animation: float 10s ease-in-out infinite reverse; }
 
@@ -40,6 +52,7 @@ body {
     66% { transform: translate(-30px, 20px) rotate(-10deg); }
 }
 
+/* 5. Indikator Status Online (Pulse) */
 .status-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
 
 @keyframes pulse { 
@@ -47,14 +60,17 @@ body {
     50% { opacity: .3; } 
 }
 
+/* 6. Scrollbar Kustom */
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: #0f172a; }
 ::-webkit-scrollbar-thumb { background: #334155; border-radius: 10px; }
 ::-webkit-scrollbar-thumb:hover { background: #475569; }
 
+/* 7. Notifikasi Toast */
 .toast-hidden { opacity: 0; transform: translate(-50%, 20px) scale(0.9); pointer-events: none; }
 .toast-visible { opacity: 1; transform: translate(-50%, 0) scale(1); }
 
+/* 8. Tombol Copy & Animasi Tab */
 .copy-btn { transition: all 0.2s; }
 .copy-btn:active { transform: scale(0.8); }
 
@@ -67,5 +83,14 @@ body {
     animation: fadeInSlide 0.5s ease-out forwards;
 }
 
+/* 9. Utility Navigasi Mobile */
 .nav-scroll::-webkit-scrollbar { display: none; }
-.nav-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+.nav-scroll { 
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+}
+
+/* 10. Tambahan Animasi Shimmer untuk Button */
+@keyframes shimmer { 
+    100% { transform: translateX(100%); } 
+}
