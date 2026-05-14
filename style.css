@@ -6,7 +6,7 @@ body {
     background-color: #020617; /* Warna cadangan jika gambar gagal dimuat */
     
     /* Overlay Gelap (85%) + Gambar Minecraft Background */
-    background-image: linear-gradient(rgba(2, 6, 23, 0.85), rgba(2, 6, 23, 0.95)), url('minecraft-2025-games-5k-3840x2160-21988.jpg');
+    background-image: linear-gradient(rgba(2, 6, 23, 0.85), rgba(2, 6, 23, 0.95)), url('main.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Bikin background diam saat scroll */
