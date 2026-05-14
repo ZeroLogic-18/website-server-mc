@@ -4,12 +4,14 @@
 function switchTab(tabId, event) {
     if (event) event.preventDefault();
     
+    // Sembunyikan semua tab
     const tabs = document.querySelectorAll('.tab-content');
     tabs.forEach(tab => {
         tab.classList.add('hidden');
         tab.classList.remove('animate-tab');
     });
     
+    // Munculkan tab yang dipilih
     const targetTab = document.getElementById(tabId);
     if(targetTab) {
         targetTab.classList.remove('hidden');
@@ -17,6 +19,7 @@ function switchTab(tabId, event) {
         targetTab.classList.add('animate-tab');
     }
 
+    // Update warna link Navbar
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
         link.classList.remove('text-emerald-400');
@@ -29,10 +32,10 @@ function switchTab(tabId, event) {
         activeLink.classList.add('text-emerald-400');
     }
 
-    if(history.pushState) {
-        history.pushState(null, null, `#${tabId}`);
-    } else {
-        location.hash = `#${tabId}`;
+    // --- BAGIAN INI YANG BIKIN URL BERSIH ---
+    // Paksa URL tetap bersih tanpa embel-embel #
+    if (history.replaceState) {
+        history.replaceState(null, null, window.location.pathname);
     }
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -121,8 +124,10 @@ function showToast(label) {
 
 // --- 4. Initialize App ---
 window.addEventListener("load", () => {
+    // Ambil tab dari URL hash (jika tidak ada, set ke 'home')
     const initialTab = window.location.hash.substring(1) || 'home';
-    switchTab(initialTab);
+    switchTab(initialTab); // Ini akan otomatis membersihkan URL setelah me-load tab yang tepat
+    
     updateServerStatus();
     setInterval(updateServerStatus, 30000);
 });
