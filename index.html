@@ -165,6 +165,7 @@
                         <div>
                             <span class="px-3 py-1 bg-yellow-500/10 border border-yellow-500/20 rounded-lg text-yellow-500 font-bold uppercase tracking-widest text-[10px] mb-3 inline-block">VIP I • Rp 15.000</span>
                             <h3 class="font-lexend text-3xl font-black text-yellow-400">⚔ Gladiator</h3>
+                            <p class="text-xs text-slate-400 mt-1 italic">(Mendapat kemampuan Wanderer)</p>
                         </div>
                         <div class="w-14 h-14 rounded-2xl bg-yellow-500/10 flex items-center justify-center border border-yellow-500/20">
                             <i class="fas fa-shield-halved text-2xl text-yellow-400"></i>
@@ -197,6 +198,7 @@
                         <div>
                             <span class="px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 rounded-lg text-cyan-400 font-bold uppercase tracking-widest text-[10px] mb-3 inline-block">VIP II • Rp 30.000</span>
                             <h3 class="font-lexend text-3xl font-black text-cyan-400">⚜ Conqueror</h3>
+                            <p class="text-xs text-slate-400 mt-1 italic">(Mendapat kemampuan Gladiator)</p>
                         </div>
                         <div class="w-14 h-14 rounded-2xl bg-cyan-500/10 flex items-center justify-center border border-cyan-500/20">
                             <i class="fas fa-chess-knight text-2xl text-cyan-400"></i>
@@ -232,6 +234,7 @@
                         <div>
                             <span class="px-3 py-1 bg-red-500/10 border border-red-500/20 rounded-lg text-red-500 font-bold uppercase tracking-widest text-[10px] mb-3 inline-block animate-pulse">Kasta Tertinggi • Rp 45.000</span>
                             <h3 class="font-lexend text-3xl font-black text-red-500 drop-shadow-md">♛ Overlord</h3>
+                            <p class="text-xs text-red-300 mt-1 italic">(Mendapat kemampuan Conqueror)</p>
                         </div>
                         <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-red-500 to-orange-600 flex items-center justify-center shadow-lg shadow-red-500/30">
                             <i class="fas fa-dragon text-2xl text-white"></i>
@@ -272,6 +275,10 @@
                 <div class="text-right w-full md:w-auto flex justify-center md:justify-end">
                     <span class="bg-pink-500/10 text-pink-400 font-bold px-5 py-3 rounded-xl text-lg border border-pink-500/30 whitespace-nowrap shadow-lg shadow-pink-500/10">Rp 10.000</span>
                 </div>
+            </div>
+            
+            <div class="mt-12 text-center text-sm text-slate-400">
+                Lanjut ke tab <a href="#currency" onclick="switchTab('currency', event)" class="text-emerald-400 font-bold hover:underline">Currency</a> untuk instruksi pembayaran via WhatsApp.
             </div>
         </section>
 
@@ -367,24 +374,21 @@
 
             <div class="glass rounded-3xl p-8 md:p-12 text-center border-t-2 border-emerald-500/50 relative overflow-hidden">
                 <div class="absolute inset-0 bg-gradient-to-b from-emerald-500/10 to-transparent pointer-events-none"></div>
-                
                 <h3 class="font-lexend text-3xl font-bold mb-6 relative z-10">Cara Pemesanan 🛒</h3>
-                
                 <div class="mb-8 flex flex-wrap justify-center items-center gap-3 text-sm text-slate-300 font-bold relative z-10">
                     <span class="mr-2"><i class="fas fa-credit-card mr-2"></i>Metode Pembayaran:</span>
                     <span class="bg-blue-500/20 text-blue-400 border border-blue-500/30 px-4 py-2 rounded-lg shadow-sm">DANA</span>
                     <span class="bg-green-500/20 text-green-400 border border-green-500/30 px-4 py-2 rounded-lg shadow-sm">GOPAY</span>
                     <span class="bg-red-500/20 text-red-400 border border-red-500/30 px-4 py-2 rounded-lg shadow-sm">QRIS</span>
                 </div>
-
                 <div class="bg-black/30 p-4 rounded-2xl border border-white/5 inline-block mb-8 relative z-10">
                     <p class="text-slate-300 text-sm mb-2">Kirim format pesan berikut ke WhatsApp Admin:</p>
-                    <code class="text-emerald-400 font-bold text-lg">"Halo Min, beli [Nama Paket/Nominal] untuk akun [Nama Akun]"</code>
+                    <code class="text-emerald-400 font-bold text-lg">"Halo Min, beli [Nama Paket/Peti] untuk akun [Nama Akun]"</code>
                 </div>
                 
                 <div class="flex flex-col md:flex-row justify-center gap-6 relative z-10">
                     <a href="https://wa.me/6283845844378" target="_blank" class="flex items-center justify-center px-6 py-4 rounded-2xl bg-black/40 hover:bg-emerald-500/20 border border-white/10 hover:border-emerald-500/50 transition-all group">
-                        <div class="w-12 h-12 rounded-full bg-[#25D366]/20 flex items-center justify-center text-[#25D366] mr-4 group-hover:scale-110 transition-transform border border-[#25D366]/30">
+                        <div class="w-12 h-12 rounded-full bg-[#25D366]/20 flex items-center justify-center text-[#25D366] mr-4 group-hover:scale-110 transition-transform">
                             <i class="fab fa-whatsapp text-2xl"></i>
                         </div>
                         <div class="text-left">
@@ -392,9 +396,8 @@
                             <p class="text-white font-bold text-lg">0838-4584-4378</p>
                         </div>
                     </a>
-                    
                     <a href="https://wa.me/6285156621544" target="_blank" class="flex items-center justify-center px-6 py-4 rounded-2xl bg-black/40 hover:bg-emerald-500/20 border border-white/10 hover:border-emerald-500/50 transition-all group">
-                        <div class="w-12 h-12 rounded-full bg-[#25D366]/20 flex items-center justify-center text-[#25D366] mr-4 group-hover:scale-110 transition-transform border border-[#25D366]/30">
+                        <div class="w-12 h-12 rounded-full bg-[#25D366]/20 flex items-center justify-center text-[#25D366] mr-4 group-hover:scale-110 transition-transform">
                             <i class="fab fa-whatsapp text-2xl"></i>
                         </div>
                         <div class="text-left">
@@ -415,31 +418,8 @@
                 <p class="text-slate-400 text-lg">Uji keberuntunganmu! Dapatkan item dewa, jackpot uang, hingga Rank permanen.</p>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 
-                <div class="interactive-card glass rounded-3xl p-6 md:p-8 border-t-4 border-t-yellow-400 relative overflow-hidden" style="--hover-color: #facc15; --hover-shadow: rgba(250, 204, 21, 0.15);">
-                    <div class="text-center mb-6">
-                        <div class="w-16 h-16 mx-auto bg-yellow-500/20 rounded-2xl flex items-center justify-center border border-yellow-500/30 mb-4">
-                            <i class="fas fa-star text-3xl text-yellow-400"></i>
-                        </div>
-                        <h3 class="font-lexend text-2xl font-black text-yellow-400">Vote Crate</h3>
-                        <p class="text-xs text-slate-400 mt-2">Peti harian yang didapatkan gratis dengan membantu melakukan Vote server.</p>
-                    </div>
-                    
-                    <div class="flex justify-between items-center bg-black/30 rounded-xl p-3 mb-6 border border-white/5">
-                        <span class="text-sm font-bold text-slate-300">Harga Kunci:</span>
-                        <span class="bg-emerald-500/10 text-emerald-400 px-3 py-1 rounded-lg text-sm font-bold border border-emerald-500/20">GRATIS</span>
-                    </div>
-
-                    <h4 class="text-sm font-bold text-slate-300 mb-3 border-b border-white/10 pb-2">Daftar Hadiah & Peluang:</h4>
-                    <ul class="text-sm space-y-3">
-                        <li class="flex justify-between items-start"><span class="text-slate-300 flex-1">Golden Apple Premium (5x)</span> <span class="font-mono text-slate-400 ml-2">45%</span></li>
-                        <li class="flex justify-between items-start"><span class="text-slate-300 flex-1">Kantong Ekspedisi <span class="block text-[10px] text-slate-500">($500 & 32x Botol XP)</span></span> <span class="font-mono text-slate-400 ml-2">35%</span></li>
-                        <li class="flex justify-between items-start"><span class="text-blue-300 flex-1">Kitab Suci: Mending</span> <span class="font-mono text-slate-400 ml-2">15%</span></li>
-                        <li class="flex justify-between items-start pt-2 border-t border-white/5"><span class="text-orange-400 font-bold flex-1">[KUNCI] COMMON CRATE</span> <span class="font-mono text-orange-400 font-bold ml-2">5%</span></li>
-                    </ul>
-                </div>
-
                 <div class="interactive-card glass rounded-3xl p-6 md:p-8 border-t-4 border-t-orange-500 relative overflow-hidden" style="--hover-color: #f97316; --hover-shadow: rgba(249, 115, 22, 0.15);">
                     <div class="text-center mb-6">
                         <div class="w-16 h-16 mx-auto bg-orange-500/20 rounded-2xl flex items-center justify-center border border-orange-500/30 mb-4">
@@ -496,7 +476,7 @@
                         <li class="flex justify-between items-start"><span class="text-slate-300 flex-1">Uang $500.000 <span class="text-red-400 text-[10px] block">(Zonk)</span></span> <span class="font-mono text-slate-400 ml-2">25%</span></li>
                         <li class="flex justify-between items-start"><span class="text-green-400 font-bold flex-1">Uang $2.500.000 <span class="text-[10px] block text-green-500">(Jackpot Untung)</span></span> <span class="font-mono text-slate-400 ml-2">10%</span></li>
                         <li class="flex justify-between items-start"><span class="text-purple-300 flex-1">⚔️ PEDANG PALADIN <span class="block text-[10px] text-slate-500">(Sharp VI, Loot IV, Fire III, Mending)</span></span> <span class="font-mono text-slate-400 ml-2">10%</span></li>
-                        <li class="flex justify-between items-start"><span class="text-slate-300 flex-1">Monster Spawner Kategori I <span class="block text-[10px] text-slate-500">(Zombie)</span></span> <span class="font-mono text-slate-400 ml-2">5%</span></li>
+                        <li class="flex justify-between items-start"><span class="text-slate-300 flex-1">Monster Spawner <span class="block text-[10px] text-slate-500">(Zombie)</span></span> <span class="font-mono text-slate-400 ml-2">5%</span></li>
                         <li class="flex justify-between items-start"><span class="text-purple-300 flex-1">⛏️ BELIUNG PALADIN <span class="block text-[10px] text-slate-500">(Eff VI, Fortune IV, Mending)</span></span> <span class="font-mono text-slate-400 ml-2">5%</span></li>
                         <li class="flex justify-between items-start"><span class="text-purple-300 flex-1">🛡️ FULL SET ZIRAH PALADIN <span class="block text-[10px] text-slate-500">(Prot VI, Thorns IV, Mending Lengkap)</span></span> <span class="font-mono text-slate-400 ml-2">4%</span></li>
                         <li class="flex justify-between items-start"><span class="text-purple-300 flex-1">🪓 KAPAK PALADIN <span class="block text-[10px] text-slate-500">(Sharp VI, Eff VI, Mending)</span></span> <span class="font-mono text-slate-400 ml-2">2%</span></li>
@@ -537,7 +517,7 @@
                         <li class="flex justify-between items-start"><span class="text-red-300 flex-1">🎯 ARTEMIS' PIERCER <span class="block text-[9px] text-slate-500">(Crossbow: Piercing X, Quick V, Multi III)</span></span> <span class="font-mono text-slate-400 ml-2">4%</span></li>
                         <li class="flex justify-between items-start"><span class="text-blue-300 flex-1">🔱 POSEIDON'S FURY <span class="block text-[9px] text-slate-500">(Impaling X, Loyalty X, Channel V)</span></span> <span class="font-mono text-slate-400 ml-2">4%</span></li>
                         <li class="flex justify-between items-start"><span class="text-red-300 flex-1">⛏️ WORLD BREAKER <span class="block text-[9px] text-slate-500">(Instan Hancur Area: Eff X, Fort V)</span></span> <span class="font-mono text-slate-400 ml-2">3%</span></li>
-                        <li class="flex justify-between items-start"><span class="text-slate-300 flex-1">Iron Golem Spawner (OP) <span class="block text-[9px] text-slate-500">(Pabrik Uang Otomatis)</span></span> <span class="font-mono text-slate-400 ml-2">2%</span></li>
+                        <li class="flex justify-between items-start"><span class="text-slate-300 flex-1">Iron Golem Spawner <span class="block text-[9px] text-slate-500">(Pabrik Uang Otomatis)</span></span> <span class="font-mono text-slate-400 ml-2">2%</span></li>
                         <li class="flex justify-between items-start"><span class="text-slate-300 flex-1">Akses /Fly (3 Hari) <span class="block text-[9px] text-slate-500">(Terbang Bebas)</span></span> <span class="font-mono text-slate-400 ml-2">2%</span></li>
                         <li class="flex justify-between items-start pt-2 border-t border-red-500/30"><span class="text-white font-black drop-shadow-md flex-1 animate-pulse">👑 [RANK] CONQUEROR <span class="block text-[10px] text-yellow-300">(JACKPOT UTAMA)</span></span> <span class="font-mono text-white font-bold ml-2">1%</span></li>
                     </ul>
@@ -700,6 +680,6 @@
         </div>
     </div>
 
-    <script src="script.js?v=4"></script>
+    <script src="script.js?v=5"></script>
 </body>
 </html>
