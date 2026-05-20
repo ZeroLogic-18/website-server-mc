@@ -165,6 +165,7 @@
                         <div>
                             <span class="px-3 py-1 bg-yellow-500/10 border border-yellow-500/20 rounded-lg text-yellow-500 font-bold uppercase tracking-widest text-[10px] mb-3 inline-block">VIP I • Rp 15.000</span>
                             <h3 class="font-lexend text-3xl font-black text-yellow-400">⚔ Gladiator</h3>
+                            <p class="text-xs text-slate-400 mt-1 italic">(Mendapat kemampuan Wanderer)</p>
                         </div>
                         <div class="w-14 h-14 rounded-2xl bg-yellow-500/10 flex items-center justify-center border border-yellow-500/20">
                             <i class="fas fa-shield-halved text-2xl text-yellow-400"></i>
@@ -197,6 +198,7 @@
                         <div>
                             <span class="px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 rounded-lg text-cyan-400 font-bold uppercase tracking-widest text-[10px] mb-3 inline-block">VIP II • Rp 30.000</span>
                             <h3 class="font-lexend text-3xl font-black text-cyan-400">⚜ Conqueror</h3>
+                            <p class="text-xs text-slate-400 mt-1 italic">(Mendapat kemampuan Gladiator)</p>
                         </div>
                         <div class="w-14 h-14 rounded-2xl bg-cyan-500/10 flex items-center justify-center border border-cyan-500/20">
                             <i class="fas fa-chess-knight text-2xl text-cyan-400"></i>
@@ -232,6 +234,7 @@
                         <div>
                             <span class="px-3 py-1 bg-red-500/10 border border-red-500/20 rounded-lg text-red-500 font-bold uppercase tracking-widest text-[10px] mb-3 inline-block animate-pulse">Kasta Tertinggi • Rp 45.000</span>
                             <h3 class="font-lexend text-3xl font-black text-red-500 drop-shadow-md">♛ Overlord</h3>
+                            <p class="text-xs text-red-300 mt-1 italic">(Mendapat kemampuan Conqueror)</p>
                         </div>
                         <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-red-500 to-orange-600 flex items-center justify-center shadow-lg shadow-red-500/30">
                             <i class="fas fa-dragon text-2xl text-white"></i>
@@ -380,7 +383,7 @@
                 </div>
                 <div class="bg-black/30 p-4 rounded-2xl border border-white/5 inline-block mb-8 relative z-10">
                     <p class="text-slate-300 text-sm mb-2">Kirim format pesan berikut ke WhatsApp Admin:</p>
-                    <code class="text-emerald-400 font-bold text-lg">"Halo Min, beli [Nama Paket/Peti] untuk akun [Nama Akun]"</code>
+                    <code class="text-emerald-400 font-bold text-lg">"Halo Min, beli [Nama Paket] untuk akun [Nama Akun]"</code>
                 </div>
                 
                 <div class="flex flex-col md:flex-row justify-center gap-6 relative z-10">
@@ -415,6 +418,31 @@
                 <p class="text-slate-400 text-lg">Uji keberuntunganmu! Dapatkan item dewa, jackpot uang, hingga Rank permanen.</p>
             </div>
 
+            <div class="mb-8 max-w-4xl mx-auto">
+                <div class="interactive-card glass rounded-3xl p-6 md:p-8 border-t-4 border-t-yellow-400 relative overflow-hidden" style="--hover-color: #facc15; --hover-shadow: rgba(250, 204, 21, 0.15);">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 mx-auto bg-yellow-500/20 rounded-2xl flex items-center justify-center border border-yellow-500/30 mb-4">
+                            <i class="fas fa-star text-3xl text-yellow-400"></i>
+                        </div>
+                        <h3 class="font-lexend text-2xl font-black text-yellow-400">Vote Crate</h3>
+                        <p class="text-xs text-slate-400 mt-2">Peti harian yang didapatkan gratis dengan membantu melakukan Vote server.</p>
+                    </div>
+                    
+                    <div class="flex justify-between items-center bg-black/30 rounded-xl p-3 mb-6 border border-white/5">
+                        <span class="text-sm font-bold text-slate-300">Harga Kunci:</span>
+                        <span class="bg-emerald-500/10 text-emerald-400 px-3 py-1 rounded-lg text-sm font-bold border border-emerald-500/20">GRATIS</span>
+                    </div>
+
+                    <h4 class="text-sm font-bold text-slate-300 mb-3 border-b border-white/10 pb-2">Daftar Hadiah & Peluang:</h4>
+                    <ul class="text-[13px] space-y-3">
+                        <li class="flex justify-between items-start"><span class="text-slate-300 flex-1">Golden Apple Premium (5x)</span> <span class="font-mono text-slate-400 ml-2">45%</span></li>
+                        <li class="flex justify-between items-start"><span class="text-slate-300 flex-1">Kantong Ekspedisi <span class="block text-[10px] text-slate-500">($500 & 32x Botol XP)</span></span> <span class="font-mono text-slate-400 ml-2">35%</span></li>
+                        <li class="flex justify-between items-start"><span class="text-blue-300 flex-1">Kitab Suci: Mending</span> <span class="font-mono text-slate-400 ml-2">15%</span></li>
+                        <li class="flex justify-between items-start pt-2 border-t border-white/5"><span class="text-orange-400 font-bold flex-1">[KUNCI] COMMON CRATE</span> <span class="font-mono text-orange-400 font-bold ml-2">5%</span></li>
+                    </ul>
+                </div>
+            </div>
+
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 
                 <div class="interactive-card glass rounded-3xl p-6 md:p-8 border-t-4 border-t-orange-500 relative overflow-hidden" style="--hover-color: #f97316; --hover-shadow: rgba(249, 115, 22, 0.15);">
@@ -435,16 +463,16 @@
                     </div>
 
                     <h4 class="text-sm font-bold text-slate-300 mb-3 border-b border-white/10 pb-2">Daftar Hadiah & Peluang:</h4>
-                    <ul class="text-[13px] space-y-2.5">
-                        <li class="flex justify-between items-start"><span class="text-slate-300 flex-1">Uang $100.000 <span class="text-red-400 text-[10px] block">(Zonk)</span></span> <span class="font-mono text-slate-400 ml-2">35%</span></li>
-                        <li class="flex justify-between items-start"><span class="text-slate-300 flex-1">Uang $250.000 <span class="text-red-400 text-[10px] block">(Zonk)</span></span> <span class="font-mono text-slate-400 ml-2">25%</span></li>
-                        <li class="flex justify-between items-start"><span class="text-green-400 font-bold flex-1">Uang $1.500.000 <span class="text-[10px] block text-green-500">(Jackpot Untung)</span></span> <span class="font-mono text-slate-400 ml-2">10%</span></li>
-                        <li class="flex justify-between items-start"><span class="text-cyan-300 flex-1">⚔️ PEDANG KSATRIA <span class="block text-[10px] text-slate-500">(Sharp IV, Loot III, Fire II, Mending)</span></span> <span class="font-mono text-slate-400 ml-2">10%</span></li>
+                    <ul class="text-[12px] space-y-2.5">
+                        <li class="flex justify-between items-start"><span class="text-slate-300 flex-1">Uang $100.000 <span class="text-red-400 text-[9px] block">(Zonk)</span></span> <span class="font-mono text-slate-400 ml-2">35%</span></li>
+                        <li class="flex justify-between items-start"><span class="text-slate-300 flex-1">Uang $250.000 <span class="text-red-400 text-[9px] block">(Zonk)</span></span> <span class="font-mono text-slate-400 ml-2">25%</span></li>
+                        <li class="flex justify-between items-start"><span class="text-green-400 font-bold flex-1">Uang $1.500.000 <span class="text-[9px] block text-green-500">(Jackpot Untung)</span></span> <span class="font-mono text-slate-400 ml-2">10%</span></li>
+                        <li class="flex justify-between items-start"><span class="text-cyan-300 flex-1">⚔️ PEDANG KSATRIA <span class="block text-[9px] text-slate-500">(Sharp IV, Loot III, Fire II, Mending)</span></span> <span class="font-mono text-slate-400 ml-2">10%</span></li>
                         <li class="flex justify-between items-start"><span class="text-slate-300 flex-1">Tabungan Diamond (5x Block)</span> <span class="font-mono text-slate-400 ml-2">5%</span></li>
-                        <li class="flex justify-between items-start"><span class="text-slate-300 flex-1">Gudang Portabel <span class="block text-[10px] text-slate-500">(1 Shulker, 100 Claim)</span></span> <span class="font-mono text-slate-400 ml-2">5%</span></li>
-                        <li class="flex justify-between items-start"><span class="text-cyan-300 flex-1">🛡️ FULL SET ZIRAH KSATRIA <span class="block text-[10px] text-slate-500">(Prot IV, Thorns II, Mending Lengkap)</span></span> <span class="font-mono text-slate-400 ml-2">4%</span></li>
-                        <li class="flex justify-between items-start"><span class="text-cyan-300 flex-1">🪓 KAPAK KSATRIA <span class="block text-[10px] text-slate-500">(Sharp IV, Eff IV, Mending)</span></span> <span class="font-mono text-slate-400 ml-2">2%</span></li>
-                        <li class="flex justify-between items-start"><span class="text-cyan-300 flex-1">🏹 BUSUR KSATRIA <span class="block text-[10px] text-slate-500">(Power IV, Flame I, Infinity)</span></span> <span class="font-mono text-slate-400 ml-2">2%</span></li>
+                        <li class="flex justify-between items-start"><span class="text-slate-300 flex-1">Gudang Portabel <span class="block text-[9px] text-slate-500">(1 Shulker, 100 Claim)</span></span> <span class="font-mono text-slate-400 ml-2">5%</span></li>
+                        <li class="flex justify-between items-start"><span class="text-cyan-300 flex-1">🛡️ FULL SET ZIRAH KSATRIA <span class="block text-[9px] text-slate-500">(Prot IV, Thorns II, Mending Lengkap)</span></span> <span class="font-mono text-slate-400 ml-2">4%</span></li>
+                        <li class="flex justify-between items-start"><span class="text-cyan-300 flex-1">🪓 KAPAK KSATRIA <span class="block text-[9px] text-slate-500">(Sharp IV, Eff IV, Mending)</span></span> <span class="font-mono text-slate-400 ml-2">2%</span></li>
+                        <li class="flex justify-between items-start"><span class="text-cyan-300 flex-1">🏹 BUSUR KSATRIA <span class="block text-[9px] text-slate-500">(Power IV, Flame I, Infinity)</span></span> <span class="font-mono text-slate-400 ml-2">2%</span></li>
                         <li class="flex justify-between items-start pt-2 border-t border-white/5"><span class="text-purple-400 font-bold flex-1">[KUNCI] EPIC CRATE</span> <span class="font-mono text-purple-400 font-bold ml-2">2%</span></li>
                     </ul>
                 </div>
@@ -468,17 +496,17 @@
                     </div>
 
                     <h4 class="text-sm font-bold text-slate-300 mb-3 border-b border-white/10 pb-2 relative z-10">Daftar Hadiah & Peluang:</h4>
-                    <ul class="text-[13px] space-y-2.5 relative z-10">
-                        <li class="flex justify-between items-start"><span class="text-slate-300 flex-1">Uang $250.000 <span class="text-red-400 text-[10px] block">(Zonk)</span></span> <span class="font-mono text-slate-400 ml-2">35%</span></li>
-                        <li class="flex justify-between items-start"><span class="text-slate-300 flex-1">Uang $500.000 <span class="text-red-400 text-[10px] block">(Zonk)</span></span> <span class="font-mono text-slate-400 ml-2">25%</span></li>
-                        <li class="flex justify-between items-start"><span class="text-green-400 font-bold flex-1">Uang $2.500.000 <span class="text-[10px] block text-green-500">(Jackpot Untung)</span></span> <span class="font-mono text-slate-400 ml-2">10%</span></li>
-                        <li class="flex justify-between items-start"><span class="text-purple-300 flex-1">⚔️ PEDANG PALADIN <span class="block text-[10px] text-slate-500">(Sharp VI, Loot IV, Fire III, Mending)</span></span> <span class="font-mono text-slate-400 ml-2">10%</span></li>
-                        <li class="flex justify-between items-start"><span class="text-slate-300 flex-1">Monster Spawner <span class="block text-[10px] text-slate-500">(Zombie)</span></span> <span class="font-mono text-slate-400 ml-2">5%</span></li>
-                        <li class="flex justify-between items-start"><span class="text-purple-300 flex-1">⛏️ BELIUNG PALADIN <span class="block text-[10px] text-slate-500">(Eff VI, Fortune IV, Mending)</span></span> <span class="font-mono text-slate-400 ml-2">5%</span></li>
-                        <li class="flex justify-between items-start"><span class="text-purple-300 flex-1">🛡️ FULL SET ZIRAH PALADIN <span class="block text-[10px] text-slate-500">(Prot VI, Thorns IV, Mending Lengkap)</span></span> <span class="font-mono text-slate-400 ml-2">4%</span></li>
-                        <li class="flex justify-between items-start"><span class="text-purple-300 flex-1">🪓 KAPAK PALADIN <span class="block text-[10px] text-slate-500">(Sharp VI, Eff VI, Mending)</span></span> <span class="font-mono text-slate-400 ml-2">2%</span></li>
-                        <li class="flex justify-between items-start"><span class="text-purple-300 flex-1">🏹 BUSUR PALADIN <span class="block text-[10px] text-slate-500">(Power VI, Flame II, Infinity)</span></span> <span class="font-mono text-slate-400 ml-2">2%</span></li>
-                        <li class="flex justify-between items-start"><span class="text-purple-300 flex-1">🔱 TRIDENT PALADIN <span class="block text-[10px] text-slate-500">(Impaling VI, Loyalty IV, Chan II)</span></span> <span class="font-mono text-slate-400 ml-2">1%</span></li>
+                    <ul class="text-[12px] space-y-2.5 relative z-10">
+                        <li class="flex justify-between items-start"><span class="text-slate-300 flex-1">Uang $250.000 <span class="text-red-400 text-[9px] block">(Zonk)</span></span> <span class="font-mono text-slate-400 ml-2">35%</span></li>
+                        <li class="flex justify-between items-start"><span class="text-slate-300 flex-1">Uang $500.000 <span class="text-red-400 text-[9px] block">(Zonk)</span></span> <span class="font-mono text-slate-400 ml-2">25%</span></li>
+                        <li class="flex justify-between items-start"><span class="text-green-400 font-bold flex-1">Uang $2.500.000 <span class="text-[9px] block text-green-500">(Jackpot Untung)</span></span> <span class="font-mono text-slate-400 ml-2">10%</span></li>
+                        <li class="flex justify-between items-start"><span class="text-purple-300 flex-1">⚔️ PEDANG PALADIN <span class="block text-[9px] text-slate-500">(Sharp VI, Loot IV, Fire III, Mending)</span></span> <span class="font-mono text-slate-400 ml-2">10%</span></li>
+                        <li class="flex justify-between items-start"><span class="text-slate-300 flex-1">Monster Spawner <span class="block text-[9px] text-slate-500">(Zombie)</span></span> <span class="font-mono text-slate-400 ml-2">5%</span></li>
+                        <li class="flex justify-between items-start"><span class="text-purple-300 flex-1">⛏️ BELIUNG PALADIN <span class="block text-[9px] text-slate-500">(Eff VI, Fortune IV, Mending)</span></span> <span class="font-mono text-slate-400 ml-2">5%</span></li>
+                        <li class="flex justify-between items-start"><span class="text-purple-300 flex-1">🛡️ FULL SET ZIRAH PALADIN <span class="block text-[9px] text-slate-500">(Prot VI, Thorns IV, Mending Lengkap)</span></span> <span class="font-mono text-slate-400 ml-2">4%</span></li>
+                        <li class="flex justify-between items-start"><span class="text-purple-300 flex-1">🪓 KAPAK PALADIN <span class="block text-[9px] text-slate-500">(Sharp VI, Eff VI, Mending)</span></span> <span class="font-mono text-slate-400 ml-2">2%</span></li>
+                        <li class="flex justify-between items-start"><span class="text-purple-300 flex-1">🏹 BUSUR PALADIN <span class="block text-[9px] text-slate-500">(Power VI, Flame II, Infinity)</span></span> <span class="font-mono text-slate-400 ml-2">2%</span></li>
+                        <li class="flex justify-between items-start"><span class="text-purple-300 flex-1">🔱 TRIDENT PALADIN <span class="block text-[9px] text-slate-500">(Impaling VI, Loyalty IV, Chan II)</span></span> <span class="font-mono text-slate-400 ml-2">1%</span></li>
                         <li class="flex justify-between items-start pt-2 border-t border-white/5"><span class="text-red-400 font-bold flex-1 animate-pulse">[KUNCI] GOD CRATE</span> <span class="font-mono text-red-400 font-bold ml-2">1%</span></li>
                     </ul>
                 </div>
@@ -502,21 +530,21 @@
                     </div>
 
                     <h4 class="text-sm font-bold text-slate-300 mb-3 border-b border-red-500/30 pb-2 relative z-10">Daftar Hadiah & Peluang:</h4>
-                    <ul class="text-[12px] space-y-2 relative z-10 leading-tight">
-                        <li class="flex justify-between items-start"><span class="text-green-400 font-bold flex-1">Uang $5.000.000 <span class="text-green-500 text-[10px] block">(Untung)</span></span> <span class="font-mono text-slate-400 ml-2">20%</span></li>
-                        <li class="flex justify-between items-start"><span class="text-slate-300 flex-1">Uang $1.000.000 <span class="text-red-400 text-[10px] block">(Zonk Terkecil)</span></span> <span class="font-mono text-slate-400 ml-2">20%</span></li>
-                        <li class="flex justify-between items-start"><span class="text-yellow-400 font-bold flex-1">Uang $15.000.000 <span class="text-[10px] block">(SUPER JACKPOT UANG)</span></span> <span class="font-mono text-yellow-400 ml-2">10%</span></li>
-                        <li class="flex justify-between items-start"><span class="text-red-300 flex-1">⚔️ THE GODSLAYER <span class="block text-[9px] text-slate-500">(Sharp X, Smite X, Loot V, Fire V, Unbreak X)</span></span> <span class="font-mono text-slate-400 ml-2">10%</span></li>
-                        <li class="flex justify-between items-start"><span class="text-red-300 flex-1">🪓 THE DECAPITATOR <span class="block text-[9px] text-slate-500">(Sharp X, Smite X, Eff X, Unbreak X)</span></span> <span class="font-mono text-slate-400 ml-2">8%</span></li>
-                        <li class="flex justify-between items-start"><span class="text-red-300 flex-1">🛡️ GOD ARMOR SET <span class="block text-[9px] text-slate-500">(Prot VIII, Thorns VI, Unbreak VIII, Mending)</span></span> <span class="font-mono text-slate-400 ml-2">7%</span></li>
-                        <li class="flex justify-between items-start"><span class="text-red-300 flex-1">🏹 APOLLO'S WRATH <span class="block text-[9px] text-slate-500">(Power X, Punch V, Flame V, Infinity)</span></span> <span class="font-mono text-slate-400 ml-2">6%</span></li>
-                        <li class="flex justify-between items-start"><span class="text-orange-300 flex-1">🔨 THE EARTHSHAKER <span class="block text-[9px] text-slate-500">(Gada 1.21: Density X, Breach X, Wind V)</span></span> <span class="font-mono text-slate-400 ml-2">5%</span></li>
-                        <li class="flex justify-between items-start"><span class="text-red-300 flex-1">🎯 ARTEMIS' PIERCER <span class="block text-[9px] text-slate-500">(Crossbow: Piercing X, Quick V, Multi III)</span></span> <span class="font-mono text-slate-400 ml-2">4%</span></li>
-                        <li class="flex justify-between items-start"><span class="text-blue-300 flex-1">🔱 POSEIDON'S FURY <span class="block text-[9px] text-slate-500">(Impaling X, Loyalty X, Channel V)</span></span> <span class="font-mono text-slate-400 ml-2">4%</span></li>
-                        <li class="flex justify-between items-start"><span class="text-red-300 flex-1">⛏️ WORLD BREAKER <span class="block text-[9px] text-slate-500">(Instan Hancur Area: Eff X, Fort V)</span></span> <span class="font-mono text-slate-400 ml-2">3%</span></li>
-                        <li class="flex justify-between items-start"><span class="text-slate-300 flex-1">Iron Golem Spawner <span class="block text-[9px] text-slate-500">(Pabrik Uang Otomatis)</span></span> <span class="font-mono text-slate-400 ml-2">2%</span></li>
-                        <li class="flex justify-between items-start"><span class="text-slate-300 flex-1">Akses /Fly (3 Hari) <span class="block text-[9px] text-slate-500">(Terbang Bebas)</span></span> <span class="font-mono text-slate-400 ml-2">2%</span></li>
-                        <li class="flex justify-between items-start pt-2 border-t border-red-500/30"><span class="text-white font-black drop-shadow-md flex-1 animate-pulse">👑 [RANK] CONQUEROR <span class="block text-[10px] text-yellow-300">(JACKPOT UTAMA)</span></span> <span class="font-mono text-white font-bold ml-2">1%</span></li>
+                    <ul class="text-[11px] space-y-2 relative z-10 leading-tight">
+                        <li class="flex justify-between items-start"><span class="text-green-400 font-bold flex-1">Uang $5.000.000 <span class="text-green-500 text-[9px] block">(Untung)</span></span> <span class="font-mono text-slate-400 ml-2">20%</span></li>
+                        <li class="flex justify-between items-start"><span class="text-slate-300 flex-1">Uang $1.000.000 <span class="text-red-400 text-[9px] block">(Zonk Terkecil)</span></span> <span class="font-mono text-slate-400 ml-2">20%</span></li>
+                        <li class="flex justify-between items-start"><span class="text-yellow-400 font-bold flex-1">Uang $15.000.000 <span class="text-[9px] block">(SUPER JACKPOT)</span></span> <span class="font-mono text-yellow-400 ml-2">10%</span></li>
+                        <li class="flex justify-between items-start"><span class="text-red-300 flex-1">⚔️ THE GODSLAYER <span class="block text-[8.5px] text-slate-500">(Sharp X, Smite X, Loot V, Fire V, Unbreak X)</span></span> <span class="font-mono text-slate-400 ml-2">10%</span></li>
+                        <li class="flex justify-between items-start"><span class="text-red-300 flex-1">🪓 THE DECAPITATOR <span class="block text-[8.5px] text-slate-500">(Sharp X, Smite X, Eff X, Unbreak X)</span></span> <span class="font-mono text-slate-400 ml-2">8%</span></li>
+                        <li class="flex justify-between items-start"><span class="text-red-300 flex-1">🛡️ GOD ARMOR SET <span class="block text-[8.5px] text-slate-500">(Prot VIII, Thorns VI, Unbreak VIII, Mending)</span></span> <span class="font-mono text-slate-400 ml-2">7%</span></li>
+                        <li class="flex justify-between items-start"><span class="text-red-300 flex-1">🏹 APOLLO'S WRATH <span class="block text-[8.5px] text-slate-500">(Power X, Punch V, Flame V, Infinity)</span></span> <span class="font-mono text-slate-400 ml-2">6%</span></li>
+                        <li class="flex justify-between items-start"><span class="text-orange-300 flex-1">🔨 THE EARTHSHAKER <span class="block text-[8.5px] text-slate-500">(Gada 1.21: Density X, Breach X, Wind V)</span></span> <span class="font-mono text-slate-400 ml-2">5%</span></li>
+                        <li class="flex justify-between items-start"><span class="text-red-300 flex-1">🎯 ARTEMIS' PIERCER <span class="block text-[8.5px] text-slate-500">(Crossbow: Piercing X, Quick V, Multi III)</span></span> <span class="font-mono text-slate-400 ml-2">4%</span></li>
+                        <li class="flex justify-between items-start"><span class="text-blue-300 flex-1">🔱 POSEIDON'S FURY <span class="block text-[8.5px] text-slate-500">(Impaling X, Loyalty X, Channel V)</span></span> <span class="font-mono text-slate-400 ml-2">4%</span></li>
+                        <li class="flex justify-between items-start"><span class="text-red-300 flex-1">⛏️ WORLD BREAKER <span class="block text-[8.5px] text-slate-500">(Instan Hancur Area: Eff X, Fort V)</span></span> <span class="font-mono text-slate-400 ml-2">3%</span></li>
+                        <li class="flex justify-between items-start"><span class="text-slate-300 flex-1">Iron Golem Spawner <span class="block text-[8.5px] text-slate-500">(Pabrik Uang Otomatis)</span></span> <span class="font-mono text-slate-400 ml-2">2%</span></li>
+                        <li class="flex justify-between items-start"><span class="text-slate-300 flex-1">Akses /Fly (3 Hari) <span class="block text-[8.5px] text-slate-500">(Terbang Bebas)</span></span> <span class="font-mono text-slate-400 ml-2">2%</span></li>
+                        <li class="flex justify-between items-start pt-2 border-t border-red-500/30"><span class="text-white font-black drop-shadow-md flex-1 animate-pulse">👑 [RANK] CONQUEROR <span class="block text-[9px] text-yellow-300">(JACKPOT UTAMA)</span></span> <span class="font-mono text-white font-bold ml-2">1%</span></li>
                     </ul>
                 </div>
             </div>
@@ -541,7 +569,7 @@
                     <i class="fas fa-book-open text-3xl text-emerald-400"></i>
                 </div>
                 <h2 class="font-lexend text-4xl md:text-5xl font-extrabold mb-4">Kodek Eksklusif Cafaalia</h2>
-                <p class="text-slate-400 text-lg max-w-3xl mx-auto">Buku panduan komprehensif ini dirancang khusus untuk seluruh pemain (Member) sebagai panduan melangkah, mulai dari pertama kali mendarat di lobi hingga menguasai dimensi OneBlock[cite: 2]. Jajaran pangkat staff telah dihapus dari dokumen ini agar fokus penuh sebagai panduan murni bagi para pemain[cite: 3].</p>
+                <p class="text-slate-400 text-lg max-w-3xl mx-auto">Buku panduan komprehensif ini dirancang khusus untuk seluruh pemain (Member) sebagai panduan melangkah, mulai dari pertama kali mendarat di lobi hingga menguasai dimensi OneBlock. Jajaran pangkat staff telah dihapus dari dokumen ini agar fokus penuh sebagai panduan murni bagi para pemain.</p>
             </div>
 
             <div class="space-y-6">
@@ -551,100 +579,100 @@
 
                 <div class="glass rounded-3xl p-8 border-l-4 border-emerald-400">
                     <h3 class="font-lexend text-2xl font-bold mb-4 text-emerald-400">1. Fase Pertama: Mendarat di Lobi / Spawn</h3>
-                    <p class="text-slate-300 mb-4 text-sm leading-relaxed">Ketika kamu pertama kali masuk ke dalam server, kamu akan berada di area Lobi utama (Spawn)[cite: 6]. Berikut adalah hal wajib yang harus kamu lakukan[cite: 7]:</p>
+                    <p class="text-slate-300 mb-4 text-sm leading-relaxed">Ketika kamu pertama kali masuk ke dalam server, kamu akan berada di area Lobi utama (Spawn). Berikut adalah hal wajib yang harus kamu lakukan:</p>
                     
                     <ul class="text-sm text-slate-300 space-y-3 leading-relaxed list-none">
-                        <li><i class="fas fa-check text-emerald-400 mr-2"></i><strong>Keamanan Akun:</strong> Segera amankan akunmu dengan mengetik <code class="text-emerald-300">/register [password] [konfirmasi_password]</code> jika kamu player baru, atau <code class="text-emerald-300">/login [password]</code> jika sudah terdaftar[cite: 9]. Jangan pernah membagikan password-mu kepada siapa pun[cite: 10].</li>
-                        <li><i class="fas fa-check text-emerald-400 mr-2"></i><strong>Pahami Aturan:</strong> Ketik <code class="text-emerald-300">/rules</code> di chat. Membaca aturan server sangat penting agar kamu terhindar dari sanksi penjara (jail) atau blokir akun (banned)[cite: 11].</li>
-                        <li><i class="fas fa-check text-emerald-400 mr-2"></i><strong>Modal Awal (Starter Kit):</strong> Ketik <code class="text-emerald-300">/kit wanderer</code> untuk mendapatkan kiriman senjata, makanan, dan perkakas kayu dasar sebagai modal awal bertahan hidup[cite: 13].</li>
-                        <li><i class="fas fa-check text-emerald-400 mr-2"></i><strong>Sistem Voting Harian:</strong> Ketik <code class="text-emerald-300">/vote</code> lalu klik tautan yang muncul untuk mendukung server[cite: 14]. Setiap kali berhasil melakukan vote, kamu akan dihadiahi Kunci Crate virtual secara otomatis[cite: 15].</li>
-                        <li><i class="fas fa-check text-emerald-400 mr-2"></i><strong>Gacha di Peti Gila:</strong> Bawa kunci hasil vote atau event milikmu ke deretan peti gacha di area Spawn[cite: 16]. Klik kanan pada peti sesuai jenis kuncimu untuk mengundi hadiah acak[cite: 17].</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i><strong>Keamanan Akun:</strong> Segera amankan akunmu dengan mengetik <code class="text-emerald-300">/register [password] [konfirmasi_password]</code> jika kamu player baru, atau <code class="text-emerald-300">/login [password]</code> jika sudah terdaftar. Jangan pernah membagikan password-mu kepada siapa pun.</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i><strong>Pahami Aturan:</strong> Ketik <code class="text-emerald-300">/rules</code> di chat. Membaca aturan server sangat penting agar kamu terhindar dari sanksi penjara (jail) atau blokir akun (banned).</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i><strong>Modal Awal (Starter Kit):</strong> Ketik <code class="text-emerald-300">/kit wanderer</code> untuk mendapatkan kiriman senjata, makanan, dan perkakas kayu dasar sebagai modal awal bertahan hidup.</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i><strong>Sistem Voting Harian:</strong> Ketik <code class="text-emerald-300">/vote</code> lalu klik tautan yang muncul untuk mendukung server. Setiap kali berhasil melakukan vote, kamu akan dihadiahi Kunci Crate virtual secara otomatis.</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i><strong>Gacha di Peti Gila:</strong> Bawa kunci hasil vote atau event milikmu ke deretan peti gacha di area Spawn. Klik kanan pada peti sesuai jenis kuncimu untuk mengundi hadiah acak.</li>
                     </ul>
                 </div>
 
                 <div class="glass rounded-3xl p-8 border-l-4 border-cyan-400">
                     <h3 class="font-lexend text-2xl font-bold mb-4 text-cyan-400">2. Fase Kedua: Memulai Pulau OneBlock Pribadi</h3>
-                    <p class="text-slate-300 mb-4 text-sm leading-relaxed">Setelah modal di tangan sudah siap, saatnya kamu membuat kerajaan melayang milikmu sendiri melalui sistem utama AOneBlock[cite: 18]. Di server ini, pulaumu berpusat pada satu blok ajaib yang bisa terus berevolusi[cite: 19].</p>
+                    <p class="text-slate-300 mb-4 text-sm leading-relaxed">Setelah modal di tangan sudah siap, saatnya kamu membuat kerajaan melayang milikmu sendiri melalui sistem utama AOneBlock. Di server ini, pulaumu berpusat pada satu blok ajaib yang bisa terus berevolusi.</p>
                     
                     <ul class="text-sm text-slate-300 space-y-3 leading-relaxed list-none">
-                        <li><i class="fas fa-cube text-cyan-400 mr-2"></i><strong>Membuat & Teleportasi ke Pulau:</strong> Ketik <code class="text-cyan-300">/ob</code> atau <code class="text-cyan-300">/ob home</code> di chat untuk membuat pulau pertamamu[cite: 22]. Jika kamu terjatuh ke void atau sedang berada di Spawn, cukup ketik kembali command ini untuk teleportasi instan pulang[cite: 23].</li>
-                        <li><i class="fas fa-cube text-cyan-400 mr-2"></i><strong>Mekanisme Penghancuran Blok:</strong> Berdirilah dengan posisi aman di samping blok tunggal tersebut, lalu hancurkan bloknya. Setiap kali hancur, blok tersebut akan langsung memunculkan material atau objek baru secara terus-menerus[cite: 24, 25].</li>
-                        <li><i class="fas fa-cube text-cyan-400 mr-2"></i><strong>Mengecek Progres & Siklus Fase:</strong> Blok OneBlock-mu akan berevolusi seiring banyaknya blok yang kamu hancurkan[cite: 26]. Ketik <code class="text-cyan-300">/ob phase</code> untuk memunculkan panel informasi sisa blok[cite: 27]. Siklus dimulai dari Fase Forest, Underground, hingga fase ekstrem seperti Nether dan End[cite: 28].</li>
-                        <li><i class="fas fa-cube text-cyan-400 mr-2"></i><strong>Peti Bonus (Bonus Chest):</strong> Secara acak, sebuah peti khusus akan muncul menggantikan blok utama[cite: 29]. Peti ini berisi material langka. Segera amankan isi petinya sebelum dihancurkan! [cite: 30, 31]</li>
-                        <li><i class="fas fa-cube text-cyan-400 mr-2"></i><strong>Ancaman Mobs Spawning:</strong> Ada peluang munculnya monster agresif (Creeper, Zombie, Witch) secara mendadak di atas blok tersebut[cite: 32]. Sangat disarankan membangun pagar pembatas di sekeliling blok utama[cite: 33].</li>
-                        <li><i class="fas fa-cube text-cyan-400 mr-2"></i><strong>Pusat Kendali GUI:</strong> Ketik <code class="text-cyan-300">/ob menu</code> atau <code class="text-cyan-300">/ob panel</code> untuk membuka menu antarmuka grafis (GUI) pulau[cite: 34].</li>
-                        <li><i class="fas fa-cube text-cyan-400 mr-2"></i><strong>Bermain Tim / Co-op:</strong> Kamu bisa berkolaborasi menggunakan <code class="text-cyan-300">/ob invite [nama]</code> untuk mengajak teman, dan <code class="text-cyan-300">/ob team accept</code> untuk menerima undangan[cite: 35].</li>
+                        <li><i class="fas fa-cube text-cyan-400 mr-2"></i><strong>Membuat & Teleportasi ke Pulau:</strong> Ketik <code class="text-cyan-300">/ob</code> atau <code class="text-cyan-300">/ob home</code> di chat untuk membuat pulau pertamamu. Jika kamu terjatuh ke void atau sedang berada di Spawn, cukup ketik kembali command ini untuk teleportasi instan pulang.</li>
+                        <li><i class="fas fa-cube text-cyan-400 mr-2"></i><strong>Mekanisme Penghancuran Blok:</strong> Berdirilah dengan posisi aman di samping blok tunggal tersebut, lalu hancurkan bloknya. Setiap kali hancur, blok tersebut akan langsung memunculkan material atau objek baru secara terus-menerus.</li>
+                        <li><i class="fas fa-cube text-cyan-400 mr-2"></i><strong>Mengecek Progres & Siklus Fase:</strong> Blok OneBlock-mu akan berevolusi seiring banyaknya blok yang kamu hancurkan. Ketik <code class="text-cyan-300">/ob phase</code> untuk memunculkan panel informasi sisa blok. Siklus dimulai dari Fase Forest, Underground, hingga fase ekstrem seperti Nether dan End.</li>
+                        <li><i class="fas fa-cube text-cyan-400 mr-2"></i><strong>Peti Bonus (Bonus Chest):</strong> Secara acak, sebuah peti khusus akan muncul menggantikan blok utama. Peti ini berisi material langka. Segera amankan isi petinya sebelum dihancurkan!</li>
+                        <li><i class="fas fa-cube text-cyan-400 mr-2"></i><strong>Ancaman Mobs Spawning:</strong> Ada peluang munculnya monster agresif (Creeper, Zombie, Witch) secara mendadak di atas blok tersebut. Sangat disarankan membangun pagar pembatas di sekeliling blok utama.</li>
+                        <li><i class="fas fa-cube text-cyan-400 mr-2"></i><strong>Pusat Kendali GUI:</strong> Ketik <code class="text-cyan-300">/ob menu</code> atau <code class="text-cyan-300">/ob panel</code> untuk membuka menu antarmuka grafis (GUI) pulau.</li>
+                        <li><i class="fas fa-cube text-cyan-400 mr-2"></i><strong>Bermain Tim / Co-op:</strong> Kamu bisa berkolaborasi menggunakan <code class="text-cyan-300">/ob invite [nama]</code> untuk mengajak teman, dan <code class="text-cyan-300">/ob team accept</code> untuk menerima undangan.</li>
                     </ul>
                 </div>
 
                 <div class="glass rounded-3xl p-8 border-l-4 border-yellow-400">
                     <h3 class="font-lexend text-2xl font-bold mb-4 text-yellow-400">3. Fase Ketiga: Sistem Ekonomi, Tambang, & Klaim Lahan</h3>
-                    <p class="text-slate-300 mb-4 text-sm leading-relaxed">Bosan di pulau? Kamu bisa berinteraksi dengan ekonomi global server dan mengamankan aset berhargamu[cite: 37]:</p>
+                    <p class="text-slate-300 mb-4 text-sm leading-relaxed">Bosan di pulau? Kamu bisa berinteraksi dengan ekonomi global server dan mengamankan aset berhargamu:</p>
                     
                     <ul class="text-sm text-slate-300 space-y-3 leading-relaxed list-none">
-                        <li><i class="fas fa-coins text-yellow-400 mr-2"></i><strong>Mencari Uang via Jual Beli:</strong> Buka menu toko server dengan mengetik <code class="text-yellow-300">/shop</code>[cite: 38]. Jual hasil panen, kayu, atau bijih berhargamu di sana untuk mendapatkan pundi-pundi uang game[cite: 39].</li>
-                        <li><i class="fas fa-coins text-yellow-400 mr-2"></i><strong>Pasar Lelang Player (Auction House):</strong> Punya barang langka bin berharga? Ketik <code class="text-yellow-300">/ah sell [harga]</code> sambil memegang item untuk memajang barang daganganmu[cite: 40, 41]. Ketik <code class="text-yellow-300">/ah</code> untuk melihat pasar[cite: 42].</li>
-                        <li><i class="fas fa-coins text-yellow-400 mr-2"></i><strong>Pertambangan Umum:</strong> Ketik <code class="text-yellow-300">/warp tambang</code> untuk pergi ke area tambang publik server[cite: 43]. Di sini kamu bisa menambang batu dan mineral gratis bersama player lain[cite: 44].</li>
-                        <li><i class="fas fa-coins text-yellow-400 mr-2"></i><strong>Teleportasi Liar & Klaim Proteksi:</strong> Jika ingin berpetualang mencari tantangan di dunia luar, ketik <code class="text-yellow-300">/rtp</code>[cite: 45]. Amankan daerah indahmu menggunakan alat sekop emas atau ketik <code class="text-yellow-300">/claim</code> untuk mengunci koordinat tanah tersebut menggunakan sistem GriefPrevention[cite: 46].</li>
+                        <li><i class="fas fa-coins text-yellow-400 mr-2"></i><strong>Mencari Uang via Jual Beli:</strong> Buka menu toko server dengan mengetik <code class="text-yellow-300">/shop</code>. Jual hasil panen, kayu, atau bijih berhargamu di sana untuk mendapatkan pundi-pundi uang game.</li>
+                        <li><i class="fas fa-coins text-yellow-400 mr-2"></i><strong>Pasar Lelang Player (Auction House):</strong> Punya barang langka bin berharga? Ketik <code class="text-yellow-300">/ah sell [harga]</code> sambil memegang item untuk memajang barang daganganmu. Ketik <code class="text-yellow-300">/ah</code> untuk melihat pasar.</li>
+                        <li><i class="fas fa-coins text-yellow-400 mr-2"></i><strong>Pertambangan Umum:</strong> Ketik <code class="text-yellow-300">/warp tambang</code> untuk pergi ke area tambang publik server. Di sini kamu bisa menambang batu dan mineral gratis bersama player lain.</li>
+                        <li><i class="fas fa-coins text-yellow-400 mr-2"></i><strong>Teleportasi Liar & Klaim Proteksi:</strong> Jika ingin berpetualang mencari tantangan di dunia luar, ketik <code class="text-yellow-300">/rtp</code>. Amankan daerah indahmu menggunakan alat sekop emas atau ketik <code class="text-yellow-300">/claim</code> untuk mengunci koordinat tanah tersebut menggunakan sistem GriefPrevention.</li>
                     </ul>
                 </div>
 
                 <div class="text-center mt-12 mb-8">
-                    <h3 class="font-lexend text-3xl font-black text-white bg-white/10 inline-block px-8 py-3 rounded-full border border-white/20">BAB II: HIRARKI RANK MEMBER DAN COMMAND HAK AKSES</h3>
-                    <p class="text-slate-400 text-sm mt-4 max-w-2xl mx-auto">Server ini menerapkan sistem hirarki akumulatif (inheritance). Pangkat premium donatur yang berada di tingkat atas secara otomatis mewarisi seluruh kemampuan, benefit, dan hak akses command dari pangkat-pangkat di bawahnya[cite: 48].</p>
+                    <h3 class="font-lexend text-3xl font-black text-white bg-white/10 inline-block px-8 py-3 rounded-full border border-white/20">BAB II: HIRARKI RANK MEMBER DAN COMMAND</h3>
+                    <p class="text-slate-400 text-sm mt-4 max-w-2xl mx-auto">Server ini menerapkan sistem hirarki akumulatif (inheritance). Pangkat premium donatur yang berada di tingkat atas secara otomatis mewarisi seluruh kemampuan, benefit, dan hak akses command dari pangkat-pangkat di bawahnya.</p>
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-6">
                     <div class="glass rounded-3xl p-6 border-t-4 border-slate-400">
                         <h4 class="font-lexend text-xl font-bold mb-2 text-slate-200">1. Rank Wanderer</h4>
-                        <p class="text-xs text-slate-400 mb-4">Pangkat awal reguler yang otomatis didapatkan oleh seluruh pendatang baru tanpa dipungut biaya[cite: 50].</p>
+                        <p class="text-xs text-slate-400 mb-4">Pangkat awal reguler yang otomatis didapatkan oleh seluruh pendatang baru tanpa dipungut biaya.</p>
                         <ul class="text-xs text-slate-300 space-y-2">
-                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-emerald-300">/spawn</code> Teleportasi instan kembali ke lobi utama server[cite: 51].</li>
-                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-emerald-300">/ob home</code> Teleportasi langsung ke titik tengah pulau OneBlock pribadi[cite: 51].</li>
-                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-emerald-300">/rtp</code> Teleportasi acak ke koordinat dunia luar yang aman secara instan[cite: 51].</li>
-                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-emerald-300">/sethome [nama]</code> Menandai lokasi berdirimu saat ini sebagai titik koordinat rumah pribadi[cite: 51].</li>
-                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-emerald-300">/home [nama]</code> Teleportasi kembali menuju ke lokasi sethome yang pernah ditandai[cite: 51].</li>
-                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-emerald-300">/tpa [nama_player]</code> Mengirimkan permohonan kunjungan izin teleportasi ke posisi player lain[cite: 51].</li>
-                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-emerald-300">/balance</code> Memeriksa jumlah total isi saldo tabungan dompet keuanganmu saat ini[cite: 51].</li>
-                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-emerald-300">/baltop</code> Melihat bagan lembar peringkat 10 besar player terkaya di dalam server[cite: 52].</li>
-                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-emerald-300">/pay [nama] [jml]</code> Mentransfer nominal uang tunai secara langsung antar sesama player online[cite: 52].</li>
-                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-emerald-300">/claim</code> Mengunci luas kapling proteksi tanah menggunakan plugin Grief Prevention[cite: 52].</li>
+                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-emerald-300">/spawn</code> Teleportasi instan kembali ke lobi utama server.</li>
+                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-emerald-300">/ob home</code> Teleportasi langsung ke titik tengah pulau OneBlock pribadi.</li>
+                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-emerald-300">/rtp</code> Teleportasi acak ke koordinat dunia luar yang aman secara instan.</li>
+                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-emerald-300">/sethome [nama]</code> Menandai lokasi berdirimu saat ini sebagai titik koordinat rumah pribadi.</li>
+                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-emerald-300">/home [nama]</code> Teleportasi kembali menuju ke lokasi sethome yang pernah ditandai.</li>
+                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-emerald-300">/tpa [nama]</code> Mengirimkan permohonan kunjungan izin teleportasi ke posisi player lain.</li>
+                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-emerald-300">/balance</code> Memeriksa jumlah total isi saldo tabungan dompet keuanganmu saat ini.</li>
+                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-emerald-300">/baltop</code> Melihat bagan lembar peringkat 10 besar player terkaya di dalam server.</li>
+                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-emerald-300">/pay [nama] [jml]</code> Mentransfer nominal uang tunai secara langsung antar sesama player online.</li>
+                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-emerald-300">/claim</code> Mengunci luas kapling proteksi tanah menggunakan plugin Grief Prevention.</li>
                         </ul>
                     </div>
 
                     <div class="glass rounded-3xl p-6 border-t-4 border-yellow-400">
                         <h4 class="font-lexend text-xl font-bold mb-2 text-yellow-400">2. Rank Gladiator</h4>
-                        <p class="text-xs text-slate-400 mb-4">Mewarisi hak akses Wanderer, ditambah pembukaan akses utilitas portabel dan animasi fisik gsit interaktif[cite: 54, 55].</p>
+                        <p class="text-xs text-slate-400 mb-4">Mewarisi hak akses Wanderer, ditambah pembukaan akses utilitas portabel dan animasi fisik gsit interaktif.</p>
                         <ul class="text-xs text-slate-300 space-y-2">
-                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-yellow-300">/anvil</code> Membuka menu paron ganti nama item portabel tanpa memerlukan blok fisik Anvil[cite: 56].</li>
-                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-yellow-300">/workbench</code> Membuka meja pembuatan barang (Crafting Table) virtual di mana saja[cite: 56].</li>
-                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-yellow-300">/feed</code> Seketika mengisi penuh bar indikator tingkat kelaparan karaktermu (cooldown)[cite: 56].</li>
-                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-yellow-300">/hat</code> Menjadikan jenis material blok yang sedang kamu genggam menjadi topi di kepala[cite: 56].</li>
-                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-yellow-300">/sit</code> Memicu animasi gerakan duduk bersila santai di atas lantai atau tangga[cite: 57].</li>
-                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-yellow-300">/lay</code> Memicu animasi gerakan rebahan telentang rileks di atas lantai bangunan[cite: 57].</li>
+                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-yellow-300">/anvil</code> Membuka menu paron ganti nama item portabel tanpa memerlukan blok fisik Anvil.</li>
+                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-yellow-300">/workbench</code> Membuka meja pembuatan barang (Crafting Table) virtual di mana saja.</li>
+                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-yellow-300">/feed</code> Seketika mengisi penuh bar indikator tingkat kelaparan karaktermu (cooldown).</li>
+                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-yellow-300">/hat</code> Menjadikan jenis material blok yang sedang kamu genggam menjadi topi di kepala.</li>
+                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-yellow-300">/sit</code> Memicu animasi gerakan duduk bersila santai di atas lantai atau tangga.</li>
+                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-yellow-300">/lay</code> Memicu animasi gerakan rebahan telentang rileks di atas lantai bangunan.</li>
                         </ul>
                     </div>
 
                     <div class="glass rounded-3xl p-6 border-t-4 border-cyan-400">
                         <h4 class="font-lexend text-xl font-bold mb-2 text-cyan-400">3. Rank Conqueror</h4>
-                        <p class="text-xs text-slate-400 mb-4">Mewarisi hak akses Gladiator, ditambah hak akses penyimpanan awan, pemulihan kesehatan instan, dan penyamaran nama[cite: 59].</p>
+                        <p class="text-xs text-slate-400 mb-4">Mewarisi hak akses Gladiator, ditambah hak akses penyimpanan awan, pemulihan kesehatan instan, dan penyamaran nama.</p>
                         <ul class="text-xs text-slate-300 space-y-2">
-                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-cyan-300">/enderchest</code> Membuka brankas tas penyimpanan rahasia kotak dimensi (Enderchest) secara portabel[cite: 60].</li>
-                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-cyan-300">/heal</code> Memulihkan total sisa darah karakter (HP) hingga penuh secara seketika (cooldown)[cite: 60].</li>
-                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-cyan-300">/repair</code> Memperbaiki nilai durabilitas perkakas armor atau senjata yang sudah hampir rusak patah[cite: 60].</li>
-                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-cyan-300">/nick [nama]</code> Mengubah nama panggilan samaran agar tampil unik dan estetik di obrolan chat global[cite: 60].</li>
-                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-cyan-300">/crawl</code> Animasi merangkak tiarap di lantai untuk nembus lorong sempit berukuran 1 blok[cite: 60].</li>
+                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-cyan-300">/enderchest</code> Membuka brankas tas penyimpanan rahasia kotak dimensi (Enderchest) portabel.</li>
+                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-cyan-300">/heal</code> Memulihkan total sisa darah karakter (HP) hingga penuh secara seketika (cooldown).</li>
+                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-cyan-300">/repair</code> Memperbaiki nilai durabilitas perkakas armor atau senjata yang rusak patah.</li>
+                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-cyan-300">/nick [nama]</code> Mengubah nama panggilan samaran agar tampil unik di obrolan chat.</li>
+                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-cyan-300">/crawl</code> Animasi merangkak tiarap di lantai untuk nembus lorong sempit berukuran 1 blok.</li>
                         </ul>
                     </div>
 
                     <div class="glass rounded-3xl p-6 border-t-4 border-red-500">
                         <h4 class="font-lexend text-xl font-bold mb-2 text-red-500">4. Rank Overlord</h4>
-                        <p class="text-xs text-slate-400 mb-4">Mewarisi hak akses Conqueror. Menikmati keuntungan absolut berupa terbang bebas, warna Hex, dan kosmetik[cite: 62].</p>
+                        <p class="text-xs text-slate-400 mb-4">Mewarisi hak akses Conqueror. Menikmati keuntungan absolut berupa terbang bebas, warna Hex, dan kosmetik.</p>
                         <ul class="text-xs text-slate-300 space-y-2">
-                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-red-300">/fly</code> Mengaktifkan/menonaktifkan mode terbang bebas anti-gravitasi di langit server[cite: 63].</li>
-                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-red-300">/nick (Warna Hex)</code> Mengizinkan penggunaan format gradasi warna-warni Hex modern pada teks nama chat[cite: 63].</li>
-                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-red-300">/gmenu main</code> Membuka panel utama katalog barang kosmetik hiburan premium (Pets, Suits, dll)[cite: 63].</li>
-                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-red-300">/kit overlord</code> Mengklaim jatah paket persenjataan legendaris berkala kasta tertinggi server[cite: 63].</li>
+                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-red-300">/fly</code> Mengaktifkan/menonaktifkan mode terbang bebas anti-gravitasi di langit server.</li>
+                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-red-300">/nick (Hex)</code> Mengizinkan penggunaan format gradasi warna-warni Hex modern pada nama chat.</li>
+                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-red-300">/gmenu main</code> Membuka panel utama katalog barang kosmetik hiburan premium (Pets, Suits, dll).</li>
+                            <li><code class="bg-slate-800 px-1.5 py-0.5 rounded text-red-300">/kit overlord</code> Mengklaim jatah paket persenjataan legendaris berkala kasta tertinggi server.</li>
                         </ul>
                     </div>
                 </div>
@@ -696,6 +724,6 @@
         </div>
     </div>
 
-    <script src="script.js?v=6"></script>
+    <script src="script.js?v=7"></script>
 </body>
 </html>
