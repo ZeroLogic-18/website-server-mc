@@ -1,11 +1,11 @@
-/* style.css - Cafaalia SMP (Official Minecraft Theme + Bright Background) */
+/* style.css - Cafaalia SMP (Official Minecraft Theme + Transparent Glassmorphism) */
 
 body {
     font-family: 'Inter', sans-serif;
     background-color: #121212; 
     
-    /* Background main.jpg dengan Overlay Gelap 30% (Cerah 70%) */
-    background-image: linear-gradient(rgba(18, 18, 18, 0.3), rgba(18, 18, 18, 0.4)), url('main.jpg');
+    /* Background main.jpg dengan Overlay Gelap 40% (Cerah 60%) */
+    background-image: linear-gradient(rgba(18, 18, 18, 0.4), rgba(18, 18, 18, 0.5)), url('main.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -22,16 +22,18 @@ body {
     font-family: 'Lexend', sans-serif; 
 }
 
-/* Minecraft Style Cards (Solid, Boxy, Dark) */
+/* Minecraft Style Cards - TRANSPARAN (Glassmorphism) */
 .mc-card {
-    background-color: #1a1a1a;
-    border: 2px solid #333333;
+    background-color: rgba(26, 26, 26, 0.65); /* Transparan 65% */
+    backdrop-filter: blur(12px); /* Efek blur kaca dari belakang */
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Border super tipis elegan */
     transition: all 0.2s ease-in-out;
 }
 
 .mc-card:hover {
     border-color: #4CAF50; /* Green highlight on hover */
-    box-shadow: 0 8px 0 rgba(0, 0, 0, 0.5); /* Bayangan lebih pekat */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); 
     transform: translateY(-4px);
 }
 
@@ -46,6 +48,7 @@ body {
     justify-content: center;
     border-bottom: 4px solid #1E5114; /* 3D bottom edge */
     transition: all 0.1s;
+    border-radius: 4px;
 }
 
 .mc-btn:hover {
@@ -60,7 +63,7 @@ body {
 /* Scrollbar Boxy */
 ::-webkit-scrollbar { width: 10px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: #333333; border: 1px solid #121212; }
+::-webkit-scrollbar-thumb { background: #333333; border: 1px solid #121212; border-radius: 5px; }
 ::-webkit-scrollbar-thumb:hover { background: #4CAF50; }
 
 /* Toast */
@@ -68,12 +71,12 @@ body {
 .toast-visible { opacity: 1; transform: translate(-50%, 0) scale(1); }
 
 .animate-tab {
-    animation: fadeIn 0.3s ease-out forwards;
+    animation: fadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .nav-scroll::-webkit-scrollbar { display: none; }
