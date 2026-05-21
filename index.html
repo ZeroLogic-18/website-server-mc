@@ -12,7 +12,7 @@
 </head>
 <body class="selection:bg-[#4CAF50] selection:text-white">
 
-    <nav class="fixed top-0 w-full z-50 bg-[#111111] border-b border-[#222222] shadow-md">
+    <nav class="fixed top-0 w-full z-50 bg-[#111111]/80 backdrop-blur-lg border-b border-[#222222] shadow-md">
         <div class="max-w-[1400px] mx-auto px-4 md:px-8 flex justify-between items-center h-[70px]">
             
             <div class="flex items-center space-x-3 cursor-pointer" onclick="switchTab('home')">
@@ -29,20 +29,20 @@
                 <a href="#community" onclick="switchTab('community', event)" class="nav-link hover:text-white transition-colors">Community</a>
             </div>
 
-            <div class="flex items-center space-x-4">
-                <div class="hidden lg:flex items-center text-xs font-bold text-slate-500 mr-2">
+            <div class="flex items-center space-x-5">
+                <div class="hidden lg:flex items-center text-xs font-bold text-slate-400 mr-2">
                     <span id="statusDotNavbar" class="w-2.5 h-2.5 rounded-full bg-slate-600 mr-2"></span>
                     <span id="statusTextNavbar">Status Unknown</span>
                 </div>
-                <a href="https://discord.gg/DRFDkKRkxR" target="_blank" class="text-white hover:text-[#5865F2] transition-colors"><i class="fab fa-discord text-xl"></i></a>
-                <button onclick="copyContent('ipJava', 'IP Server')" class="mc-btn px-6 py-2 ml-4 text-[13px]">
-                    COPY IP
-                </button>
+                <div class="flex items-center space-x-4 border-l border-[#333333] pl-5">
+                    <a href="https://discord.gg/DRFDkKRkxR" target="_blank" class="text-white hover:text-[#5865F2] transition-transform hover:scale-110"><i class="fab fa-discord text-2xl"></i></a>
+                    <a href="https://chat.whatsapp.com/DVxDPtshA4jDTKAxglTQMt" target="_blank" class="text-white hover:text-[#25D366] transition-transform hover:scale-110"><i class="fab fa-whatsapp text-2xl"></i></a>
+                </div>
             </div>
         </div>
     </nav>
 
-    <div class="md:hidden fixed bottom-0 w-full bg-[#111111] border-t border-[#222222] z-50 flex justify-around p-3 text-xs font-bold uppercase text-slate-400">
+    <div class="md:hidden fixed bottom-0 w-full bg-[#111111]/90 backdrop-blur-lg border-t border-[#222222] z-50 flex justify-around p-3 text-xs font-bold uppercase text-slate-400">
         <a href="#home" onclick="switchTab('home', event)" class="nav-link flex flex-col items-center gap-1"><i class="fas fa-home text-lg"></i></a>
         <a href="#ranks" onclick="switchTab('ranks', event)" class="nav-link flex flex-col items-center gap-1"><i class="fas fa-crown text-lg"></i></a>
         <a href="#currency" onclick="switchTab('currency', event)" class="nav-link flex flex-col items-center gap-1"><i class="fas fa-shopping-cart text-lg"></i></a>
@@ -58,7 +58,7 @@
                 
                 <div class="relative z-10 w-full max-w-[1400px] px-4 md:px-8 flex flex-col lg:flex-row items-center justify-between gap-10 mt-10 md:mt-0">
                     
-                    <div class="bg-[#1a1a1a] p-8 md:p-12 w-full lg:w-[650px] border-t-[12px] border-r-[12px] border-[#121212] shadow-2xl">
+                    <div class="bg-[#1a1a1a]/65 backdrop-blur-md p-8 md:p-12 w-full lg:w-[650px] border-t-[12px] border-r-[12px] border-white/5 shadow-2xl">
                         <h1 class="font-lexend text-4xl md:text-5xl font-black text-white uppercase tracking-tight leading-none mb-2">
                             Mainkan <br><span class="text-[#4CAF50]">Cafaalia SMP!</span>
                         </h1>
@@ -71,14 +71,14 @@
                         <p class="text-slate-300 text-sm md:text-base font-semibold mb-10 leading-relaxed max-w-xl">
                             Kami kembali dengan fitur OneBlock & Survival yang lebih seru. Cross-play Java & Bedrock, ekonomi global, dan sistem crate yang mendebarkan!
                         </p>
-                        <button onclick="document.getElementById('server-ips').scrollIntoView({behavior: 'smooth'})" class="mc-btn px-10 py-5 w-full md:w-auto text-base">
+                        <button onclick="document.getElementById('server-ips').scrollIntoView({behavior: 'smooth'})" class="mc-btn px-10 py-5 w-full md:w-auto text-base shadow-xl">
                             LIHAT IP SERVER <i class="fas fa-arrow-right ml-3 text-xs"></i>
                         </button>
                     </div>
 
                     <div class="hidden lg:flex flex-col gap-5 w-[350px]">
                         
-                        <div class="bg-[#111111]/80 backdrop-blur-md border-l-8 border-[#4CAF50] p-5 shadow-2xl transform hover:scale-105 transition-transform duration-300">
+                        <div class="bg-[#111111]/65 backdrop-blur-md border-l-8 border-[#4CAF50] p-5 shadow-2xl transform hover:scale-105 transition-transform duration-300">
                             <div class="flex items-center gap-4">
                                 <div class="bg-[#4CAF50]/20 p-3 rounded">
                                     <i class="fas fa-globe text-2xl text-[#4CAF50]"></i>
@@ -90,7 +90,7 @@
                             </div>
                         </div>
 
-                        <div class="bg-[#111111]/80 backdrop-blur-md border-l-8 border-cyan-500 p-5 shadow-2xl transform hover:scale-105 transition-transform duration-300">
+                        <div class="bg-[#111111]/65 backdrop-blur-md border-l-8 border-cyan-500 p-5 shadow-2xl transform hover:scale-105 transition-transform duration-300">
                             <div class="flex items-center gap-4">
                                 <div class="bg-cyan-500/20 p-3 rounded">
                                     <i class="fas fa-cubes text-2xl text-cyan-400"></i>
@@ -102,7 +102,7 @@
                             </div>
                         </div>
 
-                        <div class="bg-[#111111]/80 backdrop-blur-md border-l-8 border-yellow-500 p-5 shadow-2xl transform hover:scale-105 transition-transform duration-300">
+                        <div class="bg-[#111111]/65 backdrop-blur-md border-l-8 border-yellow-500 p-5 shadow-2xl transform hover:scale-105 transition-transform duration-300">
                             <div class="flex items-center gap-4">
                                 <div class="bg-yellow-500/20 p-3 rounded">
                                     <i class="fas fa-gem text-2xl text-yellow-400"></i>
@@ -120,27 +120,27 @@
 
             <div id="server-ips" class="max-w-[1400px] mx-auto px-6 mt-16">
                 <div class="text-center mb-10">
-                    <h2 class="font-lexend text-3xl font-black uppercase text-white">Gabung Sekarang</h2>
-                    <p class="text-slate-400 font-bold mt-2">Dukungan Cross-Play Java & Bedrock</p>
+                    <h2 class="font-lexend text-3xl font-black uppercase text-white shadow-sm">Gabung Sekarang</h2>
+                    <p class="text-slate-300 font-bold mt-2">Dukungan Cross-Play Java & Bedrock</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
                     <div class="mc-card p-6 flex flex-col justify-between">
-                        <div class="flex items-center space-x-3 mb-6 border-b border-[#333333] pb-3">
+                        <div class="flex items-center space-x-3 mb-6 border-b border-white/10 pb-3">
                             <i class="fab fa-java text-4xl text-[#4CAF50]"></i>
                             <h3 class="font-lexend font-black text-2xl uppercase mt-1">Java Edition</h3>
                         </div>
                         <div class="space-y-3">
-                            <div class="bg-[#121212] p-4 border border-[#333333] flex justify-between items-center">
+                            <div class="bg-[#121212]/60 backdrop-blur-sm p-4 border border-white/10 flex justify-between items-center">
                                 <div>
-                                    <p class="text-[10px] font-bold text-slate-500 uppercase">Server IP</p>
+                                    <p class="text-[10px] font-bold text-slate-400 uppercase">Server IP</p>
                                     <p id="ipJava" class="font-mono text-white font-bold text-lg">cafaaliasmp.hopto.org</p>
                                 </div>
                                 <button onclick="copyContent('ipJava', 'IP Java')" class="text-[#4CAF50] hover:text-white transition-colors"><i class="far fa-copy text-xl"></i></button>
                             </div>
-                            <div class="bg-[#121212] p-4 border border-[#333333] flex justify-between items-center">
+                            <div class="bg-[#121212]/60 backdrop-blur-sm p-4 border border-white/10 flex justify-between items-center">
                                 <div>
-                                    <p class="text-[10px] font-bold text-slate-500 uppercase">Port</p>
+                                    <p class="text-[10px] font-bold text-slate-400 uppercase">Port</p>
                                     <p id="portJava" class="font-mono text-white font-bold text-lg">25571</p>
                                 </div>
                                 <button onclick="copyContent('portJava', 'Port Java')" class="text-[#4CAF50] hover:text-white transition-colors"><i class="far fa-copy text-xl"></i></button>
@@ -149,21 +149,21 @@
                     </div>
 
                     <div class="mc-card p-6 flex flex-col justify-between">
-                        <div class="flex items-center space-x-3 mb-6 border-b border-[#333333] pb-3">
+                        <div class="flex items-center space-x-3 mb-6 border-b border-white/10 pb-3">
                             <i class="fas fa-mobile-screen-button text-4xl text-blue-400"></i>
                             <h3 class="font-lexend font-black text-2xl uppercase mt-1">Bedrock Edition</h3>
                         </div>
                         <div class="space-y-3">
-                            <div class="bg-[#121212] p-4 border border-[#333333] flex justify-between items-center">
+                            <div class="bg-[#121212]/60 backdrop-blur-sm p-4 border border-white/10 flex justify-between items-center">
                                 <div>
-                                    <p class="text-[10px] font-bold text-slate-500 uppercase">Server IP</p>
+                                    <p class="text-[10px] font-bold text-slate-400 uppercase">Server IP</p>
                                     <p id="ipBedrock" class="font-mono text-white font-bold text-lg">cafaaliasmp.hopto.org</p>
                                 </div>
                                 <button onclick="copyContent('ipBedrock', 'IP Bedrock')" class="text-blue-400 hover:text-white transition-colors"><i class="far fa-copy text-xl"></i></button>
                             </div>
-                            <div class="bg-[#121212] p-4 border border-[#333333] flex justify-between items-center">
+                            <div class="bg-[#121212]/60 backdrop-blur-sm p-4 border border-white/10 flex justify-between items-center">
                                 <div>
-                                    <p class="text-[10px] font-bold text-slate-500 uppercase">Port</p>
+                                    <p class="text-[10px] font-bold text-slate-400 uppercase">Port</p>
                                     <p id="portBedrock" class="font-mono text-white font-bold text-lg">25711</p>
                                 </div>
                                 <button onclick="copyContent('portBedrock', 'Port Bedrock')" class="text-blue-400 hover:text-white transition-colors"><i class="far fa-copy text-xl"></i></button>
@@ -176,23 +176,23 @@
 
         <section id="ranks" class="tab-content hidden w-full px-6 max-w-7xl mx-auto pt-10">
             <div class="text-center mb-12">
-                <h2 class="font-lexend text-4xl md:text-5xl font-black uppercase text-white mb-4">Server Ranks</h2>
-                <p class="text-slate-400 font-bold">Keuntungan dan fitur eksklusif di setiap tingkatan kasta Cafaalia SMP.</p>
+                <h2 class="font-lexend text-4xl md:text-5xl font-black uppercase text-white mb-4 shadow-sm">Server Ranks</h2>
+                <p class="text-slate-300 font-bold">Keuntungan dan fitur eksklusif di setiap tingkatan kasta Cafaalia SMP.</p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div class="mc-card p-8 border-l-8 border-l-slate-400">
                     <div class="flex justify-between items-start mb-6">
                         <div>
-                            <span class="bg-[#333333] text-white px-2 py-1 text-[10px] font-bold uppercase tracking-wider mb-2 inline-block">Rank Dasar • Gratis</span>
+                            <span class="bg-[#333333]/80 backdrop-blur-sm text-white px-2 py-1 text-[10px] font-bold uppercase tracking-wider mb-2 inline-block">Rank Dasar • Gratis</span>
                             <h3 class="font-lexend text-3xl font-black text-slate-200 uppercase mt-1">Wanderer</h3>
                         </div>
                         <i class="fas fa-hiking text-4xl text-slate-400"></i>
                     </div>
-                    <div class="bg-[#121212] p-4 border border-[#333333] mb-4 font-mono text-sm">
+                    <div class="bg-[#121212]/60 backdrop-blur-sm p-4 border border-white/10 mb-4 font-mono text-sm">
                         <span class="text-[#4CAF50]">Home:</span> Maksimal 1 lokasi | <span class="text-[#4CAF50]">Kit:</span> /kit wanderer
                     </div>
-                    <ul class="text-sm font-semibold text-slate-300 space-y-3 list-none">
+                    <ul class="text-sm font-semibold text-slate-200 space-y-3 list-none">
                         <li><i class="fas fa-check-square text-[#4CAF50] mr-2"></i> Akses dasar Survival & OneBlock.</li>
                         <li><i class="fas fa-check-square text-[#4CAF50] mr-2"></i> Akses Shop & RTP.</li>
                         <li><i class="fas fa-check-square text-[#4CAF50] mr-2"></i> Akses Klaim Tanah.</li>
@@ -207,16 +207,16 @@
                         </div>
                         <i class="fas fa-shield-halved text-4xl text-yellow-400"></i>
                     </div>
-                    <div class="bg-[#121212] p-4 border border-[#333333] mb-4 font-mono text-sm">
+                    <div class="bg-[#121212]/60 backdrop-blur-sm p-4 border border-white/10 mb-4 font-mono text-sm">
                         <span class="text-yellow-400">Home:</span> Maksimal 3 lokasi | <span class="text-yellow-400">Kit:</span> /kit gladiator
                     </div>
-                    <ul class="text-sm font-semibold text-slate-300 space-y-3 list-none">
-                        <li><code class="bg-[#333333] text-yellow-300 px-1">/feed</code> Kenyang instan.</li>
-                        <li><code class="bg-[#333333] text-yellow-300 px-1">/workbench</code> Meja rakit portabel.</li>
-                        <li><code class="bg-[#333333] text-yellow-300 px-1">/anvil</code> Anvil virtual.</li>
-                        <li><code class="bg-[#333333] text-yellow-300 px-1">/hat</code> Pakai blok jadi topi.</li>
-                        <li><code class="bg-[#333333] text-yellow-300 px-1">/lay</code> Rebahan telentang rileks di lantai.</li>
-                        <li><code class="bg-[#333333] text-yellow-300 px-1">/sit</code> Duduk bersila santai.</li>
+                    <ul class="text-sm font-semibold text-slate-200 space-y-3 list-none">
+                        <li><code class="bg-[#333333]/80 backdrop-blur-sm text-yellow-300 px-1">/feed</code> Kenyang instan.</li>
+                        <li><code class="bg-[#333333]/80 backdrop-blur-sm text-yellow-300 px-1">/workbench</code> Meja rakit portabel.</li>
+                        <li><code class="bg-[#333333]/80 backdrop-blur-sm text-yellow-300 px-1">/anvil</code> Anvil virtual.</li>
+                        <li><code class="bg-[#333333]/80 backdrop-blur-sm text-yellow-300 px-1">/hat</code> Pakai blok jadi topi.</li>
+                        <li><code class="bg-[#333333]/80 backdrop-blur-sm text-yellow-300 px-1">/lay</code> Rebahan telentang rileks di lantai.</li>
+                        <li><code class="bg-[#333333]/80 backdrop-blur-sm text-yellow-300 px-1">/sit</code> Duduk bersila santai.</li>
                     </ul>
                 </div>
 
@@ -228,21 +228,21 @@
                         </div>
                         <i class="fas fa-chess-knight text-4xl text-cyan-400"></i>
                     </div>
-                    <div class="bg-[#121212] p-4 border border-[#333333] mb-4 font-mono text-sm">
+                    <div class="bg-[#121212]/60 backdrop-blur-sm p-4 border border-white/10 mb-4 font-mono text-sm">
                         <span class="text-cyan-400">Home:</span> Maksimal 5 lokasi | <span class="text-cyan-400">Kit:</span> /kit conqueror
                     </div>
-                    <ul class="text-sm font-semibold text-slate-300 space-y-3 list-none">
-                        <li><code class="bg-[#333333] text-cyan-300 px-1">/heal</code> Pulihkan darah.</li>
-                        <li><code class="bg-[#333333] text-cyan-300 px-1">/repair</code> Perbaiki alat rusak GRATIS!</li>
-                        <li><code class="bg-[#333333] text-cyan-300 px-1">/tp</code> Instant TP ke pemain.</li>
-                        <li><code class="bg-[#333333] text-cyan-300 px-1">/echest</code> Brankas rahasia portabel.</li>
-                        <li><code class="bg-[#333333] text-cyan-300 px-1">/nick [nama]</code> Mengubah nama samaran chat.</li>
-                        <li><code class="bg-[#333333] text-cyan-300 px-1">/crawl</code> Animasi merangkak tiarap.</li>
+                    <ul class="text-sm font-semibold text-slate-200 space-y-3 list-none">
+                        <li><code class="bg-[#333333]/80 backdrop-blur-sm text-cyan-300 px-1">/heal</code> Pulihkan darah.</li>
+                        <li><code class="bg-[#333333]/80 backdrop-blur-sm text-cyan-300 px-1">/repair</code> Perbaiki alat rusak GRATIS!</li>
+                        <li><code class="bg-[#333333]/80 backdrop-blur-sm text-cyan-300 px-1">/tp</code> Instant TP ke pemain.</li>
+                        <li><code class="bg-[#333333]/80 backdrop-blur-sm text-cyan-300 px-1">/echest</code> Brankas rahasia portabel.</li>
+                        <li><code class="bg-[#333333]/80 backdrop-blur-sm text-cyan-300 px-1">/nick [nama]</code> Mengubah nama samaran chat.</li>
+                        <li><code class="bg-[#333333]/80 backdrop-blur-sm text-cyan-300 px-1">/crawl</code> Animasi merangkak tiarap.</li>
                     </ul>
                 </div>
 
                 <div class="mc-card p-8 border-l-8 border-l-red-500 relative overflow-hidden">
-                    <div class="absolute inset-0 bg-red-900/5 -z-10 animate-pulse"></div>
+                    <div class="absolute inset-0 bg-red-900/10 -z-10 animate-pulse"></div>
                     <div class="flex justify-between items-start mb-6 relative z-10">
                         <div>
                             <span class="bg-red-500/20 text-red-400 border border-red-500/30 px-2 py-1 text-[10px] font-bold uppercase tracking-wider mb-2 inline-block">KASTA TERTINGGI • Rp 45.000</span>
@@ -250,13 +250,13 @@
                         </div>
                         <i class="fas fa-dragon text-4xl text-red-500"></i>
                     </div>
-                    <div class="bg-[#121212] p-4 border border-red-500/30 mb-4 font-mono text-sm relative z-10">
+                    <div class="bg-[#121212]/60 backdrop-blur-sm p-4 border border-red-500/30 mb-4 font-mono text-sm relative z-10">
                         <span class="text-red-400">Home:</span> Maksimal 10 lokasi | <span class="text-red-400">Kit:</span> /kit overlord
                     </div>
-                    <ul class="text-sm font-semibold text-slate-300 space-y-3 list-none relative z-10">
-                        <li><code class="bg-[#333333] text-red-300 px-1">/fly</code> Terbang bebas anti-gravitasi sesuka hati.</li>
-                        <li><code class="bg-[#333333] text-red-300 px-1">/nick (Warna Hex)</code> Teks nama chat berwarna-warni modern.</li>
-                        <li><code class="bg-[#333333] text-red-300 px-1">/gmenu main</code> Akses penuh katalog barang kosmetik hiburan premium.</li>
+                    <ul class="text-sm font-semibold text-slate-200 space-y-3 list-none relative z-10">
+                        <li><code class="bg-[#333333]/80 backdrop-blur-sm text-red-300 px-1">/fly</code> Terbang bebas anti-gravitasi sesuka hati.</li>
+                        <li><code class="bg-[#333333]/80 backdrop-blur-sm text-red-300 px-1">/nick (Warna Hex)</code> Teks nama chat berwarna-warni modern.</li>
+                        <li><code class="bg-[#333333]/80 backdrop-blur-sm text-red-300 px-1">/gmenu main</code> Akses penuh katalog barang kosmetik hiburan premium.</li>
                         <li><i class="fas fa-check-square text-[#4CAF50] mr-2"></i> Bebas Cooldown Gadget!</li>
                     </ul>
                 </div>
@@ -267,10 +267,10 @@
                     <i class="fas fa-box-open text-3xl text-pink-500"></i>
                     <div>
                         <h3 class="font-lexend text-2xl font-black text-pink-400 uppercase mt-1">Keep Inventory</h3>
-                        <p class="text-sm text-slate-400 font-bold mt-1">Syarat: Wajib memiliki minimal Rank Gladiator!</p>
+                        <p class="text-sm text-slate-300 font-bold mt-1">Syarat: Wajib memiliki minimal Rank Gladiator!</p>
                     </div>
                 </div>
-                <button onclick="switchTab('currency')" class="mc-btn px-6 py-3">
+                <button onclick="switchTab('currency')" class="mc-btn px-6 py-3 shadow-lg">
                     Rp 10.000 <i class="fas fa-shopping-cart ml-2"></i>
                 </button>
             </div>
@@ -278,27 +278,27 @@
 
         <section id="currency" class="tab-content hidden w-full px-6 max-w-6xl mx-auto pt-10">
             <div class="text-center mb-12">
-                <h2 class="font-lexend text-4xl md:text-5xl font-black uppercase text-white mb-4">Official Store</h2>
-                <p class="text-slate-400 font-bold">Top-up uang In-Game. Cepat, Aman, dan Super Murah.</p>
+                <h2 class="font-lexend text-4xl md:text-5xl font-black uppercase text-white mb-4 shadow-sm">Official Store</h2>
+                <p class="text-slate-300 font-bold">Top-up uang In-Game. Cepat, Aman, dan Super Murah.</p>
             </div>
 
-            <div class="mc-card bg-[#212121] p-8 border-l-8 border-l-[#4CAF50] mb-12 flex flex-col md:flex-row justify-between items-center relative overflow-hidden">
+            <div class="mc-card p-8 border-l-8 border-l-[#4CAF50] mb-12 flex flex-col md:flex-row justify-between items-center relative overflow-hidden">
                 <i class="fas fa-shopping-basket absolute -right-5 top-5 text-9xl text-[#4CAF50]/10 transform rotate-12"></i>
                 <div class="mb-6 md:mb-0 relative z-10">
                     <h3 class="font-lexend text-2xl font-black uppercase text-white mb-2">Cara Pembelian 🛒</h3>
-                    <p class="text-sm font-semibold text-slate-300 mb-2 leading-relaxed">Pilih paket di bawah, lalu kirim pesan ke Admin via WhatsApp:</p>
-                    <code class="bg-[#121212] p-3 border border-[#333333] text-[#4CAF50] block w-max mt-2 text-base font-bold">"Halo Min, beli [Nama Paket/Peti] untuk akun [Nama Akun]"</code>
-                    <div class="mt-4 text-xs font-bold text-slate-400 flex gap-2">
-                        <span class="bg-[#121212] border border-[#333333] px-2 py-1">DANA</span>
-                        <span class="bg-[#121212] border border-[#333333] px-2 py-1">GOPAY</span>
-                        <span class="bg-[#121212] border border-[#333333] px-2 py-1">QRIS</span>
+                    <p class="text-sm font-semibold text-slate-200 mb-2 leading-relaxed">Pilih paket di bawah, lalu kirim pesan ke Admin via WhatsApp:</p>
+                    <code class="bg-[#121212]/80 backdrop-blur-sm p-3 border border-white/10 text-[#4CAF50] block w-max mt-2 text-base font-bold shadow-md">"Halo Min, beli [Nama Paket/Peti] untuk akun [Nama Akun]"</code>
+                    <div class="mt-4 text-xs font-bold text-slate-300 flex gap-2">
+                        <span class="bg-[#121212]/80 backdrop-blur-sm border border-white/10 px-2 py-1">DANA</span>
+                        <span class="bg-[#121212]/80 backdrop-blur-sm border border-white/10 px-2 py-1">GOPAY</span>
+                        <span class="bg-[#121212]/80 backdrop-blur-sm border border-white/10 px-2 py-1">QRIS</span>
                     </div>
                 </div>
                 <div class="flex flex-col gap-3 w-full md:w-auto relative z-10">
-                    <a href="https://wa.me/6283845844378" target="_blank" class="mc-btn px-6 py-4 justify-center">
+                    <a href="https://wa.me/6283845844378" target="_blank" class="mc-btn px-6 py-4 justify-center shadow-lg">
                         <i class="fab fa-whatsapp text-xl mr-3"></i> Admin 1 (Owner)
                     </a>
-                    <a href="https://wa.me/6285156621544" target="_blank" class="mc-btn px-6 py-4 justify-center">
+                    <a href="https://wa.me/6285156621544" target="_blank" class="mc-btn px-6 py-4 justify-center shadow-lg">
                         <i class="fab fa-whatsapp text-xl mr-3"></i> Admin 2 (Developer)
                     </a>
                 </div>
@@ -306,24 +306,24 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
                 <div class="mc-card p-6 flex flex-col">
-                    <h3 class="font-lexend text-xl font-black uppercase text-white mb-6 bg-[#121212] p-3 text-center border border-[#333333]">Paket Receh</h3>
-                    <ul class="text-sm font-bold text-slate-300 space-y-4 flex-grow">
-                        <li class="flex justify-between border-b border-[#333333] pb-2"><span>$ 500.000</span> <span class="text-[#4CAF50]">Rp 1.000</span></li>
-                        <li class="flex justify-between border-b border-[#333333] pb-2"><span>$ 1.000.000</span> <span class="text-[#4CAF50]">Rp 2.000</span></li>
+                    <h3 class="font-lexend text-xl font-black uppercase text-white mb-6 bg-[#121212]/60 backdrop-blur-sm p-3 text-center border border-white/10">Paket Receh</h3>
+                    <ul class="text-sm font-bold text-slate-200 space-y-4 flex-grow">
+                        <li class="flex justify-between border-b border-white/10 pb-2"><span>$ 500.000</span> <span class="text-[#4CAF50]">Rp 1.000</span></li>
+                        <li class="flex justify-between border-b border-white/10 pb-2"><span>$ 1.000.000</span> <span class="text-[#4CAF50]">Rp 2.000</span></li>
                         <li class="flex justify-between pb-2"><span>$ 2.500.000</span> <span class="text-[#4CAF50]">Rp 5.000</span></li>
                     </ul>
                 </div>
 
                 <div class="mc-card p-6 border-[#4CAF50] flex flex-col relative">
-                    <div class="absolute -mt-10 ml-[30%] bg-red-600 text-white text-[10px] font-black uppercase px-3 py-1.5 border-2 border-white transform rotate-6 animate-pulse">DISKON 50%</div>
-                    <h3 class="font-lexend text-xl font-black uppercase text-[#4CAF50] mb-6 bg-[#121212] p-3 text-center border border-[#333333]">Paket Medium</h3>
-                    <ul class="text-sm font-bold text-slate-300 space-y-4 flex-grow">
-                        <li class="flex justify-between border-b border-[#333333] pb-2"><span>$ 5.000.000</span> <span class="text-[#4CAF50]">Rp 10.000</span></li>
-                        <li class="flex justify-between border-b border-[#333333] pb-2"><span>$ 7.500.000</span> <span class="text-[#4CAF50]">Rp 15.000</span></li>
+                    <div class="absolute -mt-10 ml-[30%] bg-red-600 text-white text-[10px] font-black uppercase px-3 py-1.5 border-2 border-white transform rotate-6 animate-pulse shadow-xl">DISKON 50%</div>
+                    <h3 class="font-lexend text-xl font-black uppercase text-[#4CAF50] mb-6 bg-[#121212]/60 backdrop-blur-sm p-3 text-center border border-white/10">Paket Medium</h3>
+                    <ul class="text-sm font-bold text-slate-200 space-y-4 flex-grow">
+                        <li class="flex justify-between border-b border-white/10 pb-2"><span>$ 5.000.000</span> <span class="text-[#4CAF50]">Rp 10.000</span></li>
+                        <li class="flex justify-between border-b border-white/10 pb-2"><span>$ 7.500.000</span> <span class="text-[#4CAF50]">Rp 15.000</span></li>
                         <li class="flex justify-between pb-2 items-center pt-2">
                             <span class="text-white text-base">$ 10.000.000</span> 
                             <div class="text-right">
-                                <span class="text-[10px] line-through text-slate-500 block">Rp 20.000</span>
+                                <span class="text-[10px] line-through text-slate-400 block">Rp 20.000</span>
                                 <span class="text-[#4CAF50] text-xl block">Rp 10.000</span>
                             </div>
                         </li>
@@ -331,14 +331,14 @@
                 </div>
 
                 <div class="mc-card p-6 border-yellow-500 flex flex-col relative">
-                    <div class="absolute -mt-10 ml-[30%] bg-red-600 text-white text-[10px] font-black uppercase px-3 py-1.5 border-2 border-white transform rotate-6 animate-pulse">DISKON 50%</div>
-                    <h3 class="font-lexend text-xl font-black uppercase text-yellow-500 mb-6 bg-[#121212] p-3 text-center border border-[#333333]">Paket Sultan</h3>
-                    <ul class="text-sm font-bold text-slate-300 space-y-4 flex-grow">
-                        <li class="flex justify-between border-b border-[#333333] pb-2"><span>$ 12.500.000</span> <span class="text-[#4CAF50]">Rp 25.000</span></li>
-                        <li class="flex justify-between pb-2 items-center pt-2 border-t border-[#333333]">
+                    <div class="absolute -mt-10 ml-[30%] bg-red-600 text-white text-[10px] font-black uppercase px-3 py-1.5 border-2 border-white transform rotate-6 animate-pulse shadow-xl">DISKON 50%</div>
+                    <h3 class="font-lexend text-xl font-black uppercase text-yellow-500 mb-6 bg-[#121212]/60 backdrop-blur-sm p-3 text-center border border-white/10">Paket Sultan</h3>
+                    <ul class="text-sm font-bold text-slate-200 space-y-4 flex-grow">
+                        <li class="flex justify-between border-b border-white/10 pb-2"><span>$ 12.500.000</span> <span class="text-[#4CAF50]">Rp 25.000</span></li>
+                        <li class="flex justify-between pb-2 items-center pt-2 border-t border-white/10">
                             <span class="text-yellow-400 text-lg font-black">$ 15.000.000</span> 
                             <div class="text-right">
-                                <span class="text-[10px] line-through text-slate-500 block">Rp 30.000</span>
+                                <span class="text-[10px] line-through text-slate-400 block">Rp 30.000</span>
                                 <span class="text-[#4CAF50] text-2xl block font-black">Rp 15.000</span>
                             </div>
                         </li>
@@ -349,180 +349,180 @@
 
         <section id="crate" class="tab-content hidden w-full px-6 max-w-7xl mx-auto pt-10">
             <div class="text-center mb-12">
-                <h2 class="font-lexend text-4xl md:text-5xl font-black uppercase text-white mb-4">Crates & Gacha</h2>
-                <p class="text-slate-400 font-bold">Buka peti rahasia dan dapatkan item legendaris tanpa resiko rugi besar!</p>
+                <h2 class="font-lexend text-4xl md:text-5xl font-black uppercase text-white mb-4 shadow-sm">Crates & Gacha</h2>
+                <p class="text-slate-300 font-bold">Buka peti rahasia dan dapatkan item legendaris tanpa resiko rugi besar!</p>
             </div>
 
             <div class="mc-card p-6 border-l-8 border-l-yellow-400 max-w-4xl mx-auto mb-10 flex flex-col md:flex-row gap-6 relative">
-                <div class="md:w-1/3 bg-[#121212] p-6 flex flex-col items-center justify-center border border-[#333333] text-center">
-                    <i class="fas fa-star text-6xl text-yellow-400 mb-4"></i>
+                <div class="md:w-1/3 bg-[#121212]/60 backdrop-blur-sm p-6 flex flex-col items-center justify-center border border-white/10 text-center shadow-inner">
+                    <i class="fas fa-star text-6xl text-yellow-400 mb-4 drop-shadow-[0_0_15px_rgba(250,204,21,0.5)]"></i>
                     <h3 class="font-lexend text-2xl font-black uppercase text-yellow-400 mt-1">Vote Crate</h3>
-                    <span class="mt-3 bg-[#3C8527] text-white text-xs font-black px-4 py-1.5 uppercase">Harga: GRATIS</span>
+                    <span class="mt-3 bg-[#3C8527] text-white text-xs font-black px-4 py-1.5 uppercase shadow-md">Harga: GRATIS</span>
                 </div>
                 <div class="md:w-2/3">
-                    <p class="text-xs text-slate-400 font-black mb-3 uppercase tracking-wider border-b border-[#333333] pb-2">Daftar Isi & Peluang:</p>
-                    <ul class="text-xs font-bold text-slate-300 space-y-2.5">
-                        <li class="flex justify-between"><span>Golden Apple Premium (5x)</span> <span class="text-slate-500 font-mono">45%</span></li>
-                        <li class="flex justify-between"><span>Kantong Ekspedisi ($500 & 32x Botol XP)</span> <span class="text-slate-500 font-mono">35%</span></li>
-                        <li class="flex justify-between"><span><span class="text-blue-400">Kitab Suci:</span> Mending</span> <span class="text-slate-500 font-mono">15%</span></li>
-                        <li class="flex justify-between text-orange-400 border-t border-[#333333] pt-2 mt-2"><span>[KUNCI] COMMON CRATE</span> <span class="font-mono">5%</span></li>
+                    <p class="text-xs text-slate-300 font-black mb-3 uppercase tracking-wider border-b border-white/10 pb-2">Daftar Isi & Peluang:</p>
+                    <ul class="text-xs font-bold text-slate-200 space-y-2.5">
+                        <li class="flex justify-between"><span>Golden Apple Premium (5x)</span> <span class="text-slate-400 font-mono">45%</span></li>
+                        <li class="flex justify-between"><span>Kantong Ekspedisi ($500 & 32x Botol XP)</span> <span class="text-slate-400 font-mono">35%</span></li>
+                        <li class="flex justify-between"><span><span class="text-blue-400">Kitab Suci:</span> Mending</span> <span class="text-slate-400 font-mono">15%</span></li>
+                        <li class="flex justify-between text-orange-400 border-t border-white/10 pt-2 mt-2"><span>[KUNCI] COMMON CRATE</span> <span class="font-mono">5%</span></li>
                     </ul>
                 </div>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 <div class="mc-card p-6 border-t-8 border-t-orange-500 flex flex-col">
-                    <div class="bg-[#121212] p-4 border border-[#333333] text-center mb-4">
+                    <div class="bg-[#121212]/60 backdrop-blur-sm p-4 border border-white/10 text-center mb-4 shadow-inner">
                         <h3 class="font-lexend text-xl font-black uppercase text-orange-500">Common Crate</h3>
-                        <p class="text-[11px] text-slate-400 mt-2 font-semibold">Peti menengah berisi modal awal dan senjata ksatria.</p>
-                        <p class="text-xs font-bold mt-2 text-white bg-[#333333] py-1">Harga: $750k / Rp 1.000</p>
+                        <p class="text-[11px] text-slate-300 mt-2 font-semibold">Peti menengah berisi modal awal dan senjata ksatria.</p>
+                        <p class="text-xs font-bold mt-2 text-white bg-[#333333]/80 py-1 rounded">Harga: $750k / Rp 1.000</p>
                     </div>
-                    <ul class="text-[11.5px] font-bold text-slate-300 space-y-2.5 flex-grow">
-                        <li class="flex justify-between"><span>Uang $100.000 <span class="text-red-500 font-normal">(Zonk)</span></span> <span class="font-mono text-slate-500">35%</span></li>
-                        <li class="flex justify-between"><span>Uang $250.000 <span class="text-red-500 font-normal">(Zonk)</span></span> <span class="font-mono text-slate-500">25%</span></li>
-                        <li class="flex justify-between"><span>Uang $1.500.000 <span class="text-[#4CAF50] font-normal">(Untung)</span></span> <span class="font-mono text-slate-500">10%</span></li>
-                        <li class="flex justify-between text-cyan-400 items-start">
+                    <ul class="text-[11.5px] font-bold text-slate-200 space-y-2.5 flex-grow">
+                        <li class="flex justify-between"><span>Uang $100.000 <span class="text-red-400 font-normal">(Zonk)</span></span> <span class="font-mono text-slate-400">35%</span></li>
+                        <li class="flex justify-between"><span>Uang $250.000 <span class="text-red-400 font-normal">(Zonk)</span></span> <span class="font-mono text-slate-400">25%</span></li>
+                        <li class="flex justify-between"><span>Uang $1.500.000 <span class="text-[#4CAF50] font-normal">(Untung)</span></span> <span class="font-mono text-slate-400">10%</span></li>
+                        <li class="flex justify-between text-cyan-300 items-start">
                             <span>⚔️ PEDANG KSATRIA 
-                                <span class="block text-[9px] text-slate-500 font-normal">(Sharp IV, Loot III, Fire II, Mending)</span>
+                                <span class="block text-[9px] text-slate-400 font-normal">(Sharp IV, Loot III, Fire II, Mending)</span>
                             </span> 
-                            <span class="font-mono text-slate-500 mt-1">10%</span>
+                            <span class="font-mono text-slate-400 mt-1">10%</span>
                         </li>
-                        <li class="flex justify-between"><span>Tabungan Diamond (5x Block)</span> <span class="font-mono text-slate-500">5%</span></li>
+                        <li class="flex justify-between"><span>Tabungan Diamond (5x Block)</span> <span class="font-mono text-slate-400">5%</span></li>
                         <li class="flex justify-between items-start">
                             <span>Gudang Portabel 
-                                <span class="block text-[9px] text-slate-500 font-normal">(1 Shulker, 100 Claim)</span>
+                                <span class="block text-[9px] text-slate-400 font-normal">(1 Shulker, 100 Claim)</span>
                             </span> 
-                            <span class="font-mono text-slate-500 mt-1">5%</span>
+                            <span class="font-mono text-slate-400 mt-1">5%</span>
                         </li>
-                        <li class="flex justify-between text-cyan-400 items-start">
+                        <li class="flex justify-between text-cyan-300 items-start">
                             <span>🛡️ FULL SET ZIRAH KSATRIA 
-                                <span class="block text-[9px] text-slate-500 font-normal">(Prot IV, Thorns II, Mending)</span>
+                                <span class="block text-[9px] text-slate-400 font-normal">(Prot IV, Thorns II, Mending)</span>
                             </span> 
-                            <span class="font-mono text-slate-500 mt-1">4%</span>
+                            <span class="font-mono text-slate-400 mt-1">4%</span>
                         </li>
-                        <li class="flex justify-between text-cyan-400 items-start">
+                        <li class="flex justify-between text-cyan-300 items-start">
                             <span>🪓 KAPAK KSATRIA 
-                                <span class="block text-[9px] text-slate-500 font-normal">(Sharp IV, Eff IV, Mending)</span>
+                                <span class="block text-[9px] text-slate-400 font-normal">(Sharp IV, Eff IV, Mending)</span>
                             </span> 
-                            <span class="font-mono text-slate-500 mt-1">2%</span>
+                            <span class="font-mono text-slate-400 mt-1">2%</span>
                         </li>
-                        <li class="flex justify-between text-cyan-400 items-start">
+                        <li class="flex justify-between text-cyan-300 items-start">
                             <span>🏹 BUSUR KSATRIA 
-                                <span class="block text-[9px] text-slate-500 font-normal">(Power IV, Flame I, Infinity)</span>
+                                <span class="block text-[9px] text-slate-400 font-normal">(Power IV, Flame I, Infinity)</span>
                             </span> 
-                            <span class="font-mono text-slate-500 mt-1">2%</span>
+                            <span class="font-mono text-slate-400 mt-1">2%</span>
                         </li>
-                        <li class="flex justify-between text-purple-400 border-t border-[#333333] pt-2 mt-2"><span>[KUNCI] EPIC CRATE</span> <span class="font-mono">2%</span></li>
+                        <li class="flex justify-between text-purple-300 border-t border-white/10 pt-2 mt-2"><span>[KUNCI] EPIC CRATE</span> <span class="font-mono">2%</span></li>
                     </ul>
                 </div>
 
                 <div class="mc-card p-6 border-t-8 border-t-purple-500 flex flex-col">
-                    <div class="bg-[#121212] p-4 border border-[#333333] text-center mb-4">
-                        <h3 class="font-lexend text-xl font-black uppercase text-purple-500">Epic Crate</h3>
-                        <p class="text-[11px] text-slate-400 mt-2 font-semibold">Peti tinggi dengan persenjataan Paladin Netherite tingkat lanjut.</p>
-                        <p class="text-xs font-bold mt-2 text-white bg-[#333333] py-1">Harga: $1.5M / Rp 3.000</p>
+                    <div class="bg-[#121212]/60 backdrop-blur-sm p-4 border border-white/10 text-center mb-4 shadow-inner">
+                        <h3 class="font-lexend text-xl font-black uppercase text-purple-400">Epic Crate</h3>
+                        <p class="text-[11px] text-slate-300 mt-2 font-semibold">Peti tinggi dengan persenjataan Paladin tingkat lanjut.</p>
+                        <p class="text-xs font-bold mt-2 text-white bg-[#333333]/80 py-1 rounded">Harga: $1.5M / Rp 3.000</p>
                     </div>
-                    <ul class="text-[11.5px] font-bold text-slate-300 space-y-2.5 flex-grow">
-                        <li class="flex justify-between"><span>Uang $250.000 <span class="text-red-500 font-normal">(Zonk)</span></span> <span class="font-mono text-slate-500">35%</span></li>
-                        <li class="flex justify-between"><span>Uang $500.000 <span class="text-red-500 font-normal">(Zonk)</span></span> <span class="font-mono text-slate-500">25%</span></li>
-                        <li class="flex justify-between"><span>Uang $2.500.000 <span class="text-[#4CAF50] font-normal">(Untung)</span></span> <span class="font-mono text-slate-500">10%</span></li>
-                        <li class="flex justify-between text-purple-400 items-start">
+                    <ul class="text-[11.5px] font-bold text-slate-200 space-y-2.5 flex-grow">
+                        <li class="flex justify-between"><span>Uang $250.000 <span class="text-red-400 font-normal">(Zonk)</span></span> <span class="font-mono text-slate-400">35%</span></li>
+                        <li class="flex justify-between"><span>Uang $500.000 <span class="text-red-400 font-normal">(Zonk)</span></span> <span class="font-mono text-slate-400">25%</span></li>
+                        <li class="flex justify-between"><span>Uang $2.500.000 <span class="text-[#4CAF50] font-normal">(Untung)</span></span> <span class="font-mono text-slate-400">10%</span></li>
+                        <li class="flex justify-between text-purple-300 items-start">
                             <span>⚔️ PEDANG PALADIN 
-                                <span class="block text-[9px] text-slate-500 font-normal">(Sharp VI, Loot IV, Fire III, Mending)</span>
+                                <span class="block text-[9px] text-slate-400 font-normal">(Sharp VI, Loot IV, Fire III, Mending)</span>
                             </span> 
-                            <span class="font-mono text-slate-500 mt-1">10%</span>
+                            <span class="font-mono text-slate-400 mt-1">10%</span>
                         </li>
-                        <li class="flex justify-between"><span>Monster Spawner (Zombie)</span> <span class="font-mono text-slate-500">5%</span></li>
-                        <li class="flex justify-between text-purple-400 items-start">
+                        <li class="flex justify-between"><span>Monster Spawner (Zombie)</span> <span class="font-mono text-slate-400">5%</span></li>
+                        <li class="flex justify-between text-purple-300 items-start">
                             <span>⛏️ BELIUNG PALADIN 
-                                <span class="block text-[9px] text-slate-500 font-normal">(Eff VI, Fortune IV, Mending)</span>
+                                <span class="block text-[9px] text-slate-400 font-normal">(Eff VI, Fortune IV, Mending)</span>
                             </span> 
-                            <span class="font-mono text-slate-500 mt-1">5%</span>
+                            <span class="font-mono text-slate-400 mt-1">5%</span>
                         </li>
-                        <li class="flex justify-between text-purple-400 items-start">
+                        <li class="flex justify-between text-purple-300 items-start">
                             <span>🛡️ FULL SET ZIRAH PALADIN 
-                                <span class="block text-[9px] text-slate-500 font-normal">(Prot VI, Thorns IV, Mending)</span>
+                                <span class="block text-[9px] text-slate-400 font-normal">(Prot VI, Thorns IV, Mending)</span>
                             </span> 
-                            <span class="font-mono text-slate-500 mt-1">4%</span>
+                            <span class="font-mono text-slate-400 mt-1">4%</span>
                         </li>
-                        <li class="flex justify-between text-purple-400 items-start">
+                        <li class="flex justify-between text-purple-300 items-start">
                             <span>🪓 KAPAK PALADIN 
-                                <span class="block text-[9px] text-slate-500 font-normal">(Sharp VI, Eff VI, Mending)</span>
+                                <span class="block text-[9px] text-slate-400 font-normal">(Sharp VI, Eff VI, Mending)</span>
                             </span> 
-                            <span class="font-mono text-slate-500 mt-1">2%</span>
+                            <span class="font-mono text-slate-400 mt-1">2%</span>
                         </li>
-                        <li class="flex justify-between text-purple-400 items-start">
+                        <li class="flex justify-between text-purple-300 items-start">
                             <span>🏹 BUSUR PALADIN 
-                                <span class="block text-[9px] text-slate-500 font-normal">(Power VI, Flame II, Infinity)</span>
+                                <span class="block text-[9px] text-slate-400 font-normal">(Power VI, Flame II, Infinity)</span>
                             </span> 
-                            <span class="font-mono text-slate-500 mt-1">2%</span>
+                            <span class="font-mono text-slate-400 mt-1">2%</span>
                         </li>
-                        <li class="flex justify-between text-purple-400 items-start">
+                        <li class="flex justify-between text-purple-300 items-start">
                             <span>🔱 TRIDENT PALADIN 
-                                <span class="block text-[9px] text-slate-500 font-normal">(Impaling VI, Loyalty IV, Channel II)</span>
+                                <span class="block text-[9px] text-slate-400 font-normal">(Impaling VI, Loyalty IV, Channel II)</span>
                             </span> 
-                            <span class="font-mono text-slate-500 mt-1">1%</span>
+                            <span class="font-mono text-slate-400 mt-1">1%</span>
                         </li>
-                        <li class="flex justify-between text-red-500 border-t border-[#333333] pt-2 mt-2"><span>[KUNCI] GOD CRATE</span> <span class="font-mono">1%</span></li>
+                        <li class="flex justify-between text-red-400 border-t border-white/10 pt-2 mt-2"><span>[KUNCI] GOD CRATE</span> <span class="font-mono">1%</span></li>
                     </ul>
                 </div>
 
                 <div class="mc-card p-6 border-t-8 border-t-red-600 flex flex-col relative overflow-hidden">
-                    <div class="absolute inset-0 bg-red-900/5 -z-10 animate-pulse"></div>
-                    <div class="bg-[#121212] p-4 border border-[#333333] text-center mb-4 relative z-10">
-                        <h3 class="font-lexend text-xl font-black uppercase text-red-500">God Crate</h3>
-                        <p class="text-[11px] text-slate-400 mt-2 font-semibold">Peti Kasta Tertinggi. Senjata ilegal dewa tanpa risiko rugi besar!</p>
-                        <p class="text-xs font-bold mt-2 text-white bg-[#333333] py-1">Harga: Gacha Only / Rp 5.000</p>
+                    <div class="absolute inset-0 bg-red-900/10 -z-10 animate-pulse"></div>
+                    <div class="bg-[#121212]/60 backdrop-blur-sm p-4 border border-white/10 text-center mb-4 relative z-10 shadow-inner">
+                        <h3 class="font-lexend text-xl font-black uppercase text-red-500 drop-shadow-[0_0_8px_rgba(239,68,68,0.5)]">God Crate</h3>
+                        <p class="text-[11px] text-slate-300 mt-2 font-semibold">Peti Kasta Tertinggi. Senjata ilegal dewa tanpa risiko rugi besar!</p>
+                        <p class="text-xs font-bold mt-2 text-white bg-[#333333]/80 py-1 rounded">Harga: Gacha Only / Rp 5.000</p>
                     </div>
-                    <ul class="text-[11px] font-bold text-slate-300 space-y-1.5 flex-grow relative z-10 leading-tight">
-                        <li class="flex justify-between"><span>Uang $5.000.000 <span class="text-[#4CAF50] font-normal">(Untung)</span></span> <span class="font-mono text-slate-500">20%</span></li>
-                        <li class="flex justify-between"><span>Uang $1.000.000 <span class="text-red-500 font-normal">(Zonk Terkecil)</span></span> <span class="font-mono text-slate-500">20%</span></li>
-                        <li class="flex justify-between text-yellow-400 items-start">
-                            <span>Uang $15.000.000 <span class="text-yellow-500/80 font-normal block text-[9px]">(SUPER JACKPOT UANG)</span></span> 
-                            <span class="font-mono text-yellow-500 mt-1">10%</span>
+                    <ul class="text-[11px] font-bold text-slate-200 space-y-1.5 flex-grow relative z-10 leading-tight">
+                        <li class="flex justify-between"><span>Uang $5.000.000 <span class="text-[#4CAF50] font-normal">(Untung)</span></span> <span class="font-mono text-slate-400">20%</span></li>
+                        <li class="flex justify-between"><span>Uang $1.000.000 <span class="text-red-400 font-normal">(Zonk Terkecil)</span></span> <span class="font-mono text-slate-400">20%</span></li>
+                        <li class="flex justify-between text-yellow-300 items-start">
+                            <span>Uang $15.000.000 <span class="text-yellow-400/80 font-normal block text-[9px]">(SUPER JACKPOT UANG)</span></span> 
+                            <span class="font-mono text-yellow-400 mt-1">10%</span>
                         </li>
                         <li class="flex justify-between text-red-300 items-start">
-                            <span>⚔️ THE GODSLAYER <span class="block text-[8.5px] text-slate-500 font-normal">(Sharp X, Smite X, Loot V, Fire V, Unbreak X)</span></span> 
-                            <span class="font-mono text-slate-500 mt-1">10%</span>
+                            <span>⚔️ THE GODSLAYER <span class="block text-[8.5px] text-slate-400 font-normal">(Sharp X, Smite X, Loot V, Fire V, Unbreak X)</span></span> 
+                            <span class="font-mono text-slate-400 mt-1">10%</span>
                         </li>
                         <li class="flex justify-between text-red-300 items-start">
-                            <span>🪓 THE DECAPITATOR <span class="block text-[8.5px] text-slate-500 font-normal">(Sharp X, Smite X, Eff X, Unbreak X)</span></span> 
-                            <span class="font-mono text-slate-500 mt-1">8%</span>
+                            <span>🪓 THE DECAPITATOR <span class="block text-[8.5px] text-slate-400 font-normal">(Sharp X, Smite X, Eff X, Unbreak X)</span></span> 
+                            <span class="font-mono text-slate-400 mt-1">8%</span>
                         </li>
                         <li class="flex justify-between text-red-300 items-start">
-                            <span>🛡️ GOD ARMOR SET <span class="block text-[8.5px] text-slate-500 font-normal">(Prot VIII, Thorns VI, Unbreak VIII, Mending)</span></span> 
-                            <span class="font-mono text-slate-500 mt-1">7%</span>
+                            <span>🛡️ GOD ARMOR SET <span class="block text-[8.5px] text-slate-400 font-normal">(Prot VIII, Thorns VI, Unbreak VIII, Mending)</span></span> 
+                            <span class="font-mono text-slate-400 mt-1">7%</span>
                         </li>
                         <li class="flex justify-between text-red-300 items-start">
-                            <span>🏹 APOLLO'S WRATH <span class="block text-[8.5px] text-slate-500 font-normal">(Power X, Punch V, Flame V, Infinity)</span></span> 
-                            <span class="font-mono text-slate-500 mt-1">6%</span>
+                            <span>🏹 APOLLO'S WRATH <span class="block text-[8.5px] text-slate-400 font-normal">(Power X, Punch V, Flame V, Infinity)</span></span> 
+                            <span class="font-mono text-slate-400 mt-1">6%</span>
                         </li>
                         <li class="flex justify-between text-orange-300 items-start">
-                            <span>🔨 THE EARTHSHAKER <span class="block text-[8.5px] text-slate-500 font-normal">(Gada 1.21: Density X, Breach X, Wind V)</span></span> 
-                            <span class="font-mono text-slate-500 mt-1">5%</span>
+                            <span>🔨 THE EARTHSHAKER <span class="block text-[8.5px] text-slate-400 font-normal">(Gada 1.21: Density X, Breach X, Wind V)</span></span> 
+                            <span class="font-mono text-slate-400 mt-1">5%</span>
                         </li>
                         <li class="flex justify-between text-red-300 items-start">
-                            <span>🎯 ARTEMIS' PIERCER <span class="block text-[8.5px] text-slate-500 font-normal">(Crossbow: Piercing X, Quick V, Multi III)</span></span> 
-                            <span class="font-mono text-slate-500 mt-1">4%</span>
+                            <span>🎯 ARTEMIS' PIERCER <span class="block text-[8.5px] text-slate-400 font-normal">(Crossbow: Piercing X, Quick V, Multi III)</span></span> 
+                            <span class="font-mono text-slate-400 mt-1">4%</span>
                         </li>
                         <li class="flex justify-between text-blue-300 items-start">
-                            <span>🔱 POSEIDON'S FURY <span class="block text-[8.5px] text-slate-500 font-normal">(Impaling X, Loyalty X, Channel V)</span></span> 
-                            <span class="font-mono text-slate-500 mt-1">4%</span>
+                            <span>🔱 POSEIDON'S FURY <span class="block text-[8.5px] text-slate-400 font-normal">(Impaling X, Loyalty X, Channel V)</span></span> 
+                            <span class="font-mono text-slate-400 mt-1">4%</span>
                         </li>
                         <li class="flex justify-between text-red-300 items-start">
-                            <span>⛏️ WORLD BREAKER <span class="block text-[8.5px] text-slate-500 font-normal">(Instan Hancur Area: Eff X, Fort V)</span></span> 
-                            <span class="font-mono text-slate-500 mt-1">3%</span>
+                            <span>⛏️ WORLD BREAKER <span class="block text-[8.5px] text-slate-400 font-normal">(Instan Hancur Area: Eff X, Fort V)</span></span> 
+                            <span class="font-mono text-slate-400 mt-1">3%</span>
                         </li>
-                        <li class="flex justify-between text-slate-300 items-center">
+                        <li class="flex justify-between text-slate-200 items-center">
                             <span>Iron Golem Spawner <span class="text-xs text-[#4CAF50]/80 font-normal block text-[9px]">(Pabrik Uang)</span></span> 
-                            <span class="font-mono text-slate-500">2%</span>
+                            <span class="font-mono text-slate-400">2%</span>
                         </li>
-                        <li class="flex justify-between text-slate-300 items-start">
-                            <span>Akses /Fly (3 Hari) <span class="block text-[8.5px] text-slate-500 font-normal">(Terbang Bebas)</span></span> 
-                            <span class="font-mono text-slate-500 mt-1">2%</span>
+                        <li class="flex justify-between text-slate-200 items-start">
+                            <span>Akses /Fly (3 Hari) <span class="block text-[8.5px] text-slate-400 font-normal">(Terbang Bebas)</span></span> 
+                            <span class="font-mono text-slate-400 mt-1">2%</span>
                         </li>
-                        <li class="flex justify-between text-white border-t border-red-900 pt-2 mt-2">
-                            <span class="font-black animate-pulse">👑 [RANK] CONQUEROR <span class="block text-[10px] text-yellow-300">(JACKPOT UTAMA)</span></span> 
+                        <li class="flex justify-between text-white border-t border-red-900/50 pt-2 mt-2">
+                            <span class="font-black animate-pulse drop-shadow-[0_0_5px_rgba(255,255,255,0.8)]">👑 [RANK] CONQUEROR <span class="block text-[10px] text-yellow-300">(JACKPOT UTAMA)</span></span> 
                             <span class="font-mono font-bold">1%</span>
                         </li>
                     </ul>
@@ -535,66 +535,66 @@
         </section>
 
         <section id="guide" class="tab-content hidden w-full px-6 max-w-5xl mx-auto pt-10">
-            <div class="mc-card bg-[#1a1a1a] p-8 border-l-8 border-l-[#4CAF50] mb-12 flex flex-col md:flex-row justify-between items-center relative overflow-hidden">
+            <div class="mc-card p-8 border-l-8 border-l-[#4CAF50] mb-12 flex flex-col md:flex-row justify-between items-center relative overflow-hidden">
                 <i class="fas fa-file-pdf absolute -right-5 top-5 text-9xl text-white/5 transform -rotate-12"></i>
                 <div class="mb-6 md:mb-0 relative z-10">
-                    <h3 class="font-lexend text-3xl font-black uppercase text-white mb-2">Buku Panduan Player 📖</h3>
-                    <p class="text-base font-semibold text-slate-300 mb-2 leading-relaxed">Pelajari cara bertahan hidup dan command dari PDF resmi kami.</p>
-                    <span class="mt-2 text-slate-500 text-xs font-bold bg-[#121212] px-2 py-1">Versi: Ultimate Guidebook v1.2</span>
+                    <h3 class="font-lexend text-3xl font-black uppercase text-white mb-2 shadow-sm">Buku Panduan Player 📖</h3>
+                    <p class="text-base font-semibold text-slate-200 mb-2 leading-relaxed">Pelajari cara bertahan hidup dan command dari PDF resmi kami.</p>
+                    <span class="mt-2 text-slate-300 text-xs font-bold bg-[#121212]/60 backdrop-blur-sm px-2 py-1 border border-white/10 rounded">Versi: Ultimate Guidebook v1.2</span>
                 </div>
-                <a href="Cafaalia SMP Server Ultimate Player Guidebook.pdf" download class="mc-btn bg-red-600 border-red-800 hover:bg-red-500 px-8 py-4 whitespace-nowrap text-base relative z-10">
+                <a href="Cafaalia SMP Server Ultimate Player Guidebook.pdf" download class="mc-btn bg-red-600 border-red-800 hover:bg-red-500 px-8 py-4 whitespace-nowrap text-base relative z-10 shadow-lg">
                     <i class="fas fa-file-pdf mr-3 text-2xl"></i> UNDUH PDF
                 </a>
             </div>
 
             <div class="space-y-12">
                 <div class="text-center">
-                    <h3 class="font-lexend text-2xl md:text-3xl font-black uppercase text-white inline-block bg-[#121212] px-8 py-3 border border-[#333333]">BAB I: Panduan Memulai Bermain</h3>
+                    <h3 class="font-lexend text-2xl md:text-3xl font-black uppercase text-white inline-block bg-[#121212]/60 backdrop-blur-md px-8 py-3 border border-white/10 shadow-md">BAB I: Panduan Memulai Bermain</h3>
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-8">
                     <div class="mc-card p-8 border-l-8 border-l-[#4CAF50]">
-                        <h4 class="font-lexend text-xl font-black uppercase text-[#4CAF50] mb-5 border-b border-[#333333] pb-3">1. Fase Pertama: Lobi / Spawn</h4>
-                        <ul class="text-sm font-semibold text-slate-300 space-y-4 list-none leading-relaxed">
-                            <li><strong>Keamanan Akun:</strong> Ketik <code class="bg-[#121212] px-1.5 py-0.5 text-white border border-[#333333]">/register [pass] [pass]</code> atau <code class="bg-[#121212] px-1.5 py-0.5 text-white border border-[#333333]">/login [pass]</code>.</li>
-                            <li><strong>Pahami Aturan:</strong> Ketik <code class="bg-[#121212] px-1.5 py-0.5 text-white border border-[#333333]">/rules</code> untuk terhindar dari sanksi.</li>
-                            <li><strong>Modal Awal:</strong> Ketik <code class="bg-[#121212] px-1.5 py-0.5 text-white border border-[#333333]">/kit wanderer</code> untuk perkakas dasar.</li>
-                            <li><strong>Sistem Voting:</strong> Ketik <code class="bg-[#121212] px-1.5 py-0.5 text-white border border-[#333333]">/vote</code> dapat kunci gacha gratis.</li>
+                        <h4 class="font-lexend text-xl font-black uppercase text-[#4CAF50] mb-5 border-b border-white/10 pb-3">1. Fase Pertama: Lobi / Spawn</h4>
+                        <ul class="text-sm font-semibold text-slate-200 space-y-4 list-none leading-relaxed">
+                            <li><strong>Keamanan Akun:</strong> Ketik <code class="bg-[#121212]/80 backdrop-blur-sm px-1.5 py-0.5 text-white border border-white/10 rounded">/register [pass] [pass]</code> atau <code class="bg-[#121212]/80 backdrop-blur-sm px-1.5 py-0.5 text-white border border-white/10 rounded">/login [pass]</code>.</li>
+                            <li><strong>Pahami Aturan:</strong> Ketik <code class="bg-[#121212]/80 backdrop-blur-sm px-1.5 py-0.5 text-white border border-white/10 rounded">/rules</code> untuk terhindar dari sanksi.</li>
+                            <li><strong>Modal Awal:</strong> Ketik <code class="bg-[#121212]/80 backdrop-blur-sm px-1.5 py-0.5 text-white border border-white/10 rounded">/kit wanderer</code> untuk perkakas dasar.</li>
+                            <li><strong>Sistem Voting:</strong> Ketik <code class="bg-[#121212]/80 backdrop-blur-sm px-1.5 py-0.5 text-white border border-white/10 rounded">/vote</code> dapat kunci gacha gratis.</li>
                             <li><strong>Gacha:</strong> Buka peti di area Spawn menggunakan kunci hasil vote.</li>
                         </ul>
                     </div>
                     
                     <div class="mc-card p-8 border-l-8 border-l-cyan-500">
-                        <h4 class="font-lexend text-xl font-black uppercase text-cyan-500 mb-5 border-b border-[#333333] pb-3">2. Fase Kedua: Pulau OneBlock Pribadi</h4>
-                        <ul class="text-sm font-semibold text-slate-300 space-y-4 list-none leading-relaxed">
-                            <li><strong>Buat Pulau:</strong> Ketik <code class="bg-[#121212] px-1.5 py-0.5 text-cyan-300 border border-[#333333]">/ob</code> atau <code class="bg-[#121212] px-1.5 py-0.5 text-cyan-300 border border-[#333333]">/ob home</code>.</li>
+                        <h4 class="font-lexend text-xl font-black uppercase text-cyan-400 mb-5 border-b border-white/10 pb-3">2. Fase Kedua: Pulau OneBlock Pribadi</h4>
+                        <ul class="text-sm font-semibold text-slate-200 space-y-4 list-none leading-relaxed">
+                            <li><strong>Buat Pulau:</strong> Ketik <code class="bg-[#121212]/80 backdrop-blur-sm px-1.5 py-0.5 text-cyan-300 border border-white/10 rounded">/ob</code> atau <code class="bg-[#121212]/80 backdrop-blur-sm px-1.5 py-0.5 text-cyan-300 border border-white/10 rounded">/ob home</code>.</li>
                             <li><strong>Hancurkan Blok:</strong> Hancurkan blok tengah terus-menerus. Awas <strong>Peti Bonus</strong> dan <strong>Mob Agresif</strong>!</li>
-                            <li><strong>Cek Fase:</strong> Ketik <code class="bg-[#121212] px-1.5 py-0.5 text-cyan-300 border border-[#333333]">/ob phase</code> untuk melihat sisa blok.</li>
-                            <li><strong>Pusat Kontrol:</strong> Ketik <code class="bg-[#121212] px-1.5 py-0.5 text-cyan-300 border border-[#333333]">/ob menu</code> untuk GUI.</li>
-                            <li><strong>Bermain Tim:</strong> Ketik <code class="bg-[#121212] px-1.5 py-0.5 text-cyan-300 border border-[#333333]">/ob invite [nama]</code> untuk mengundang, dan <code class="bg-[#121212] px-1.5 py-0.5 text-cyan-300 border border-[#333333]">/ob team accept</code> untuk menerima undangan pulau.</li>
+                            <li><strong>Cek Fase:</strong> Ketik <code class="bg-[#121212]/80 backdrop-blur-sm px-1.5 py-0.5 text-cyan-300 border border-white/10 rounded">/ob phase</code> untuk melihat sisa blok.</li>
+                            <li><strong>Pusat Kontrol:</strong> Ketik <code class="bg-[#121212]/80 backdrop-blur-sm px-1.5 py-0.5 text-cyan-300 border border-white/10 rounded">/ob menu</code> untuk GUI.</li>
+                            <li><strong>Bermain Tim:</strong> Ketik <code class="bg-[#121212]/80 backdrop-blur-sm px-1.5 py-0.5 text-cyan-300 border border-white/10 rounded">/ob invite [nama]</code> untuk mengundang, dan <code class="bg-[#121212]/80 backdrop-blur-sm px-1.5 py-0.5 text-cyan-300 border border-white/10 rounded">/ob team accept</code> untuk menerima undangan pulau.</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="mc-card p-8 border-l-8 border-l-yellow-500 mt-6 max-w-4xl mx-auto">
-                    <h4 class="font-lexend text-xl font-black uppercase text-yellow-500 mb-5 border-b border-[#333333] pb-3">3. Fase Ketiga: Ekonomi, Tambang Public, & Klaim Lahan</h4>
-                    <ul class="text-sm font-semibold text-slate-300 space-y-4 list-none leading-relaxed">
-                        <li><strong>Mencari Uang via Shop:</strong> Ketik <code class="bg-[#121212] px-1.5 py-0.5 text-yellow-300 border border-[#333333]">/shop</code> untuk beli/jual material ke server.</li>
-                        <li><strong>Pasar Lelang Player:</strong> Ketik <code class="bg-[#121212] px-1.5 py-0.5 text-yellow-300 border border-[#333333]">/ah sell [harga]</code> untuk jualan, <code class="bg-[#121212] px-1.5 py-0.5 text-yellow-300 border border-[#333333]">/ah</code> untuk beli.</li>
-                        <li><strong>Pertambangan Publik:</strong> Ketik <code class="bg-[#121212] px-1.5 py-0.5 text-yellow-300 border border-[#333333]">/warp tambang</code>.</li>
-                        <li><strong>Klaim Lahan Proteksi:</strong> Pakai alat Sekop Emas klik kiri/kanan di 2 sudut, atau berdiri di area lalu ketik <code class="bg-[#121212] px-1.5 py-0.5 text-yellow-300 border border-[#333333]">/claim</code>. Gunakan <code class="bg-[#121212] px-1.5 py-0.5 text-yellow-300 border border-[#333333]">/rtp</code> cari tempat luas.</li>
-                        <li><strong>Izin Teman:</strong> Ketik <code class="bg-[#121212] px-1.5 py-0.5 text-yellow-300 border border-[#333333]">/trust [nama]</code> izin bangun di klaim-an.</li>
+                    <h4 class="font-lexend text-xl font-black uppercase text-yellow-400 mb-5 border-b border-white/10 pb-3">3. Fase Ketiga: Ekonomi, Tambang Public, & Klaim Lahan</h4>
+                    <ul class="text-sm font-semibold text-slate-200 space-y-4 list-none leading-relaxed">
+                        <li><strong>Mencari Uang via Shop:</strong> Ketik <code class="bg-[#121212]/80 backdrop-blur-sm px-1.5 py-0.5 text-yellow-300 border border-white/10 rounded">/shop</code> untuk beli/jual material ke server.</li>
+                        <li><strong>Pasar Lelang Player:</strong> Ketik <code class="bg-[#121212]/80 backdrop-blur-sm px-1.5 py-0.5 text-yellow-300 border border-white/10 rounded">/ah sell [harga]</code> untuk jualan, <code class="bg-[#121212]/80 backdrop-blur-sm px-1.5 py-0.5 text-yellow-300 border border-white/10 rounded">/ah</code> untuk beli.</li>
+                        <li><strong>Pertambangan Publik:</strong> Ketik <code class="bg-[#121212]/80 backdrop-blur-sm px-1.5 py-0.5 text-yellow-300 border border-white/10 rounded">/warp tambang</code>.</li>
+                        <li><strong>Klaim Lahan Proteksi:</strong> Pakai alat Sekop Emas klik kiri/kanan di 2 sudut, atau berdiri di area lalu ketik <code class="bg-[#121212]/80 backdrop-blur-sm px-1.5 py-0.5 text-yellow-300 border border-white/10 rounded">/claim</code>. Gunakan <code class="bg-[#121212]/80 backdrop-blur-sm px-1.5 py-0.5 text-yellow-300 border border-white/10 rounded">/rtp</code> cari tempat luas.</li>
+                        <li><strong>Izin Teman:</strong> Ketik <code class="bg-[#121212]/80 backdrop-blur-sm px-1.5 py-0.5 text-yellow-300 border border-white/10 rounded">/trust [nama]</code> izin bangun di klaim-an.</li>
                     </ul>
                 </div>
 
-                <div class="text-center mt-16 border-t border-[#333333] pt-16">
-                    <h3 class="font-lexend text-2xl md:text-3xl font-black uppercase text-white inline-block bg-[#121212] px-8 py-3 border border-[#333333]">BAB II: Hirarki Rank Member & Hak Akses Command</h3>
+                <div class="text-center mt-16 border-t border-white/10 pt-16">
+                    <h3 class="font-lexend text-2xl md:text-3xl font-black uppercase text-white inline-block bg-[#121212]/60 backdrop-blur-md px-8 py-3 border border-white/10 shadow-md">BAB II: Hirarki Rank Member & Hak Akses Command</h3>
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-8">
                     <div class="mc-card p-6 border-t-4 border-slate-400 flex flex-col">
-                        <h4 class="font-lexend text-lg font-black uppercase text-slate-200 mb-4 bg-[#121212] p-3 border border-[#333333]">1. Wanderer (Gratis)</h4>
-                        <ul class="text-xs font-semibold text-slate-300 space-y-2.5 list-none leading-tight flex-grow">
+                        <h4 class="font-lexend text-lg font-black uppercase text-slate-100 mb-4 bg-[#121212]/60 backdrop-blur-sm p-3 border border-white/10">1. Wanderer (Gratis)</h4>
+                        <ul class="text-xs font-semibold text-slate-200 space-y-2.5 list-none leading-tight flex-grow">
                             <li><code class="text-emerald-400">/spawn</code> : Teleport kembali ke lobi utama server.</li>
                             <li><code class="text-emerald-400">/ob home</code> : Teleport langsung ke pulau OneBlock.</li>
                             <li><code class="text-emerald-400">/rtp</code> : Teleport acak ke koordinat dunia luar yang aman.</li>
@@ -608,8 +608,8 @@
                     </div>
 
                     <div class="mc-card p-6 border-t-4 border-yellow-400 flex flex-col">
-                        <h4 class="font-lexend text-lg font-black uppercase text-yellow-400 mb-4 bg-[#121212] p-3 border border-[#333333]">2. Gladiator (Donatur v1)</h4>
-                        <ul class="text-xs font-semibold text-slate-300 space-y-2.5 list-none leading-tight flex-grow">
+                        <h4 class="font-lexend text-lg font-black uppercase text-yellow-400 mb-4 bg-[#121212]/60 backdrop-blur-sm p-3 border border-white/10">2. Gladiator (Donatur v1)</h4>
+                        <ul class="text-xs font-semibold text-slate-200 space-y-2.5 list-none leading-tight flex-grow">
                             <li>Mewarisi seluruh kemampuan Rank Wanderer.</li>
                             <li><code class="text-yellow-400">/anvil</code> : Membuka menu paron ganti nama item portabel.</li>
                             <li><code class="text-yellow-400">/workbench</code> : Membuka meja rakit crafting virtual.</li>
@@ -620,8 +620,8 @@
                     </div>
 
                     <div class="mc-card p-6 border-t-4 border-cyan-400 flex flex-col">
-                        <h4 class="font-lexend text-lg font-black uppercase text-cyan-400 mb-4 bg-[#121212] p-3 border border-[#333333]">3. Conqueror (Donatur v2)</h4>
-                        <ul class="text-xs font-semibold text-slate-300 space-y-2.5 list-none leading-tight flex-grow">
+                        <h4 class="font-lexend text-lg font-black uppercase text-cyan-400 mb-4 bg-[#121212]/60 backdrop-blur-sm p-3 border border-white/10">3. Conqueror (Donatur v2)</h4>
+                        <ul class="text-xs font-semibold text-slate-200 space-y-2.5 list-none leading-tight flex-grow">
                             <li>Mewarisi seluruh kemampuan Rank Gladiator.</li>
                             <li><code class="text-cyan-400">/enderchest</code> : Membuka brankas tas dimensi portabel.</li>
                             <li><code class="text-cyan-400">/heal</code> : Pemulihan total darah instan hingga penuh.</li>
@@ -632,14 +632,14 @@
                     </div>
 
                     <div class="mc-card p-6 border-t-4 border-red-500 flex flex-col relative overflow-hidden">
-                        <div class="absolute inset-0 bg-red-900/5 -z-10 animate-pulse"></div>
-                        <h4 class="font-lexend text-lg font-black uppercase text-red-500 mb-4 bg-[#121212] p-3 border border-[#333333] relative z-10">4. Overlord (Donatur v3)</h4>
-                        <ul class="text-xs font-semibold text-slate-300 space-y-2.5 list-none leading-tight flex-grow relative z-10">
+                        <div class="absolute inset-0 bg-red-900/10 -z-10 animate-pulse"></div>
+                        <h4 class="font-lexend text-lg font-black uppercase text-red-500 mb-4 bg-[#121212]/60 backdrop-blur-sm p-3 border border-white/10 relative z-10">4. Overlord (Donatur v3)</h4>
+                        <ul class="text-xs font-semibold text-slate-200 space-y-2.5 list-none leading-tight flex-grow relative z-10">
                             <li>Mewarisi seluruh kemampuan Rank Conqueror.</li>
                             <li><code class="text-red-400">/fly</code> : Mode terbang bebas anti-gravitasi di langit server.</li>
                             <li><code class="text-red-400">/nick (Warna Hex)</code> : Gunakan gradasi warna warna modern chat.</li>
                             <li><code class="text-red-400">/gmenu main</code> : Katalog barang kosmetik hiburan premium (Pets, Suits).</li>
-                            <li><code class="text-red-400">/kit overlord</code> : Mengklaim jatah jatah paket kasta tertinggi.</li>
+                            <li><code class="text-red-400">/kit overlord</code> : Mengklaim jatah paket kasta tertinggi.</li>
                         </ul>
                     </div>
                 </div>
@@ -648,17 +648,17 @@
 
         <section id="community" class="tab-content hidden w-full px-6 max-w-5xl mx-auto pt-10">
             <div class="text-center mb-12">
-                <h2 class="font-lexend text-4xl md:text-5xl font-black uppercase text-white mb-4">Join Komunitas</h2>
-                <p class="text-slate-400 font-bold max-w-xl mx-auto">Dapatkan update terbaru, laporkan keluhan, dan cari teman mabar di grup resmi kami.</p>
+                <h2 class="font-lexend text-4xl md:text-5xl font-black uppercase text-white mb-4 shadow-sm">Join Komunitas</h2>
+                <p class="text-slate-300 font-bold max-w-xl mx-auto">Dapatkan update terbaru, laporkan keluhan, dan cari teman mabar di grup resmi kami.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="mc-card p-10 text-center border-t-[12px] border-t-[#5865F2] relative overflow-hidden">
                     <i class="fab fa-discord absolute -right-5 top-5 text-9xl text-[#5865F2]/10 transform rotate-12"></i>
                     <div class="relative z-10">
-                        <i class="fab fa-discord text-6xl text-[#5865F2] mb-6"></i>
+                        <i class="fab fa-discord text-6xl text-[#5865F2] mb-6 drop-shadow-[0_0_15px_rgba(88,101,242,0.5)]"></i>
                         <h3 class="font-lexend text-2xl font-black uppercase text-white mb-4">Discord Server</h3>
-                        <p class="text-sm text-slate-400 font-bold mb-8 leading-relaxed">Voice chat, tiket bantuan, info event eksklusif, dan obrolan komunitas ada di sini.</p>
+                        <p class="text-sm text-slate-300 font-bold mb-8 leading-relaxed">Voice chat, tiket bantuan, info event eksklusif, dan obrolan komunitas ada di sini.</p>
                         <a href="https://discord.gg/DRFDkKRkxR" target="_blank" class="mc-btn bg-[#5865F2] hover:bg-[#4752C4] border-b-4 border-[#3c45a5] w-full px-6 py-4 text-sm shadow-xl">
                             MASUK DISCORD <i class="fas fa-arrow-right ml-3"></i>
                         </a>
@@ -668,9 +668,9 @@
                 <div class="mc-card p-10 text-center border-t-[12px] border-t-[#25D366] relative overflow-hidden">
                     <i class="fab fa-whatsapp absolute -right-5 top-5 text-9xl text-[#25D366]/10 transform rotate-12"></i>
                     <div class="relative z-10">
-                        <i class="fab fa-whatsapp text-6xl text-[#25D366] mb-6"></i>
+                        <i class="fab fa-whatsapp text-6xl text-[#25D366] mb-6 drop-shadow-[0_0_15px_rgba(37,211,102,0.5)]"></i>
                         <h3 class="font-lexend text-2xl font-black uppercase text-white mb-4">Grup WhatsApp</h3>
-                        <p class="text-sm text-slate-400 font-bold mb-8 leading-relaxed">Diskusi santai, cari teman mabar cepat, dan update info langsung dari HP lu.</p>
+                        <p class="text-sm text-slate-300 font-bold mb-8 leading-relaxed">Diskusi santai, cari teman mabar cepat, dan update info langsung dari HP lu.</p>
                         <a href="https://chat.whatsapp.com/DVxDPtshA4jDTKAxglTQMt" target="_blank" class="mc-btn bg-[#25D366] hover:bg-[#20bd5a] border-b-4 border-[#188c42] w-full px-6 py-4 text-sm shadow-xl text-white">
                             GABUNG GRUP WA <i class="fas fa-arrow-right ml-3"></i>
                         </a>
@@ -681,29 +681,29 @@
 
     </main>
 
-    <footer class="bg-[#111111] border-t border-[#222222] py-12 w-full text-center">
+    <footer class="bg-[#111111]/80 backdrop-blur-md border-t border-white/10 py-12 w-full text-center mt-auto">
         <div class="flex justify-center space-x-8 mb-8">
-            <a href="https://discord.gg/DRFDkKRkxR" class="text-slate-500 hover:text-white text-3xl transition-colors"><i class="fab fa-discord"></i></a>
-            <a href="https://chat.whatsapp.com/DVxDPtshA4jDTKAxglTQMt" class="text-slate-500 hover:text-white text-3xl transition-colors"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://discord.gg/DRFDkKRkxR" class="text-slate-400 hover:text-[#5865F2] text-3xl transition-transform hover:scale-110"><i class="fab fa-discord"></i></a>
+            <a href="https://chat.whatsapp.com/DVxDPtshA4jDTKAxglTQMt" class="text-slate-400 hover:text-[#25D366] text-3xl transition-transform hover:scale-110"><i class="fab fa-whatsapp"></i></a>
         </div>
-        <p class="text-slate-600 text-xs font-bold uppercase tracking-wider mb-2">
+        <p class="text-slate-400 text-xs font-bold uppercase tracking-wider mb-2">
             © 2026 Cafaalia SMP Team.
         </p>
-        <p class="text-slate-700 text-[10px] font-bold max-w-lg mx-auto leading-relaxed uppercase">
+        <p class="text-slate-500 text-[10px] font-bold max-w-lg mx-auto leading-relaxed uppercase">
             NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.
         </p>
     </footer>
 
-    <div id="toast" class="toast-hidden fixed bottom-10 left-1/2 -translate-x-1/2 z-[100] bg-[#1a1a1a] border-2 border-[#4CAF50] px-6 py-4 flex items-center space-x-4 shadow-[4px_4px_0_0_rgba(0,0,0,0.8)]">
+    <div id="toast" class="toast-hidden fixed bottom-10 left-1/2 -translate-x-1/2 z-[100] bg-[#1a1a1a]/90 backdrop-blur-md border-2 border-[#4CAF50] px-6 py-4 flex items-center space-x-4 shadow-[4px_4px_0_0_rgba(0,0,0,0.5)] rounded-lg">
         <div class="text-[#4CAF50] text-3xl shrink-0">
             <i class="fas fa-check-square"></i>
         </div>
         <div class="text-left pr-3">
             <p class="text-white font-black text-sm uppercase" id="toastTitle">Copied!</p>
-            <p class="text-slate-400 text-xs font-bold" id="toastMsg">Silakan paste di Minecraft.</p>
+            <p class="text-slate-300 text-xs font-bold" id="toastMsg">Silakan paste di Minecraft.</p>
         </div>
     </div>
 
-    <script src="script.js?v=12"></script>
+    <script src="script.js?v=13"></script>
 </body>
 </html>
