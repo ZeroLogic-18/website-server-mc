@@ -1,6 +1,8 @@
 <div align="center">
-  <h1>🚀 Cafaalia SMP - Official Website</h1>
-  <p>Modern, Fast, and Sleek Single Page Application (SPA) for Cafaalia Minecraft Server.</p>
+  <img src="main.jpg" alt="Cafaalia SMP Banner" width="100%" style="border-radius: 8px; border: 2px solid #333;">
+  <br><br>
+  <h1>⚔️ Cafaalia SMP - Official Website</h1>
+  <p>Modern, Fast, and Official Minecraft-Themed Single Page Application (SPA).</p>
   <p><b>✨ Designed & Developed by Nanda (ZeroLogic) ✨</b></p>
 </div>
 
@@ -9,30 +11,30 @@
 ## 🌟 Tentang Proyek
 Website ini adalah portal informasi resmi untuk komunitas **Cafaalia SMP**, sebuah server Minecraft Cross-Play (Java & Bedrock) berbasis OneBlock & Survival. 
 
-Dibangun secara *from scratch* dengan konsep *Single Page Application* (SPA) tanpa framework berat, mengandalkan UI modern bergaya *Glassmorphism*, serta dilengkapi dengan fitur *real-time fetcher* untuk mengecek status server Minecraft.
+Baru saja dirombak total (*Major Update*) dengan mengusung gaya desain **Official Minecraft Website** yang *boxy*, solid, dan *dark-themed*. Dibangun dengan konsep *Single Page Application* (SPA) sehingga navigasi perpindahan tab terasa sangat instan tanpa *loading* ulang halaman.
 
 ## ✨ Fitur Utama
-- **⚡ Single Page Application (SPA):** Navigasi super mulus antar halaman (Home, Ranks, Currency, Crate, Guide, Community) tanpa perlu *loading* atau *refresh* ulang.
-- **🟢 Real-time Server Status:** Menampilkan indikator server (Online/Offline) dan jumlah *player* yang sedang aktif secara otomatis menggunakan integrasi API pihak ketiga.
-- **📋 One-Click Copy:** Fitur *copy-paste* IP server yang dilengkapi dengan notifikasi *Toast* animasi.
-- **💎 Showcase Interaktif:** Menampilkan katalog interaktif untuk Ranks, Crates/Gacha, dan Harga Top-Up.
-- **📱 Fully Responsive:** Desain responsif yang menyesuaikan ukuran layar dari PC ultra-wide hingga layar Smartphone.
+- **⚡ SPA Navigation:** Perpindahan mulus antar menu (Home, Ranks, Store, Crates, Guide) secara instan dalam satu file HTML.
+- **🟢 Real-time Server Status:** Menampilkan status server (Online/Offline) dan jumlah *player* yang sedang aktif secara akurat menggunakan integrasi `mcsrvstat.us` API.
+- **🧱 Official Minecraft UI:** Antarmuka bergaya klasik Minecraft dengan tombol 3D hijau khas, *cards* bersudut tajam (*boxy*), dan *background image* estetik.
+- **📋 One-Click Copy:** Kemudahan menyalin IP Server (Java & Bedrock) dengan notifikasi *Toast* animasi ala *achievement* di dalam game.
+- **📱 Fully Responsive:** Nyaman dan rapi diakses lewat PC ultra-wide, Tablet, maupun Smartphone.
 
 ## 🛠️ Tech Stack yang Digunakan
-- **HTML5:** Struktur dasar (*Semantic HTML*).
-- **Vanilla JavaScript:** Logika routing SPA, fungsi salin teks (*clipboard API*), dan asinkronus *fetch* status server.
-- **Tailwind CSS (via CDN):** *Styling* utilitas cepat, efek transparansi kaca (*backdrop-filter blur*), dan animasi *hover*/*floating*.
+- **HTML5:** Struktur dasar semantik.
+- **Vanilla JavaScript:** Logika routing *Hash-based* SPA, *Clipboard API*, dan *Asynchronous Fetch* untuk status server.
+- **Tailwind CSS (via CDN):** Pengaturan utilitas CSS kustom tingkat lanjut untuk menciptakan gaya kotak-kotak (*boxy*) dan efek UI solid tanpa *framework* komponen tambahan.
 - **FontAwesome:** Pustaka ikon antarmuka.
 
 ## 👤 Kredensial & Author
-Proyek ini didesain, ditulis, dan dikembangkan oleh:
+Proyek ini didesain, di-*coding*, dan dikembangkan secara independen oleh:
 * **Developer:** [Nanda (ZeroLogic)](https://github.com/ZeroLogic-18)
-* **Status Proyek:** Aktif / Production
+* **Status Proyek:** Production / Active
 * **Domain Utama:** `cafaaliaserver.hopto.org`
 
 ---
 
 <div align="center">
-  <i>© 2026 Cafaalia SMP Team. Not associated with Mojang AB.</i><br>
-  <i>Built with ❤️ by ZeroLogic</i>
+  <i>© 2026 Cafaalia SMP Team. Not associated with Mojang AB or Microsoft.</i><br>
+  <i>Built with ☕ and ❤️ by ZeroLogic</i>
 </div>
