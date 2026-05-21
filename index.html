@@ -26,6 +26,7 @@
                 <a href="#currency" onclick="switchTab('currency', event)" class="nav-link hover:text-white transition-colors">Store</a>
                 <a href="#crate" onclick="switchTab('crate', event)" class="nav-link hover:text-white transition-colors">Crates</a>
                 <a href="#guide" onclick="switchTab('guide', event)" class="nav-link hover:text-white transition-colors">Guide</a>
+                <a href="#community" onclick="switchTab('community', event)" class="nav-link hover:text-white transition-colors">Community</a>
             </div>
 
             <div class="flex items-center space-x-4">
@@ -47,6 +48,7 @@
         <a href="#currency" onclick="switchTab('currency', event)" class="nav-link flex flex-col items-center gap-1"><i class="fas fa-shopping-cart text-lg"></i></a>
         <a href="#crate" onclick="switchTab('crate', event)" class="nav-link flex flex-col items-center gap-1"><i class="fas fa-box-open text-lg"></i></a>
         <a href="#guide" onclick="switchTab('guide', event)" class="nav-link flex flex-col items-center gap-1"><i class="fas fa-book text-lg"></i></a>
+        <a href="#community" onclick="switchTab('community', event)" class="nav-link flex flex-col items-center gap-1"><i class="fas fa-users text-lg"></i></a>
     </div>
 
     <main class="flex-grow pt-[70px] pb-24 md:pb-12 w-full relative">
@@ -569,7 +571,7 @@
                             <li><strong>Hancurkan Blok:</strong> Hancurkan blok tengah terus-menerus. Awas <strong>Peti Bonus</strong> dan <strong>Mob Agresif</strong>!</li>
                             <li><strong>Cek Fase:</strong> Ketik <code class="bg-[#121212] px-1.5 py-0.5 text-cyan-300 border border-[#333333]">/ob phase</code> untuk melihat sisa blok.</li>
                             <li><strong>Pusat Kontrol:</strong> Ketik <code class="bg-[#121212] px-1.5 py-0.5 text-cyan-300 border border-[#333333]">/ob menu</code> untuk GUI.</li>
-                            <li><strong>Bermain Tim:</strong> Ketik <code class="bg-[#121212] px-1.5 py-0.5 text-cyan-300 border border-[#333333]">/ob invite [nama]</code> untuk mabar.</li>
+                            <li><strong>Bermain Tim:</strong> Ketik <code class="bg-[#121212] px-1.5 py-0.5 text-cyan-300 border border-[#333333]">/ob invite [nama]</code> untuk mengundang, dan <code class="bg-[#121212] px-1.5 py-0.5 text-cyan-300 border border-[#333333]">/ob team accept</code> untuk menerima undangan pulau.</li>
                         </ul>
                     </div>
                 </div>
@@ -644,17 +646,35 @@
             </div>
         </section>
 
-        <section id="community" class="tab-content hidden w-full px-6 max-w-4xl mx-auto pt-10">
-            <div class="mc-card p-10 md:p-16 text-center border-t-[12px] border-t-[#5865F2] relative overflow-hidden">
-                <i class="fab fa-discord absolute -right-5 top-5 text-9xl text-[#5865F2]/10 transform rotate-12"></i>
-                <div class="relative z-10">
-                    <i class="fab fa-discord text-6xl text-[#5865F2] mb-6"></i>
-                    <h2 class="font-lexend text-4xl font-black uppercase text-white mb-4">Join Komunitas</h2>
-                    <p class="text-slate-400 font-bold mb-10 leading-relaxed max-w-xl mx-auto">Dapatkan update terbaru, laporkan keluhan, dan cari teman mabar di Discord resmi kami.</p>
-                    
-                    <a href="https://discord.gg/DRFDkKRkxR" target="_blank" class="mc-btn bg-[#5865F2] hover:bg-[#4752C4] border-b-4 border-[#3c45a5] px-10 py-5 text-lg shadow-xl">
-                        MASUK DISCORD <i class="fas fa-arrow-right ml-3 text-sm"></i>
-                    </a>
+        <section id="community" class="tab-content hidden w-full px-6 max-w-5xl mx-auto pt-10">
+            <div class="text-center mb-12">
+                <h2 class="font-lexend text-4xl md:text-5xl font-black uppercase text-white mb-4">Join Komunitas</h2>
+                <p class="text-slate-400 font-bold max-w-xl mx-auto">Dapatkan update terbaru, laporkan keluhan, dan cari teman mabar di grup resmi kami.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="mc-card p-10 text-center border-t-[12px] border-t-[#5865F2] relative overflow-hidden">
+                    <i class="fab fa-discord absolute -right-5 top-5 text-9xl text-[#5865F2]/10 transform rotate-12"></i>
+                    <div class="relative z-10">
+                        <i class="fab fa-discord text-6xl text-[#5865F2] mb-6"></i>
+                        <h3 class="font-lexend text-2xl font-black uppercase text-white mb-4">Discord Server</h3>
+                        <p class="text-sm text-slate-400 font-bold mb-8 leading-relaxed">Voice chat, tiket bantuan, info event eksklusif, dan obrolan komunitas ada di sini.</p>
+                        <a href="https://discord.gg/DRFDkKRkxR" target="_blank" class="mc-btn bg-[#5865F2] hover:bg-[#4752C4] border-b-4 border-[#3c45a5] w-full px-6 py-4 text-sm shadow-xl">
+                            MASUK DISCORD <i class="fas fa-arrow-right ml-3"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="mc-card p-10 text-center border-t-[12px] border-t-[#25D366] relative overflow-hidden">
+                    <i class="fab fa-whatsapp absolute -right-5 top-5 text-9xl text-[#25D366]/10 transform rotate-12"></i>
+                    <div class="relative z-10">
+                        <i class="fab fa-whatsapp text-6xl text-[#25D366] mb-6"></i>
+                        <h3 class="font-lexend text-2xl font-black uppercase text-white mb-4">Grup WhatsApp</h3>
+                        <p class="text-sm text-slate-400 font-bold mb-8 leading-relaxed">Diskusi santai, cari teman mabar cepat, dan update info langsung dari HP lu.</p>
+                        <a href="https://chat.whatsapp.com/DVxDPtshA4jDTKAxglTQMt" target="_blank" class="mc-btn bg-[#25D366] hover:bg-[#20bd5a] border-b-4 border-[#188c42] w-full px-6 py-4 text-sm shadow-xl text-white">
+                            GABUNG GRUP WA <i class="fas fa-arrow-right ml-3"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -664,7 +684,7 @@
     <footer class="bg-[#111111] border-t border-[#222222] py-12 w-full text-center">
         <div class="flex justify-center space-x-8 mb-8">
             <a href="https://discord.gg/DRFDkKRkxR" class="text-slate-500 hover:text-white text-3xl transition-colors"><i class="fab fa-discord"></i></a>
-            <a href="https://wa.me/6283845844378" class="text-slate-500 hover:text-white text-3xl transition-colors"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://chat.whatsapp.com/DVxDPtshA4jDTKAxglTQMt" class="text-slate-500 hover:text-white text-3xl transition-colors"><i class="fab fa-whatsapp"></i></a>
         </div>
         <p class="text-slate-600 text-xs font-bold uppercase tracking-wider mb-2">
             © 2026 Cafaalia SMP Team.
