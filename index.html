@@ -31,7 +31,7 @@
             <div class="flex items-center space-x-4">
                 <div class="hidden lg:flex items-center text-xs font-bold text-slate-500 mr-2">
                     <span id="statusDotNavbar" class="w-2.5 h-2.5 rounded-full bg-slate-600 mr-2"></span>
-                    <span id="statusTextNavbar">Status Unkown</span>
+                    <span id="statusTextNavbar">Status Unknown</span>
                 </div>
                 <a href="https://discord.gg/DRFDkKRkxR" target="_blank" class="text-white hover:text-[#5865F2] transition-colors"><i class="fab fa-discord text-xl"></i></a>
                 <button onclick="copyContent('ipJava', 'IP Server')" class="mc-btn px-6 py-2 ml-4 text-[13px]">
@@ -52,23 +52,67 @@
     <main class="flex-grow pt-[70px] pb-24 md:pb-12 w-full relative">
 
         <section id="home" class="tab-content w-full animate-tab">
-            <div class="relative w-full h-[60vh] min-h-[500px] overflow-hidden flex items-end justify-start">
-                <div class="relative z-10 bg-[#1a1a1a] p-8 md:p-12 w-[95%] md:w-[650px] border-t-[12px] border-r-[12px] border-[#121212] ml-0 md:ml-16 mb-0 md:mb-12 shadow-2xl">
-                    <h1 class="font-lexend text-4xl md:text-5xl font-black text-white uppercase tracking-tight leading-none mb-2">
-                        Mainkan <br><span class="text-[#4CAF50]">Cafaalia SMP!</span>
-                    </h1>
+            <div class="relative w-full h-[65vh] min-h-[550px] overflow-hidden flex items-center justify-center">
+                
+                <div class="relative z-10 w-full max-w-[1400px] px-4 md:px-8 flex flex-col lg:flex-row items-center justify-between gap-10 mt-10 md:mt-0">
                     
-                    <div class="flex items-center text-[#4CAF50] font-black uppercase text-xl mb-6">
-                        <i class="fas fa-signal mr-3 text-2xl"></i>
-                        <span id="onlinePlayerCountHeader">Loading Players...</span>
+                    <div class="bg-[#1a1a1a] p-8 md:p-12 w-full lg:w-[650px] border-t-[12px] border-r-[12px] border-[#121212] shadow-2xl">
+                        <h1 class="font-lexend text-4xl md:text-5xl font-black text-white uppercase tracking-tight leading-none mb-2">
+                            Mainkan <br><span class="text-[#4CAF50]">Cafaalia SMP!</span>
+                        </h1>
+                        
+                        <div class="flex items-center text-[#4CAF50] font-black uppercase text-xl mb-6">
+                            <i class="fas fa-signal mr-3 text-2xl"></i>
+                            <span id="onlinePlayerCountHeader">Loading Players...</span>
+                        </div>
+
+                        <p class="text-slate-300 text-sm md:text-base font-semibold mb-10 leading-relaxed max-w-xl">
+                            Kami kembali dengan fitur OneBlock & Survival yang lebih seru. Cross-play Java & Bedrock, ekonomi global, dan sistem crate yang mendebarkan!
+                        </p>
+                        <button onclick="document.getElementById('server-ips').scrollIntoView({behavior: 'smooth'})" class="mc-btn px-10 py-5 w-full md:w-auto text-base">
+                            LIHAT IP SERVER <i class="fas fa-arrow-right ml-3 text-xs"></i>
+                        </button>
                     </div>
 
-                    <p class="text-slate-300 text-sm md:text-base font-semibold mb-10 leading-relaxed max-w-xl">
-                        Kami kembali dengan fitur OneBlock & Survival yang lebih seru. Cross-play Java & Bedrock, ekonomi global, dan sistem crate yang mendebarkan!
-                    </p>
-                    <button onclick="document.getElementById('server-ips').scrollIntoView({behavior: 'smooth'})" class="mc-btn px-10 py-5 w-full md:w-auto text-base">
-                        LIHAT IP SERVER <i class="fas fa-arrow-right ml-3 text-xs"></i>
-                    </button>
+                    <div class="hidden lg:flex flex-col gap-5 w-[350px]">
+                        
+                        <div class="bg-[#111111]/80 backdrop-blur-md border-l-8 border-[#4CAF50] p-5 shadow-2xl transform hover:scale-105 transition-transform duration-300">
+                            <div class="flex items-center gap-4">
+                                <div class="bg-[#4CAF50]/20 p-3 rounded">
+                                    <i class="fas fa-globe text-2xl text-[#4CAF50]"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-lexend font-black text-white uppercase">Cross-Play Support</h4>
+                                    <p class="text-xs text-slate-300 font-bold mt-1">Java & Bedrock Edition</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-[#111111]/80 backdrop-blur-md border-l-8 border-cyan-500 p-5 shadow-2xl transform hover:scale-105 transition-transform duration-300">
+                            <div class="flex items-center gap-4">
+                                <div class="bg-cyan-500/20 p-3 rounded">
+                                    <i class="fas fa-cubes text-2xl text-cyan-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-lexend font-black text-white uppercase">Dual Gamemode</h4>
+                                    <p class="text-xs text-slate-300 font-bold mt-1">OneBlock & Survival MC</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-[#111111]/80 backdrop-blur-md border-l-8 border-yellow-500 p-5 shadow-2xl transform hover:scale-105 transition-transform duration-300">
+                            <div class="flex items-center gap-4">
+                                <div class="bg-yellow-500/20 p-3 rounded">
+                                    <i class="fas fa-gem text-2xl text-yellow-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-lexend font-black text-white uppercase">Premium Crates</h4>
+                                    <p class="text-xs text-slate-300 font-bold mt-1">Gacha item dewa impianmu!</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
 
@@ -196,6 +240,7 @@
                 </div>
 
                 <div class="mc-card p-8 border-l-8 border-l-red-500 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-red-900/5 -z-10 animate-pulse"></div>
                     <div class="flex justify-between items-start mb-6 relative z-10">
                         <div>
                             <span class="bg-red-500/20 text-red-400 border border-red-500/30 px-2 py-1 text-[10px] font-bold uppercase tracking-wider mb-2 inline-block">KASTA TERTINGGI • Rp 45.000</span>
@@ -207,7 +252,7 @@
                         <span class="text-red-400">Home:</span> Maksimal 10 lokasi | <span class="text-red-400">Kit:</span> /kit overlord
                     </div>
                     <ul class="text-sm font-semibold text-slate-300 space-y-3 list-none relative z-10">
-                        <li><code class="bg-[#333333] text-red-300 px-1">/fly</code> Terbang bebas sesuka hati.</li>
+                        <li><code class="bg-[#333333] text-red-300 px-1">/fly</code> Terbang bebas anti-gravitasi sesuka hati.</li>
                         <li><code class="bg-[#333333] text-red-300 px-1">/nick (Warna Hex)</code> Teks nama chat berwarna-warni modern.</li>
                         <li><code class="bg-[#333333] text-red-300 px-1">/gmenu main</code> Akses penuh katalog barang kosmetik hiburan premium.</li>
                         <li><i class="fas fa-check-square text-[#4CAF50] mr-2"></i> Bebas Cooldown Gadget!</li>
@@ -633,12 +678,12 @@
         <div class="text-[#4CAF50] text-3xl shrink-0">
             <i class="fas fa-check-square"></i>
         </div>
-        <div class="text-left Pr-3">
+        <div class="text-left pr-3">
             <p class="text-white font-black text-sm uppercase" id="toastTitle">Copied!</p>
             <p class="text-slate-400 text-xs font-bold" id="toastMsg">Silakan paste di Minecraft.</p>
         </div>
     </div>
 
-    <script src="script.js?v=11"></script>
+    <script src="script.js?v=12"></script>
 </body>
 </html>
