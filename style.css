@@ -1,14 +1,14 @@
-/* style.css - Cafaalia SMP (Official Minecraft Theme + Background) */
+/* style.css - Cafaalia SMP (Official Minecraft Theme + Background main.jpg) */
 
 body {
     font-family: 'Inter', sans-serif;
     background-color: #121212; 
     
-    /* Background Gambar Minecraft dengan Dark Overlay */
-    background-image: linear-gradient(rgba(18, 18, 18, 0.85), rgba(18, 18, 18, 0.95)), url('minecraft-2025-games-5k-3840x2160-21988.jpg');
+    /* Background main.jpg dengan Overlay Gelap Estetik */
+    background-image: linear-gradient(rgba(18, 18, 18, 0.8), rgba(18, 18, 18, 0.95)), url('main.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: fixed; /* Terkunci saat scroll, efek dalam */
     background-repeat: no-repeat;
     
     color: #f8fafc;
@@ -24,14 +24,14 @@ body {
 
 /* Minecraft Style Cards (Solid, Boxy, Dark) */
 .mc-card {
-    background-color: #1e1e1e;
+    background-color: #1a1a1a;
     border: 2px solid #333333;
     transition: all 0.2s ease-in-out;
 }
 
 .mc-card:hover {
     border-color: #4CAF50; /* Green highlight on hover */
-    box-shadow: 0 8px 0 rgba(0, 0, 0, 0.4);
+    box-shadow: 0 8px 0 rgba(0, 0, 0, 0.4); /* Bayangan keras ala retro game */
     transform: translateY(-4px);
 }
 
@@ -53,8 +53,8 @@ body {
 }
 
 .mc-btn:active {
-    border-bottom: 0px solid #1E5114;
-    transform: translateY(4px); /* Animasi kepencet */
+    border-bottom: 0px solid #1E5114; /* Tombol neken ke bawah */
+    transform: translateY(4px); 
 }
 
 /* Scrollbar Boxy */
