@@ -16,13 +16,11 @@
     <nav class="fixed top-0 w-full z-50 bg-[#111111] border-b border-[#222222] shadow-md">
         <div class="max-w-[1400px] mx-auto px-4 md:px-8 flex justify-between items-center h-[70px]">
             
-            <!-- Logo -->
             <div class="flex items-center space-x-3 cursor-pointer" onclick="switchTab('home')">
                 <i class="fas fa-cube text-white text-2xl"></i>
                 <span class="font-lexend font-black text-2xl tracking-widest text-white uppercase mt-1">CAFAALIA<span class="text-[#4CAF50]">SMP</span></span>
             </div>
             
-            <!-- Navigation Links -->
             <div class="nav-scroll hidden md:flex space-x-8 text-[13px] font-bold uppercase tracking-wider text-[#cccccc]">
                 <a href="#home" onclick="switchTab('home', event)" class="nav-link text-white hover:text-white transition-colors">Home</a>
                 <a href="#ranks" onclick="switchTab('ranks', event)" class="nav-link hover:text-white transition-colors">Ranks</a>
@@ -32,7 +30,6 @@
                 <a href="#community" onclick="switchTab('community', event)" class="nav-link hover:text-white transition-colors">Community</a>
             </div>
 
-            <!-- Right Actions -->
             <div class="flex items-center space-x-4">
                 <div class="hidden lg:flex items-center text-xs font-bold text-slate-500 mr-2">
                     <span id="statusDotNavbar" class="w-2.5 h-2.5 rounded-full bg-slate-600 mr-2"></span>
@@ -47,7 +44,7 @@
         </div>
     </nav>
 
-    <!-- Mobile Nav Bar (Bottom) for small screens -->
+    <!-- Mobile Nav Bar (Bottom) -->
     <div class="md:hidden fixed bottom-0 w-full bg-[#111111] border-t border-[#222222] z-50 flex justify-around p-3 text-[10px] font-bold uppercase text-slate-400">
         <a href="#home" onclick="switchTab('home', event)" class="nav-link flex flex-col items-center gap-1"><i class="fas fa-home text-lg"></i>Home</a>
         <a href="#ranks" onclick="switchTab('ranks', event)" class="nav-link flex flex-col items-center gap-1"><i class="fas fa-crown text-lg"></i>Ranks</a>
@@ -63,20 +60,15 @@
         <!-- ================= 1. HOME TAB ================= -->
         <section id="home" class="tab-content w-full animate-tab">
             <div class="relative w-full h-[65vh] min-h-[550px] overflow-hidden flex items-center justify-center">
-                
                 <div class="relative z-10 w-full max-w-[1400px] px-4 md:px-8 flex flex-col lg:flex-row items-center justify-between gap-10 mt-10 md:mt-0">
-                    
-                    <!-- KOTAK KIRI (Main Info) -->
                     <div class="bg-[#1a1a1a] p-8 md:p-12 w-full lg:w-[650px] border-t-[12px] border-r-[12px] border-[#121212] shadow-2xl">
                         <h1 class="font-lexend text-4xl md:text-5xl font-black text-white uppercase tracking-tight leading-none mb-2">
                             Mainkan <br><span class="text-[#4CAF50]">Cafaalia SMP!</span>
                         </h1>
-                        
                         <div class="flex items-center text-[#4CAF50] font-black uppercase text-xl mb-6">
                             <i class="fas fa-signal mr-3 text-2xl"></i>
                             <span id="onlinePlayerCountHeader">Loading Players...</span>
                         </div>
-
                         <p class="text-slate-300 text-sm md:text-base font-semibold mb-10 leading-relaxed max-w-xl">
                             Kami kembali dengan era baru! Jelajahi dunia murni di <strong>Survival Vanilla</strong>, atau bangun kerajaan dan hancurkan aliansi musuh di <strong>Survival Faction RPG</strong>. Cross-play Java & Bedrock didukung penuh!
                         </p>
@@ -85,58 +77,44 @@
                         </button>
                     </div>
 
-                    <!-- KOTAK KANAN (Floating Badges) -->
                     <div class="hidden lg:flex flex-col gap-5 w-[350px]">
-                        
                         <div class="bg-[#111111]/80 backdrop-blur-md border-l-8 border-[#4CAF50] p-5 shadow-2xl transform hover:scale-105 transition-transform duration-300">
                             <div class="flex items-center gap-4">
-                                <div class="bg-[#4CAF50]/20 p-3 rounded">
-                                    <i class="fas fa-globe text-2xl text-[#4CAF50]"></i>
-                                </div>
+                                <div class="bg-[#4CAF50]/20 p-3 rounded"><i class="fas fa-globe text-2xl text-[#4CAF50]"></i></div>
                                 <div>
                                     <h4 class="font-lexend font-black text-white uppercase">Cross-Play Support</h4>
                                     <p class="text-xs text-slate-300 font-bold mt-1">Java & Bedrock Edition</p>
                                 </div>
                             </div>
                         </div>
-
                         <div class="bg-[#111111]/80 backdrop-blur-md border-l-8 border-cyan-500 p-5 shadow-2xl transform hover:scale-105 transition-transform duration-300">
                             <div class="flex items-center gap-4">
-                                <div class="bg-cyan-500/20 p-3 rounded">
-                                    <i class="fas fa-swords text-2xl text-cyan-400"></i>
-                                </div>
+                                <div class="bg-cyan-500/20 p-3 rounded"><i class="fas fa-swords text-2xl text-cyan-400"></i></div>
                                 <div>
                                     <h4 class="font-lexend font-black text-white uppercase">Epic Gamemodes</h4>
                                     <p class="text-xs text-slate-300 font-bold mt-1">Vanilla & Faction RPG</p>
                                 </div>
                             </div>
                         </div>
-
                         <div class="bg-[#111111]/80 backdrop-blur-md border-l-8 border-yellow-500 p-5 shadow-2xl transform hover:scale-105 transition-transform duration-300">
                             <div class="flex items-center gap-4">
-                                <div class="bg-yellow-500/20 p-3 rounded">
-                                    <i class="fas fa-gem text-2xl text-yellow-400"></i>
-                                </div>
+                                <div class="bg-yellow-500/20 p-3 rounded"><i class="fas fa-gem text-2xl text-yellow-400"></i></div>
                                 <div>
                                     <h4 class="font-lexend font-black text-white uppercase">Premium Crates</h4>
                                     <p class="text-xs text-slate-300 font-bold mt-1">Gacha item dewa impianmu!</p>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
 
-            <!-- Content Bawah Hero (IP Address) -->
             <div id="server-ips" class="max-w-[1400px] mx-auto px-6 mt-16">
                 <div class="text-center mb-10">
                     <h2 class="font-lexend text-3xl font-black uppercase text-white">Gabung Sekarang</h2>
                     <p class="text-slate-400 font-bold mt-2">Dukungan Cross-Play Java & Bedrock</p>
                 </div>
-
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-                    <!-- Java Box -->
                     <div class="mc-card p-6 flex flex-col justify-between">
                         <div class="flex items-center space-x-3 mb-6 border-b border-[#333333] pb-3">
                             <i class="fab fa-java text-4xl text-[#4CAF50]"></i>
@@ -144,23 +122,15 @@
                         </div>
                         <div class="space-y-3">
                             <div class="bg-[#121212] p-4 border border-[#333333] flex justify-between items-center">
-                                <div>
-                                    <p class="text-[10px] font-bold text-slate-500 uppercase">Server IP</p>
-                                    <p id="ipJava" class="font-mono text-white font-bold text-lg">cafaaliasmp.hopto.org</p>
-                                </div>
+                                <div><p class="text-[10px] font-bold text-slate-500 uppercase">Server IP</p><p id="ipJava" class="font-mono text-white font-bold text-lg">cafaaliasmp.hopto.org</p></div>
                                 <button onclick="copyContent('ipJava', 'IP Java')" class="text-[#4CAF50] hover:text-white transition-colors"><i class="far fa-copy text-xl"></i></button>
                             </div>
                             <div class="bg-[#121212] p-4 border border-[#333333] flex justify-between items-center">
-                                <div>
-                                    <p class="text-[10px] font-bold text-slate-500 uppercase">Port</p>
-                                    <p id="portJava" class="font-mono text-white font-bold text-lg">25571</p>
-                                </div>
+                                <div><p class="text-[10px] font-bold text-slate-500 uppercase">Port</p><p id="portJava" class="font-mono text-white font-bold text-lg">25571</p></div>
                                 <button onclick="copyContent('portJava', 'Port Java')" class="text-[#4CAF50] hover:text-white transition-colors"><i class="far fa-copy text-xl"></i></button>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Bedrock Box -->
                     <div class="mc-card p-6 flex flex-col justify-between">
                         <div class="flex items-center space-x-3 mb-6 border-b border-[#333333] pb-3">
                             <i class="fas fa-mobile-screen-button text-4xl text-blue-400"></i>
@@ -168,17 +138,11 @@
                         </div>
                         <div class="space-y-3">
                             <div class="bg-[#121212] p-4 border border-[#333333] flex justify-between items-center">
-                                <div>
-                                    <p class="text-[10px] font-bold text-slate-500 uppercase">Server IP</p>
-                                    <p id="ipBedrock" class="font-mono text-white font-bold text-lg">cafaaliasmp.hopto.org</p>
-                                </div>
+                                <div><p class="text-[10px] font-bold text-slate-500 uppercase">Server IP</p><p id="ipBedrock" class="font-mono text-white font-bold text-lg">cafaaliasmp.hopto.org</p></div>
                                 <button onclick="copyContent('ipBedrock', 'IP Bedrock')" class="text-blue-400 hover:text-white transition-colors"><i class="far fa-copy text-xl"></i></button>
                             </div>
                             <div class="bg-[#121212] p-4 border border-[#333333] flex justify-between items-center">
-                                <div>
-                                    <p class="text-[10px] font-bold text-slate-500 uppercase">Port</p>
-                                    <p id="portBedrock" class="font-mono text-white font-bold text-lg">25711</p>
-                                </div>
+                                <div><p class="text-[10px] font-bold text-slate-500 uppercase">Port</p><p id="portBedrock" class="font-mono text-white font-bold text-lg">25711</p></div>
                                 <button onclick="copyContent('portBedrock', 'Port Bedrock')" class="text-blue-400 hover:text-white transition-colors"><i class="far fa-copy text-xl"></i></button>
                             </div>
                         </div>
@@ -275,7 +239,7 @@
                     <div class="flex justify-between items-start mb-6">
                         <div>
                             <span class="bg-red-500/20 text-red-400 border border-red-500/30 px-2 py-1 text-[10px] font-bold uppercase tracking-wider mb-2 inline-block">SULTAN • Rp 50.000</span>
-                            <h3 class="font-lexend text-3xl font-black text-red-500 uppercase mt-1">♛ Overlord</h3>
+                            <h3 class="font-lexend text-3xl font-black text-red-500 uppercase mt-1">✮ Overlord</h3>
                         </div>
                         <i class="fas fa-dragon text-4xl text-red-500"></i>
                     </div>
@@ -587,154 +551,246 @@
             </div>
         </section>
 
-        <!-- ================= 5. GUIDE TAB ================= -->
+        <!-- ================= 5. GUIDE TAB (WIKI FORMAT) ================= -->
         <section id="guide" class="tab-content hidden w-full px-6 max-w-5xl mx-auto pt-10">
-            <div class="mc-card bg-[#1a1a1a] p-8 border-l-8 border-l-[#4CAF50] mb-12 flex flex-col md:flex-row justify-between items-center relative overflow-hidden">
+            
+            <!-- PDF Download Button -->
+            <div class="mc-card bg-[#1a1a1a] p-8 border-l-8 border-l-[#4CAF50] mb-8 flex flex-col md:flex-row justify-between items-center relative overflow-hidden">
                 <i class="fas fa-file-pdf absolute -right-5 top-5 text-9xl text-white/5 transform -rotate-12"></i>
                 <div class="mb-6 md:mb-0 relative z-10">
                     <h3 class="font-lexend text-3xl font-black uppercase text-white mb-2">Buku Panduan Player 📖</h3>
-                    <p class="text-base font-semibold text-slate-300 mb-2 leading-relaxed">Pelajari cara bertahan hidup, bergabung guild, dan list command resmi.</p>
-                    <span class="mt-2 text-slate-500 text-xs font-bold bg-[#121212] px-2 py-1">Versi: Factions & Vanilla Survival v2.0</span>
+                    <p class="text-base font-semibold text-slate-300 mb-2 leading-relaxed">Versi lengkap panduan server, dari cara login hingga list command resmi.</p>
+                    <span class="mt-2 text-slate-500 text-xs font-bold bg-[#121212] px-2 py-1">Versi: Ultimate Guidebook v3.0</span>
                 </div>
                 <a href="Cafaalia SMP Server Ultimate Player Guidebook.pdf" download class="mc-btn bg-red-600 border-red-800 hover:bg-red-500 px-8 py-4 whitespace-nowrap text-base relative z-10">
                     <i class="fas fa-file-pdf mr-3 text-2xl"></i> UNDUH PDF
                 </a>
             </div>
 
-            <div class="space-y-12">
-                <!-- JUDUL BAB I -->
-                <div class="text-center">
-                    <h3 class="font-lexend text-2xl md:text-3xl font-black uppercase text-white inline-block bg-[#121212] px-8 py-3 border border-[#333333]">BAB I: Panduan Memulai Bermain</h3>
+            <!-- WIKI / DOC STYLE CONTAINER -->
+            <div class="bg-[#121212] border border-[#333333] p-8 md:p-12 shadow-2xl relative">
+                <!-- decorative top bar -->
+                <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#4CAF50] via-cyan-500 to-purple-500"></div>
+
+                <div class="text-center mb-10 border-b border-[#333333] pb-8">
+                    <h2 class="font-lexend text-3xl md:text-4xl font-black uppercase text-white mb-4">📖 BUKU PANDUAN LENGKAP CAFAALIA SMP</h2>
+                    <p class="text-slate-400 font-semibold max-w-2xl mx-auto leading-relaxed">(ULTIMATE GUIDE)</p>
+                    <p class="text-slate-300 mt-4 leading-relaxed max-w-3xl mx-auto text-sm md:text-base">Selamat datang di Cafaalia SMP! Dokumen ini adalah panduan resmi yang memuat segala hal yang perlu kamu ketahui tentang server ini. Mulai dari cara bergabung, bertahan hidup, mencari uang, hingga menguasai fitur-fitur VIP tingkat Dewa.</p>
                 </div>
 
-                <!-- BAB I - Detail -->
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div class="mc-card p-8 border-l-8 border-l-[#4CAF50]">
-                        <h4 class="font-lexend text-xl font-black uppercase text-[#4CAF50] mb-5 border-b border-[#333333] pb-3">1. Fase Pertama: Lobi / Spawn</h4>
-                        <ul class="text-sm font-semibold text-slate-300 space-y-4 list-none leading-relaxed">
-                            <li><strong>Keamanan Akun:</strong> Ketik <code class="bg-[#121212] px-1.5 py-0.5 text-white border border-[#333333]">/register [pass] [pass]</code> jika pemula, atau <code class="bg-[#121212] px-1.5 py-0.5 text-white border border-[#333333]">/login [pass]</code> jika sudah terdaftar.</li>
-                            <li><strong>Pahami Aturan:</strong> Ketik <code class="bg-[#121212] px-1.5 py-0.5 text-white border border-[#333333]">/rules</code> untuk terhindar dari sanksi.</li>
-                            <li><strong>Modal Awal:</strong> Ketik <code class="bg-[#121212] px-1.5 py-0.5 text-white border border-[#333333]">/kit wanderer</code> untuk senjata & perkakas dasar.</li>
-                            <li><strong>Sistem Voting:</strong> Ketik <code class="bg-[#121212] px-1.5 py-0.5 text-white border border-[#333333]">/vote</code> untuk dapat kunci gacha gratis.</li>
-                            <li><strong>Gacha:</strong> Buka peti di area Spawn menggunakan kunci hasil vote.</li>
-                        </ul>
-                    </div>
+                <!-- Content Body -->
+                <div class="space-y-10 text-slate-300 leading-relaxed text-sm md:text-base">
                     
-                    <div class="mc-card p-8 border-l-8 border-l-cyan-500">
-                        <h4 class="font-lexend text-xl font-black uppercase text-cyan-500 mb-5 border-b border-[#333333] pb-3">2. Fase Kedua: Survival & Faction</h4>
-                        <ul class="text-sm font-semibold text-slate-300 space-y-4 list-none leading-relaxed">
-                            <li><strong>Pilih Jalanmu:</strong> Main santai di dunia Vanilla, atau bentuk Faction/Guild untuk perang & ekspansi area.</li>
-                            <li><strong>Bentuk Guild:</strong> Ketik <code class="bg-[#121212] px-1.5 py-0.5 text-cyan-300 border border-[#333333]">/f create [nama]</code> untuk membuat Faction sendiri.</li>
-                            <li><strong>Klaim Wilayah:</strong> Berdiri di area yang diinginkan, ketik <code class="bg-[#121212] px-1.5 py-0.5 text-cyan-300 border border-[#333333]">/f claim</code> agar base aman dari <em>griefing</em> faction lain.</li>
-                            <li><strong>Ajak Teman:</strong> Ketik <code class="bg-[#121212] px-1.5 py-0.5 text-cyan-300 border border-[#333333]">/f invite [nama]</code> untuk merekrut anggota guild.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="mc-card p-8 border-l-8 border-l-yellow-500 mt-6 max-w-4xl mx-auto">
-                    <h4 class="font-lexend text-xl font-black uppercase text-yellow-500 mb-5 border-b border-[#333333] pb-3">3. Fase Ketiga: Ekonomi, Tambang, & Arena PVP</h4>
-                    <ul class="text-sm font-semibold text-slate-300 space-y-4 list-none leading-relaxed">
-                        <li><strong>Mencari Uang via Shop:</strong> Ketik <code class="bg-[#121212] px-1.5 py-0.5 text-yellow-300 border border-[#333333]">/shop</code> untuk beli/jual material ke server.</li>
-                        <li><strong>Pasar Lelang Player:</strong> Ketik <code class="bg-[#121212] px-1.5 py-0.5 text-yellow-300 border border-[#333333]">/ah sell [harga]</code> untuk jualan item dewa, atau <code class="bg-[#121212] px-1.5 py-0.5 text-yellow-300 border border-[#333333]">/ah</code> untuk membeli barang player lain.</li>
-                        <li><strong>Teleport Liar:</strong> Gunakan <code class="bg-[#121212] px-1.5 py-0.5 text-yellow-300 border border-[#333333]">/rtp</code> untuk mencari lahan tersembunyi membangun markas Faction.</li>
-                        <li><strong>Bertempur:</strong> Pergi ke area luar /rtp untuk PvP atau berperang antar Guild memperebutkan wilayah kekuasaan!</li>
-                    </ul>
-                </div>
-
-                <!-- JUDUL BAB II -->
-                <div class="text-center mt-16 border-t border-[#333333] pt-16">
-                    <h3 class="font-lexend text-2xl md:text-3xl font-black uppercase text-white inline-block bg-[#121212] px-8 py-3 border border-[#333333]">BAB II: Hirarki Rank Member & Hak Akses Command</h3>
-                </div>
-
-                <div class="grid md:grid-cols-2 gap-8">
-                    <!-- Rank Wanderer (Guide) -->
-                    <div class="mc-card p-6 border-t-4 border-slate-400 flex flex-col">
-                        <h4 class="font-lexend text-lg font-black uppercase text-slate-200 mb-4 bg-[#121212] p-3 border border-[#333333]">1. Wanderer (Gratis)</h4>
-                        <ul class="text-xs font-semibold text-slate-300 space-y-2.5 list-none leading-tight flex-grow">
-                            <li><code class="text-emerald-400">/spawn</code> : Teleport kembali ke lobi utama server.</li>
-                            <li><code class="text-emerald-400">/f create</code> & <code class="text-emerald-400">/f claim</code> : Buat dan klaim wilayah Faction.</li>
-                            <li><code class="text-emerald-400">/rtp</code> : Teleport acak ke koordinat dunia luar yang aman.</li>
-                            <li><code class="text-emerald-400">/sethome [nama]</code> : Menandai lokasi rumah pribadi/base (Maks 2).</li>
-                            <li><code class="text-emerald-400">/home [nama]</code> : Teleport kembali ke lokasi sethome.</li>
-                            <li><code class="text-emerald-400">/tpa [nama]</code> : Izin berkunjung ke posisi player lain.</li>
-                            <li><code class="text-emerald-400">/balance</code> & <code class="text-emerald-400">/baltop</code> : Cek saldo & peringkat dompet.</li>
-                            <li><code class="text-emerald-400">/pay [nama] [jml]</code> : Transfer nominal uang tunai ke player.</li>
-                        </ul>
+                    <!-- BAB 1 -->
+                    <div>
+                        <h3 class="font-lexend text-xl md:text-2xl font-black text-white border-l-4 border-[#4CAF50] pl-4 mb-4 flex items-center bg-[#1a1a1a] py-2">🟢 BAB 1: SISTEM AKUN & LOGIN (CROSSPLAY)</h3>
+                        <p class="mb-4">Server ini mendukung fitur <em>Crossplay</em>, sehingga pemain dari <strong>Minecraft Java (PC)</strong> dan <strong>Minecraft Bedrock (HP/Console)</strong> bisa bermain bersama dalam satu dunia.</p>
+                        <ol class="list-decimal ml-6 space-y-4 font-semibold text-slate-200">
+                            <li><strong>Registrasi Akun Baru (Wajib)</strong>
+                                <p class="font-normal text-slate-400 mt-1">Saat pertama kali masuk, akunmu belum aman. Kamu harus membuat <em>password</em> agar barang dan rumahmu tidak dibajak orang lain dengan nama yang sama.</p>
+                                <ul class="list-disc ml-6 mt-2 text-slate-400 font-normal space-y-1">
+                                    <li>Buka chat dan ketik: <code class="bg-[#222] text-[#4CAF50] px-1 py-0.5 border border-[#333]">/register &lt;password_baru&gt; &lt;ulangi_password&gt;</code></li>
+                                    <li>Contoh: <code class="bg-[#222] text-[#4CAF50] px-1 py-0.5 border border-[#333]">/register cafaalia123 cafaalia123</code></li>
+                                </ul>
+                            </li>
+                            <li><strong>Sesi Auto-Login (Login Pintar)</strong>
+                                <p class="font-normal text-slate-400 mt-1">Kamu <strong>TIDAK PERLU</strong> mengetik <code class="bg-[#222] text-[#4CAF50] px-1 py-0.5 border border-[#333]">/login</code> setiap kali masuk ke server. Server kita mencatat IP Address-mu.</p>
+                                <ul class="list-disc ml-6 mt-2 text-slate-400 font-normal">
+                                    <li>Kamu hanya perlu mengetik <code class="bg-[#222] text-[#4CAF50] px-1 py-0.5 border border-[#333]">/login &lt;password&gt;</code> JIKA kamu ganti HP/PC, ganti jaringan Wi-Fi, atau menggunakan kuota data seluler yang IP-nya berubah-ubah.</li>
+                                </ul>
+                            </li>
+                        </ol>
                     </div>
 
-                    <!-- Rank Streamer (Guide) -->
-                    <div class="mc-card p-6 border-t-4 border-fuchsia-500 flex flex-col">
-                        <h4 class="font-lexend text-lg font-black uppercase text-fuchsia-400 mb-4 bg-[#121212] p-3 border border-[#333333]">2. Streamer (Partner)</h4>
-                        <ul class="text-xs font-semibold text-slate-300 space-y-2.5 list-none leading-tight flex-grow">
-                            <li><i class="fas fa-check-square text-fuchsia-400 mr-2"></i> Memiliki <strong>SEMUA</strong> fitur dari Rank Gladiator.</li>
-                            <li><i class="fas fa-link text-fuchsia-400 mr-2"></i> Mendapat akses izin kirim link Live Stream di Chat.</li>
-                            <li><i class="fas fa-info-circle text-fuchsia-400 mr-2"></i> Rank khusus Content Creator. Silakan hubungi Admin.</li>
-                        </ul>
+                    <hr class="border-[#333333]">
+
+                    <!-- BAB 2 -->
+                    <div>
+                        <h3 class="font-lexend text-xl md:text-2xl font-black text-white border-l-4 border-cyan-500 pl-4 mb-4 flex items-center bg-[#1a1a1a] py-2">🟢 BAB 2: NAVIGASI & TELEPORTASI</h3>
+                        <p class="mb-4">Dunia Minecraft itu luas. Jangan sampai kamu tersesat atau repot jalan kaki ribuan blok!</p>
+                        <ol class="list-decimal ml-6 space-y-4 font-semibold text-slate-200">
+                            <li><strong>Menu Utama Server:</strong> Ketik <code class="bg-[#222] text-cyan-400 px-1 py-0.5 border border-[#333]">/menu</code> atau <code class="bg-[#222] text-cyan-400 px-1 py-0.5 border border-[#333]">/utama</code> untuk membuka tampilan antarmuka (GUI) yang memuat semua fitur server secara praktis.</li>
+                            <li><strong>Teleportasi Acak (RTP):</strong> Berada di Spawn dan bingung mau ke mana? Ketik <code class="bg-[#222] text-cyan-400 px-1 py-0.5 border border-[#333]">/rtp</code> untuk diteleportasikan secara acak ke alam liar. Ini adalah titik awalmu membangun <em>base</em>!</li>
+                            <li><strong>Sistem Rumah (Sethome):</strong> Menemukan spot bagus untuk rumah? Wajib simpan lokasinya!
+                                <ul class="list-disc ml-6 mt-2 text-slate-400 font-normal space-y-1">
+                                    <li>Ketik <code class="bg-[#222] text-cyan-400 px-1 py-0.5 border border-[#333]">/sethome rumahku</code> untuk menyimpan lokasi.</li>
+                                    <li>Ketik <code class="bg-[#222] text-cyan-400 px-1 py-0.5 border border-[#333]">/home rumahku</code> untuk kembali ke rumahmu dari mana saja.</li>
+                                    <li><em>(Kapasitas sethome bergantung pada Rank kamu).</em></li>
+                                </ul>
+                            </li>
+                            <li><strong>Teleport ke Teman (TPA):</strong>
+                                <ul class="list-disc ml-6 mt-2 text-slate-400 font-normal space-y-1">
+                                    <li>Ketik <code class="bg-[#222] text-cyan-400 px-1 py-0.5 border border-[#333]">/tpa &lt;nama_teman&gt;</code> untuk meminta teleport ke lokasi temanmu.</li>
+                                    <li>Temanmu harus mengetik <code class="bg-[#222] text-cyan-400 px-1 py-0.5 border border-[#333]">/tpaccept</code> untuk menerima, atau <code class="bg-[#222] text-cyan-400 px-1 py-0.5 border border-[#333]">/tpacancel</code> untuk menolak.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Kembali ke Pusat Kota:</strong> Ketik <code class="bg-[#222] text-cyan-400 px-1 py-0.5 border border-[#333]">/spawn</code> kapan saja untuk kembali ke titik awal server.</li>
+                        </ol>
                     </div>
 
-                    <!-- Rank Gladiator (Guide) -->
-                    <div class="mc-card p-6 border-t-4 border-yellow-400 flex flex-col">
-                        <h4 class="font-lexend text-lg font-black uppercase text-yellow-400 mb-4 bg-[#121212] p-3 border border-[#333333]">3. Gladiator (VIP I)</h4>
-                        <ul class="text-xs font-semibold text-slate-300 space-y-2.5 list-none leading-tight flex-grow">
-                            <li>Mewarisi seluruh kemampuan Rank Wanderer.</li>
-                            <li><code class="text-yellow-400">/anvil</code> : Membuka menu paron ganti nama item portabel.</li>
-                            <li><code class="text-yellow-400">/workbench</code> : Membuka meja rakit crafting virtual.</li>
-                            <li><code class="text-yellow-400">/feed</code> : Mengisi penuh bar kelaparan instan.</li>
-                            <li><code class="text-yellow-400">/hat</code> : Menjadikan jenis material blok jadi topi.</li>
-                            <li><code class="text-yellow-400">/sit</code> & <code class="text-yellow-400">/lay</code> : Animasi duduk dan rebahan santai (Maks 3 sethome).</li>
-                        </ul>
+                    <hr class="border-[#333333]">
+
+                    <!-- BAB 3 -->
+                    <div>
+                        <h3 class="font-lexend text-xl md:text-2xl font-black text-white border-l-4 border-yellow-500 pl-4 mb-4 flex items-center bg-[#1a1a1a] py-2">🟢 BAB 3: BERTAHAN HIDUP (SURVIVAL SYSTEM)</h3>
+                        <p class="mb-4">Server ini memiliki beberapa modifikasi ringan agar <em>Survival</em> lebih menyenangkan dan tidak membuang waktu.</p>
+                        <ol class="list-decimal ml-6 space-y-4 font-semibold text-slate-200">
+                            <li><strong>Modal Awal (Kit):</strong> Jangan mulai dengan tangan kosong! Ketik <code class="bg-[#222] text-yellow-400 px-1 py-0.5 border border-[#333]">/kit wanderer</code> untuk mendapatkan pedang, beliung, kapak, dan makanan gratis. Bisa diklaim setiap 24 jam.</li>
+                            <li><strong>Tebang Pohon Instan (Timber):</strong> Gunakan kapak jenis apa saja, hancurkan 1 blok kayu paling bawah dari sebuah pohon, dan seluruh batangnya akan otomatis hancur sekaligus.</li>
+                            <li><strong>Tidur Praktis (SinglePlayerSleep):</strong> Malam hari terlalu banyak monster? Cukup <strong>1 orang</strong> saja yang tidur di kasur, dan cuaca akan langsung berubah menjadi pagi untuk seluruh server!</li>
+                        </ol>
                     </div>
 
-                    <!-- Rank Conqueror (Guide) -->
-                    <div class="mc-card p-6 border-t-4 border-cyan-400 flex flex-col">
-                        <h4 class="font-lexend text-lg font-black uppercase text-cyan-400 mb-4 bg-[#121212] p-3 border border-[#333333]">4. Conqueror (VIP II)</h4>
-                        <ul class="text-xs font-semibold text-slate-300 space-y-2.5 list-none leading-tight flex-grow">
-                            <li>Mewarisi seluruh kemampuan Rank Gladiator.</li>
-                            <li><code class="text-cyan-400">/enderchest</code> : Membuka brankas tas dimensi portabel.</li>
-                            <li><code class="text-cyan-400">/heal</code> : Pemulihan total darah instan hingga penuh.</li>
-                            <li><code class="text-cyan-400">/repair</code> : Memperbaiki durabilitas alat armor/senjata rusak (Maks 5 sethome).</li>
-                            <li><code class="text-cyan-400">/nick [nama]</code> : Mengubah nama panggilan samaran unik chat.</li>
-                            <li><code class="text-cyan-400">/crawl</code> : Animasi merangkak tiarap lewat 1 blok.</li>
-                        </ul>
+                    <hr class="border-[#333333]">
+
+                    <!-- BAB 4 -->
+                    <div>
+                        <h3 class="font-lexend text-xl md:text-2xl font-black text-white border-l-4 border-orange-500 pl-4 mb-4 flex items-center bg-[#1a1a1a] py-2">🟢 BAB 4: ANTI-MALING & KEPEMILIKAN TANAH (CLAIM SYSTEM)</h3>
+                        <p class="mb-4">Kita menggunakan sistem <em>GriefPrevention</em>. Selama tanahmu di-claim, tidak ada <em>player</em> lain yang bisa menghancurkan blok, membuka peti, atau membunuh hewan ternakmu.</p>
+                        <ol class="list-decimal ml-6 space-y-4 font-semibold text-slate-200">
+                            <li><strong>Cara Mengklaim Tanah:</strong>
+                                <ul class="list-disc ml-6 mt-2 text-slate-400 font-normal space-y-1">
+                                    <li>Dapatkan <strong>Golden Shovel</strong> (Sekop Emas).</li>
+                                    <li>Klik kanan di tanah pada sudut pertama area rumahmu.</li>
+                                    <li>Berjalanlah ke sudut berlawanan (secara diagonal) dan klik kanan lagi.</li>
+                                    <li>Muncul blok emas sementara? Selamat! Area itu sekarang 100% milikmu.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Cara Menambah Luas Tanah:</strong> Semakin lama kamu bermain <em>online</em> di server, <em>Claim Blocks</em> (jatah luas tanahmu) akan otomatis bertambah!</li>
+                            <li><strong>Bermain dengan Teman (Trust):</strong> Ingin temanmu bisa membuka pintu dan peti di rumahmu? 
+                                <ul class="list-disc ml-6 mt-2 text-slate-400 font-normal space-y-1">
+                                    <li>Berdirilah di dalam area rumahmu, lalu ketik <code class="bg-[#222] text-orange-400 px-1 py-0.5 border border-[#333]">/trust &lt;nama_teman&gt;</code>.</li>
+                                    <li>Untuk mencabut izin, ketik <code class="bg-[#222] text-orange-400 px-1 py-0.5 border border-[#333]">/untrust &lt;nama_teman&gt;</code>.</li>
+                                </ul>
+                            </li>
+                        </ol>
                     </div>
 
-                    <!-- Rank Overlord (Guide) -->
-                    <div class="mc-card p-6 border-t-4 border-red-500 flex flex-col relative overflow-hidden">
-                        <div class="absolute inset-0 bg-red-900/5 -z-10 animate-pulse"></div>
-                        <h4 class="font-lexend text-lg font-black uppercase text-red-500 mb-4 bg-[#121212] p-3 border border-[#333333] relative z-10">5. Overlord (Sultan)</h4>
-                        <ul class="text-xs font-semibold text-slate-300 space-y-2.5 list-none leading-tight flex-grow relative z-10">
-                            <li>Mewarisi seluruh kemampuan Rank Conqueror.</li>
-                            <li><code class="text-red-400">/fly</code> : Mode terbang bebas tanpa batas di server (Maks 15 sethome).</li>
-                            <li><code class="text-red-400">/nick (Warna Hex)</code> : Gunakan gradasi warna warna modern chat.</li>
-                            <li><code class="text-red-400">/gmenu main</code> : Katalog barang kosmetik hiburan premium (Pets).</li>
-                        </ul>
+                    <hr class="border-[#333333]">
+
+                    <!-- BAB 5 -->
+                    <div>
+                        <h3 class="font-lexend text-xl md:text-2xl font-black text-white border-l-4 border-fuchsia-500 pl-4 mb-4 flex items-center bg-[#1a1a1a] py-2">🟢 BAB 5: EKONOMI & PEKERJAAN (JOBS & SKILLS)</h3>
+                        <p class="mb-4">Jadilah orang terkaya di server! Segala aktivitasmu bisa diubah menjadi uang (<em>Koin</em>).</p>
+                        <ol class="list-decimal ml-6 space-y-4 font-semibold text-slate-200">
+                            <li><strong>Sistem Pekerjaan (JobSystem):</strong>
+                                <ul class="list-disc ml-6 mt-2 text-slate-400 font-normal space-y-1">
+                                    <li>Ketik <code class="bg-[#222] text-fuchsia-400 px-1 py-0.5 border border-[#333]">/jobs</code> untuk melihat daftar pekerjaan (Miner, Farmer, Hunter, dll).</li>
+                                    <li>Bergabunglah dengan pekerjaan tersebut. Setiap kali kamu menambang atau bertani, uang otomatis masuk ke saldomu.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Sistem Level RPG (AuraSkills):</strong>
+                                <ul class="list-disc ml-6 mt-2 text-slate-400 font-normal space-y-1">
+                                    <li>Ketik <code class="bg-[#222] text-fuchsia-400 px-1 py-0.5 border border-[#333]">/skills</code>. Karaktermu akan naik level seiring berjalannya waktu.</li>
+                                    <li>Semakin tinggi level skill-mu, darahmu (HP) akan bertambah, seranganmu lebih kuat, dan hasil tambangmu bisa berlipat ganda!</li>
+                                </ul>
+                            </li>
+                            <li><strong>Jual Beli (Toko Server):</strong>
+                                <ul class="list-disc ml-6 mt-2 text-slate-400 font-normal space-y-1">
+                                    <li>Ketik <code class="bg-[#222] text-fuchsia-400 px-1 py-0.5 border border-[#333]">/shop</code> untuk membuka GUI Toko. Kamu bisa menjual item hasil <em>farming</em> ke server untuk mendapat uang, atau membeli blok untuk membangun rumah.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Perbankan:</strong>
+                                <ul class="list-disc ml-6 mt-2 text-slate-400 font-normal space-y-1">
+                                    <li>Cek uangmu: <code class="bg-[#222] text-fuchsia-400 px-1 py-0.5 border border-[#333]">/bal</code></li>
+                                    <li>Lihat orang terkaya: <code class="bg-[#222] text-fuchsia-400 px-1 py-0.5 border border-[#333]">/baltop</code></li>
+                                    <li>Transfer uang ke teman: <code class="bg-[#222] text-fuchsia-400 px-1 py-0.5 border border-[#333]">/pay &lt;nama_teman&gt; &lt;jumlah_uang&gt;</code> (Contoh: <code>/pay Udin 10000</code>).</li>
+                                </ul>
+                            </li>
+                        </ol>
                     </div>
 
-                    <!-- Rank Immortal (Guide) -->
-                    <div class="mc-card p-6 border-t-4 border-amber-500 flex flex-col relative overflow-hidden">
-                        <div class="absolute inset-0 bg-amber-900/5 -z-10 animate-pulse"></div>
-                        <h4 class="font-lexend text-lg font-black uppercase text-amber-500 mb-4 bg-[#121212] p-3 border border-[#333333] relative z-10">6. Immortal (Mythic)</h4>
-                        <ul class="text-xs font-semibold text-slate-300 space-y-2.5 list-none leading-tight flex-grow relative z-10">
-                            <li>Mewarisi seluruh kemampuan Rank Overlord.</li>
-                            <li><code class="text-amber-400">/repair all</code> & <code class="text-amber-400">/condense</code> : Efisiensi inventori penuh (Maks 30 sethome).</li>
-                            <li><code class="text-amber-400">/speed, /near, /pweather</code> : Utilitas radar dan manipulasi lari.</li>
-                            <li><i class="fas fa-arrow-up text-amber-400 mr-1"></i> Bonus Boost EXP AuraSkills sebesar 1.5x Lipat!</li>
-                        </ul>
+                    <hr class="border-[#333333]">
+
+                    <!-- BAB 6 -->
+                    <div>
+                        <h3 class="font-lexend text-xl md:text-2xl font-black text-white border-l-4 border-blue-500 pl-4 mb-4 flex items-center bg-[#1a1a1a] py-2">🟢 BAB 6: FITUR SOSIAL & HIBURAN</h3>
+                        <ol class="list-decimal ml-6 space-y-4 font-semibold text-slate-200">
+                            <li><strong>Animasi Karakter (GSit):</strong>
+                                <ul class="list-disc ml-6 mt-2 text-slate-400 font-normal space-y-1">
+                                    <li>Ketik <code class="bg-[#222] text-blue-400 px-1 py-0.5 border border-[#333]">/sit</code> untuk duduk santai di tanah.</li>
+                                    <li>Ketik <code class="bg-[#222] text-blue-400 px-1 py-0.5 border border-[#333]">/lay</code> untuk rebahan.</li>
+                                    <li>Bisa juga klik kanan langsung pada <em>Stairs/Slab</em> (Tangga) untuk duduk tanpa command!</li>
+                                </ul>
+                            </li>
+                            <li><strong>Toko Kunci (Gacha / CrazyCrates):</strong> Pergi ke area Gacha di Spawn. Gunakan kunci yang kamu dapatkan untuk mengundi hadiah (Common, Epic, God Keys).</li>
+                            <li><strong>Dukung Server (Vote):</strong> Ketik <code class="bg-[#222] text-blue-400 px-1 py-0.5 border border-[#333]">/vote</code> dan dukung server kita di website. Kamu akan mendapat hadiah dan Kunci Gacha gratis!</li>
+                            <li><strong>Voice Chat:</strong> Jika kamu bermain di Java (PC) dan memasang mod <em>Simple Voice Chat</em>, kamu bisa mengobrol langsung menggunakan <em>Mic</em> dengan pemain di sekitarmu (Proximity Chat).</li>
+                        </ol>
                     </div>
 
-                    <!-- Rank Godlike (Guide) -->
-                    <div class="mc-card p-6 border-t-4 border-purple-500 flex flex-col relative overflow-hidden lg:col-span-2">
-                        <div class="absolute inset-0 bg-purple-900/10 -z-10 animate-pulse"></div>
-                        <h4 class="font-lexend text-lg font-black uppercase text-purple-400 mb-4 bg-[#121212] p-3 border border-[#333333] relative z-10">7. Godlike (Dewa)</h4>
-                        <div class="grid md:grid-cols-2 gap-4 relative z-10">
-                            <ul class="text-xs font-semibold text-slate-300 space-y-2.5 list-none leading-tight">
-                                <li>Mewarisi <strong>SEMUA</strong> fitur dari rank di server tanpa terkecuali (Maks 40 sethome).</li>
-                                <li><code class="text-purple-400">/god</code> (Mode Kebal) & <code class="text-purple-400">/vanish</code> (Menghilang tak terlihat).</li>
-                            </ul>
-                            <ul class="text-xs font-semibold text-slate-300 space-y-2.5 list-none leading-tight">
-                                <li><code class="text-purple-400">/jump, /thru, /ptime</code> : Pengendali ruang dimensi & waktu lokal.</li>
-                                <li><i class="fas fa-ghost text-purple-400 mr-1"></i> Nyetir semua mob sesuka hati dan Boost EXP Aura 2.0x!</li>
-                            </ul>
+                    <hr class="border-[#333333]">
+
+                    <!-- BAB 7 -->
+                    <div>
+                        <h3 class="font-lexend text-xl md:text-2xl font-black text-white border-l-4 border-red-500 pl-4 mb-4 flex items-center bg-[#1a1a1a] py-2">👑 BAB 7: PANDUAN RANK & VIP SERVER</h3>
+                        <p class="mb-6">Ingin pengalaman bermain yang OP (Overpowered) dan eksklusif? Dukung server dengan meng-upgrade Rank kamu via WhatsApp Admin (Ketik <code class="bg-[#222] text-red-400 font-bold px-1 py-0.5 border border-[#333]">/buy</code> di in-game). <br><em class="text-slate-400 text-sm mt-1 block">*Catatan: Rank tinggi otomatis mendapatkan semua fitur dari rank di bawahnya.</em></p>
+                        
+                        <div class="space-y-6">
+                            <!-- Wanderer -->
+                            <div class="bg-[#181818] p-5 border border-[#333333] rounded">
+                                <h4 class="font-lexend text-lg font-black text-slate-200 mb-2">1. ⚓ WANDERER <span class="text-sm font-normal text-slate-400 ml-2">(Default/Gratis)</span></h4>
+                                <p class="text-slate-400 text-sm">Rank awal. Mendapat Kit per 24 jam, batas sethome <strong>2 lokasi</strong>.</p>
+                            </div>
+
+                            <!-- Gladiator -->
+                            <div class="bg-[#181818] p-5 border border-[#333333] rounded border-l-4 border-l-yellow-400">
+                                <h4 class="font-lexend text-lg font-black text-yellow-400 mb-2">2. ⚔ GLADIATOR <span class="text-sm font-normal text-yellow-600 ml-2">(Rp 15.000)</span></h4>
+                                <ul class="list-disc ml-5 text-slate-300 text-sm space-y-1">
+                                    <li>Buka Crafting Table (<code class="text-yellow-400">/workbench</code>) & Anvil (<code class="text-yellow-400">/anvil</code>) di mana saja.</li>
+                                    <li>Kenyang instan tanpa makan (<code class="text-yellow-400">/feed</code>).</li>
+                                    <li>Batas Sethome: <strong>3 lokasi</strong>.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Conqueror -->
+                            <div class="bg-[#181818] p-5 border border-[#333333] rounded border-l-4 border-l-cyan-400">
+                                <h4 class="font-lexend text-lg font-black text-cyan-400 mb-2">3. ⚜ CONQUEROR <span class="text-sm font-normal text-cyan-600 ml-2">(Rp 30.000)</span></h4>
+                                <ul class="list-disc ml-5 text-slate-300 text-sm space-y-1">
+                                    <li>Darah penuh instan (<code class="text-cyan-400">/heal</code>) & Perbaiki item gratis tanpa EXP (<code class="text-cyan-400">/repair</code>).</li>
+                                    <li>Teleportasi instan ke teman tanpa perlu persetujuan (<code class="text-cyan-400">/tp</code>).</li>
+                                    <li>Buka Enderchest portabel (<code class="text-cyan-400">/echest</code>).</li>
+                                    <li>Batas Sethome: <strong>5 lokasi</strong>.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Overlord -->
+                            <div class="bg-[#181818] p-5 border border-[#333333] rounded border-l-4 border-l-red-500">
+                                <h4 class="font-lexend text-lg font-black text-red-500 mb-2">4. ✮ OVERLORD <span class="text-sm font-normal text-red-700 ml-2">(Rp 50.000)</span></h4>
+                                <ul class="list-disc ml-5 text-slate-300 text-sm space-y-1">
+                                    <li>Terbang bebas di mode Survival tanpa henti (<code class="text-red-400">/fly</code>).</li>
+                                    <li>Akses SEMUA menu kosmetik (GadgetsMenu) tanpa batas waktu!</li>
+                                    <li>Ganti warna & gaya nickname di chat (<code class="text-red-400">/nick</code>).</li>
+                                    <li>Batas Sethome: <strong>15 lokasi</strong>.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Immortal -->
+                            <div class="bg-[#181818] p-5 border border-[#333333] rounded border-l-4 border-l-amber-500 relative overflow-hidden">
+                                <div class="absolute inset-0 bg-amber-900/5 -z-10"></div>
+                                <h4 class="font-lexend text-lg font-black text-amber-500 mb-2 relative z-10">5. ✦ IMMORTAL <span class="text-sm font-normal text-amber-600 ml-2">(Rp 80.000) - MYTHIC</span></h4>
+                                <ul class="list-disc ml-5 text-slate-300 text-sm space-y-1 relative z-10">
+                                    <li><strong>Multiplier 1.5x:</strong> Level AuraSkills & Uang Job naik 50% lebih cepat!</li>
+                                    <li>Perbaiki SEMUA barang di inventory sekaligus (<code class="text-amber-400">/repair all</code>).</li>
+                                    <li>Ubah ore otomatis menjadi blok di inventory (<code class="text-amber-400">/condense</code>).</li>
+                                    <li>Lari/Terbang super cepat (<code class="text-amber-400">/speed</code>).</li>
+                                    <li>Batas Sethome: <strong>30 lokasi</strong>.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Godlike -->
+                            <div class="bg-[#181818] p-5 border border-[#333333] rounded border-l-4 border-l-purple-500 relative overflow-hidden shadow-[0_0_15px_rgba(168,85,247,0.15)]">
+                                <div class="absolute inset-0 bg-purple-900/10 -z-10 animate-pulse"></div>
+                                <h4 class="font-lexend text-lg font-black text-purple-400 mb-2 relative z-10">6. ♛ GODLIKE <span class="text-sm font-normal text-purple-600 ml-2">(Rp 120.000) - DEWA MUTLAK</span></h4>
+                                <ul class="list-disc ml-5 text-slate-300 text-sm space-y-1 relative z-10">
+                                    <li><strong>Pawang Monster (MobSteer):</strong> Fitur Paling OP! Bisa tunggangi dan setir <em>semua</em> monster (Creeper, Ravager, dll) pakai tombol WASD.</li>
+                                    <li><strong>Multiplier 2.0x:</strong> Level AuraSkills & Uang Job naik 2x lipat!</li>
+                                    <li>Mode Kebal (<code class="text-purple-400">/god</code>) dan Mode Menghilang/Ghost (<code class="text-purple-400">/vanish</code>).</li>
+                                    <li>Menembus tembok (<code class="text-purple-400">/thru</code>) dan Teleport via pandangan (<code class="text-purple-400">/jump</code>).</li>
+                                    <li>Atur waktu pribadi (<code class="text-purple-400">/ptime</code>).</li>
+                                    <li>Batas Sethome: <strong>40 lokasi</strong>.</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -789,7 +845,7 @@
         </div>
     </div>
 
-    <!-- Script versioning v23 -->
-    <script src="script.js?v=23"></script>
+    <!-- Script versioning v24 -->
+    <script src="script.js?v=24"></script>
 </body>
 </html>
