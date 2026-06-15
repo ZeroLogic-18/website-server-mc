@@ -356,7 +356,6 @@
                 <p class="text-slate-400 text-sm md:text-base font-bold">Top-up uang In-Game, Beli Rank & Kunci Crate. Aman dan Terpercaya.</p>
             </div>
 
-            <!-- FIX MOBILE TEXT BUG: Added break-words and min-w-0 -->
             <div class="mc-card bg-[#212121] p-6 md:p-8 border-l-8 border-l-[#4CAF50] mb-8 md:mb-12 flex flex-col md:flex-row justify-between items-center relative overflow-hidden">
                 <i class="fas fa-shopping-basket absolute -right-5 top-5 text-8xl md:text-9xl text-[#4CAF50]/10 transform rotate-12"></i>
                 <div class="mb-6 md:mb-0 relative z-10 w-full md:w-auto min-w-0 break-words">
@@ -406,7 +405,7 @@
             </div>
         </section>
 
-        <!-- ================= 4. CRATE TAB (NEW FULL LENGKAP) ================= -->
+        <!-- ================= 4. CRATE TAB (FIXED: 6 Premium Crates) ================= -->
         <section id="crate" class="tab-content hidden w-full md:px-6 max-w-7xl mx-auto pt-10">
             <div class="text-center mb-10 md:mb-12">
                 <h2 class="font-lexend text-3xl md:text-5xl font-black uppercase text-white mb-2 md:mb-4">Crates & Gacha</h2>
@@ -431,7 +430,7 @@
                 </div>
             </div>
 
-            <!-- GRID CRATES BARU -->
+            <!-- GRID 6 CRATES (2 Baris x 3 Kolom) -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                 
                 <!-- Common Crate -->
@@ -439,7 +438,7 @@
                     <div class="bg-[#121212] p-3 border border-[#333333] text-center mb-4">
                         <h3 class="font-lexend text-lg md:text-xl font-black uppercase text-orange-500">Common Crate</h3>
                         <p class="text-[9px] md:text-[11px] text-slate-400 mt-2 font-semibold">Peti menengah berisi modal awal dan senjata ksatria.</p>
-                        <p class="text-[10px] md:text-xs font-bold mt-2 text-white bg-[#333333] py-1">Harga: Rp 1.000</p>
+                        <p class="text-[10px] md:text-xs font-bold mt-2 text-white bg-[#333333] py-1 border border-orange-500/30">Bisa dibeli pakai Uang Server ($750k)<br>atau Rp 1.000</p>
                     </div>
                     <ul class="text-[9px] md:text-[11px] font-bold text-slate-300 space-y-2 flex-grow">
                         <li class="flex justify-between items-start gap-2"><span class="min-w-0 break-words leading-tight">Uang $100.000 <span class="block text-[8px] text-red-500 font-normal mt-0.5">(Zonk)</span></span> <span class="font-mono text-slate-500 shrink-0">35%</span></li>
@@ -460,7 +459,7 @@
                     <div class="bg-[#121212] p-3 border border-[#333333] text-center mb-4">
                         <h3 class="font-lexend text-lg md:text-xl font-black uppercase text-purple-500">Epic Crate</h3>
                         <p class="text-[9px] md:text-[11px] text-slate-400 mt-2 font-semibold">Peti tinggi dengan persenjataan Paladin tingkat lanjut.</p>
-                        <p class="text-[10px] md:text-xs font-bold mt-2 text-white bg-[#333333] py-1">Harga: Rp 3.000</p>
+                        <p class="text-[10px] md:text-xs font-bold mt-2 text-white bg-[#333333] py-1 border border-purple-500/30">Bisa dibeli pakai Uang Server ($1.5M)<br>atau Rp 3.000</p>
                     </div>
                     <ul class="text-[9px] md:text-[11px] font-bold text-slate-300 space-y-2 flex-grow">
                         <li class="flex justify-between items-start gap-2"><span class="min-w-0 break-words leading-tight">Uang $250.000 <span class="block text-[8px] text-red-500 font-normal mt-0.5">(Zonk)</span></span> <span class="font-mono text-slate-500 shrink-0">35%</span></li>
@@ -473,7 +472,33 @@
                         <li class="flex justify-between items-start gap-2 text-purple-400"><span class="min-w-0 break-words leading-tight">🪓 KAPAK PALADIN <span class="block text-[8px] text-slate-500 font-normal mt-0.5">(Sharp VI, Eff VI, Mending)</span></span> <span class="font-mono text-slate-500 shrink-0">2%</span></li>
                         <li class="flex justify-between items-start gap-2 text-purple-400"><span class="min-w-0 break-words leading-tight">🏹 BUSUR PALADIN <span class="block text-[8px] text-slate-500 font-normal mt-0.5">(Power VI, Flame II, Infinity)</span></span> <span class="font-mono text-slate-500 shrink-0">2%</span></li>
                         <li class="flex justify-between items-start gap-2 text-purple-400"><span class="min-w-0 break-words leading-tight">🔱 TRIDENT PALADIN <span class="block text-[8px] text-slate-500 font-normal mt-0.5">(Impaling VI, Loyalty IV, Channel II)</span></span> <span class="font-mono text-slate-500 shrink-0">1%</span></li>
-                        <li class="flex justify-between items-start gap-2 text-pink-500 border-t border-[#333333] pt-2 mt-2"><span class="min-w-0 break-words leading-tight">[KUNCI] MYTHIC CRATE</span> <span class="font-mono shrink-0">1%</span></li>
+                        <li class="flex justify-between items-start gap-2 text-red-500 border-t border-[#333333] pt-2 mt-2"><span class="min-w-0 break-words leading-tight">[KUNCI] GOD CRATE</span> <span class="font-mono shrink-0">1%</span></li>
+                    </ul>
+                </div>
+
+                <!-- God Crate (Lama) -->
+                <div class="mc-card p-5 md:p-6 border-t-8 border-t-red-600 flex flex-col relative overflow-hidden">
+                    <div class="absolute inset-0 bg-red-900/5 -z-10 animate-pulse"></div>
+                    <div class="bg-[#121212] p-3 border border-[#333333] text-center mb-4 relative z-10">
+                        <h3 class="font-lexend text-lg md:text-xl font-black uppercase text-red-500">God Crate</h3>
+                        <p class="text-[9px] md:text-[11px] text-slate-400 mt-2 font-semibold">Peti Kelas Atas. Senjata langka dewa tanpa risiko rugi besar!</p>
+                        <p class="text-[10px] md:text-xs font-bold mt-2 text-white bg-[#333333] py-1 border border-red-500/30">Harga: Rp 5.000</p>
+                    </div>
+                    <ul class="text-[9px] md:text-[11px] font-bold text-slate-300 space-y-1.5 flex-grow relative z-10 leading-tight">
+                        <li class="flex justify-between items-start gap-2"><span class="min-w-0 break-words leading-tight">Uang $5.000.000 <span class="block text-[8px] text-[#4CAF50] font-normal mt-0.5">(Untung)</span></span> <span class="font-mono text-slate-500 shrink-0">20%</span></li>
+                        <li class="flex justify-between items-start gap-2"><span class="min-w-0 break-words leading-tight">Uang $1.000.000 <span class="block text-[8px] text-red-500 font-normal mt-0.5">(Zonk Terkecil)</span></span> <span class="font-mono text-slate-500 shrink-0">20%</span></li>
+                        <li class="flex justify-between items-start gap-2 text-yellow-400"><span class="min-w-0 break-words leading-tight">Uang $15.000.000 <span class="block text-[8px] text-yellow-500/80 font-normal mt-0.5">(SUPER JACKPOT)</span></span> <span class="font-mono text-yellow-500 shrink-0">10%</span></li>
+                        <li class="flex justify-between items-start gap-2 text-red-300"><span class="min-w-0 break-words leading-tight">⚔️ THE GODSLAYER <span class="block text-[8px] text-slate-500 font-normal mt-0.5">(Sharp X, Smite X, Loot V, Fire V, Unbreak X)</span></span> <span class="font-mono text-slate-500 shrink-0">10%</span></li>
+                        <li class="flex justify-between items-start gap-2 text-red-300"><span class="min-w-0 break-words leading-tight">🪓 THE DECAPITATOR <span class="block text-[8px] text-slate-500 font-normal mt-0.5">(Sharp X, Smite X, Eff X, Unbreak X)</span></span> <span class="font-mono text-slate-500 shrink-0">8%</span></li>
+                        <li class="flex justify-between items-start gap-2 text-red-300"><span class="min-w-0 break-words leading-tight">🛡️ GOD ARMOR SET <span class="block text-[8px] text-slate-500 font-normal mt-0.5">(Prot VIII, Thorns VI, Unbreak VIII, Mending)</span></span> <span class="font-mono text-slate-500 shrink-0">7%</span></li>
+                        <li class="flex justify-between items-start gap-2 text-red-300"><span class="min-w-0 break-words leading-tight">🏹 APOLLO'S WRATH <span class="block text-[8px] text-slate-500 font-normal mt-0.5">(Power X, Punch V, Flame V, Infinity)</span></span> <span class="font-mono text-slate-500 shrink-0">6%</span></li>
+                        <li class="flex justify-between items-start gap-2 text-orange-300"><span class="min-w-0 break-words leading-tight">🔨 THE EARTHSHAKER <span class="block text-[8px] text-slate-500 font-normal mt-0.5">(Gada 1.21: Density X, Breach X, Wind V)</span></span> <span class="font-mono text-slate-500 shrink-0">5%</span></li>
+                        <li class="flex justify-between items-start gap-2 text-red-300"><span class="min-w-0 break-words leading-tight">🎯 ARTEMIS' PIERCER <span class="block text-[8px] text-slate-500 font-normal mt-0.5">(Crossbow: Piercing X, Quick V, Multi III)</span></span> <span class="font-mono text-slate-500 shrink-0">4%</span></li>
+                        <li class="flex justify-between items-start gap-2 text-blue-300"><span class="min-w-0 break-words leading-tight">🔱 POSEIDON'S FURY <span class="block text-[8px] text-slate-500 font-normal mt-0.5">(Impaling X, Loyalty X, Channel V)</span></span> <span class="font-mono text-slate-500 shrink-0">4%</span></li>
+                        <li class="flex justify-between items-start gap-2 text-red-300"><span class="min-w-0 break-words leading-tight">⛏️ WORLD BREAKER <span class="block text-[8px] text-slate-500 font-normal mt-0.5">(Instan Hancur Area: Eff X, Fort V)</span></span> <span class="font-mono text-slate-500 shrink-0">3%</span></li>
+                        <li class="flex justify-between items-start gap-2 text-slate-300"><span class="min-w-0 break-words leading-tight">Iron Golem Spawner <span class="block text-[8px] text-slate-500 font-normal mt-0.5">(Pabrik Uang)</span></span> <span class="font-mono text-slate-500 shrink-0">2%</span></li>
+                        <li class="flex justify-between items-start gap-2 text-slate-300"><span class="min-w-0 break-words leading-tight">Akses /Fly (3 Hari) <span class="block text-[8px] text-slate-500 font-normal mt-0.5">(Terbang Bebas)</span></span> <span class="font-mono text-slate-500 shrink-0">2%</span></li>
+                        <li class="flex justify-between items-start gap-2 text-fuchsia-500 border-t border-red-900 pt-2 mt-2"><span class="min-w-0 break-words leading-tight font-black">✮ [RANK] OVERLORD <span class="block text-[8px] text-yellow-300">(JACKPOT UTAMA)</span></span> <span class="font-mono font-bold shrink-0">1%</span></li>
                     </ul>
                 </div>
 
@@ -482,7 +507,7 @@
                     <div class="bg-[#121212] p-3 border border-[#333333] text-center mb-4">
                         <h3 class="font-lexend text-lg md:text-xl font-black uppercase text-fuchsia-500">Mythic Crate</h3>
                         <p class="text-[9px] md:text-[11px] text-slate-400 mt-2 font-semibold">Peti kekuatan para legenda. Senjata dan kekuatan mitologi untuk mendominasi server.</p>
-                        <p class="text-[10px] md:text-xs font-bold mt-2 text-white bg-[#333333] py-1">Harga: Rp 8.000</p>
+                        <p class="text-[10px] md:text-xs font-bold mt-2 text-white bg-[#333333] py-1 border border-fuchsia-500/30">Harga: Rp 8.000</p>
                     </div>
                     <ul class="text-[9px] md:text-[11px] font-bold text-slate-300 space-y-2 flex-grow">
                         <li class="flex justify-between items-start gap-2"><span class="min-w-0 break-words leading-tight">Uang $2.000.000 <span class="block text-[8px] text-red-500 font-normal mt-0.5">(Zonk Terkecil)</span></span> <span class="font-mono text-slate-500 shrink-0">20%</span></li>
@@ -505,8 +530,8 @@
                 <div class="mc-card p-5 md:p-6 border-t-8 border-t-cyan-500 flex flex-col">
                     <div class="bg-[#121212] p-3 border border-[#333333] text-center mb-4">
                         <h3 class="font-lexend text-lg md:text-xl font-black uppercase text-cyan-500">Celestial Crate</h3>
-                        <p class="text-[9px] md:text-[11px] text-slate-400 mt-2 font-semibold">Peti perusak keseimbangan kosmik. Membawa artefak dari luar angkasa dengan jaminan untung besar.</p>
-                        <p class="text-[10px] md:text-xs font-bold mt-2 text-white bg-[#333333] py-1">Harga: Rp 12.000</p>
+                        <p class="text-[9px] md:text-[11px] text-slate-400 mt-2 font-semibold">Peti perusak keseimbangan kosmik. Membawa artefak luar angkasa dengan jaminan untung besar.</p>
+                        <p class="text-[10px] md:text-xs font-bold mt-2 text-white bg-[#333333] py-1 border border-cyan-500/30">Harga: Rp 12.000</p>
                     </div>
                     <ul class="text-[9px] md:text-[11px] font-bold text-slate-300 space-y-2 flex-grow">
                         <li class="flex justify-between items-start gap-2"><span class="min-w-0 break-words leading-tight">Uang $5.000.000 <span class="block text-[8px] text-red-500 font-normal mt-0.5">(Zonk Terkecil)</span></span> <span class="font-mono text-slate-500 shrink-0">20%</span></li>
@@ -531,10 +556,10 @@
                     <div class="absolute inset-0 bg-purple-900/10 -z-10 animate-pulse"></div>
                     <div class="bg-[#121212] p-3 border border-[#333333] text-center mb-4 relative z-10">
                         <h3 class="font-lexend text-lg md:text-xl font-black uppercase text-purple-500">Godlike Crate</h3>
-                        <p class="text-[9px] md:text-[11px] text-slate-400 mt-2 font-semibold">Peti Dewa Mutlak. Kasta tertinggi dan paling absolut. Hanya untuk donatur penakluk server!</p>
-                        <p class="text-[10px] md:text-xs font-bold mt-2 text-white bg-[#333333] py-1">Harga: Rp 15.000</p>
+                        <p class="text-[9px] md:text-[11px] text-slate-400 mt-2 font-semibold">Peti Dewa Mutlak. Kasta tertinggi dan paling absolut. Hanya untuk penakluk server!</p>
+                        <p class="text-[10px] md:text-xs font-bold mt-2 text-white bg-[#333333] py-1 border border-purple-500/30">Harga: Rp 15.000</p>
                     </div>
-                    <ul class="text-[9px] md:text-[11px] font-bold text-slate-300 space-y-1.5 flex-grow relative z-10">
+                    <ul class="text-[9px] md:text-[11px] font-bold text-slate-300 space-y-1.5 flex-grow relative z-10 leading-tight">
                         <li class="flex justify-between items-start gap-2"><span class="min-w-0 break-words leading-tight">Uang $10.000.000 <span class="block text-[8px] text-red-500 font-normal mt-0.5">(Zonk Terkecil)</span></span> <span class="font-mono text-slate-500 shrink-0">20%</span></li>
                         <li class="flex justify-between items-start gap-2"><span class="min-w-0 break-words leading-tight">Uang $15.000.000 <span class="block text-[8px] text-red-500 font-normal mt-0.5">(Zonk Menengah)</span></span> <span class="font-mono text-slate-500 shrink-0">15%</span></li>
                         <li class="flex justify-between items-start gap-2"><span class="min-w-0 break-words leading-tight">Uang $25.000.000 <span class="block text-[8px] text-[#4CAF50] font-normal mt-0.5">(Untung)</span></span> <span class="font-mono text-slate-500 shrink-0">15%</span></li>
@@ -806,18 +831,18 @@
 
         <!-- ================= 6. COMMUNITY TAB ================= -->
         <section id="community" class="tab-content hidden w-full md:px-6 max-w-4xl mx-auto pt-10">
-            <div class="mc-card p-8 md:p-16 text-center border-t-[12px] border-t-[#5865F2] relative overflow-hidden">
-                <i class="fab fa-discord absolute -right-5 top-5 text-8xl md:text-9xl text-[#5865F2]/10 transform rotate-12"></i>
+            <div class="mc-card p-10 md:p-16 text-center border-t-[12px] border-t-[#5865F2] relative overflow-hidden">
+                <i class="fab fa-discord absolute -right-5 top-5 text-9xl text-[#5865F2]/10 transform rotate-12"></i>
                 <div class="relative z-10">
-                    <i class="fab fa-discord text-5xl md:text-6xl text-[#5865F2] mb-4 md:mb-6"></i>
-                    <h2 class="font-lexend text-3xl md:text-4xl font-black uppercase text-white mb-2 md:mb-4">Join Komunitas</h2>
-                    <p class="text-slate-400 text-sm md:text-base font-bold mb-8 md:mb-10 leading-relaxed max-w-xl mx-auto">Dapatkan update terbaru, laporkan keluhan, dan cari teman mabar di grup resmi kami.</p>
+                    <i class="fab fa-discord text-6xl text-[#5865F2] mb-6"></i>
+                    <h2 class="font-lexend text-4xl font-black uppercase text-white mb-4">Join Komunitas</h2>
+                    <p class="text-slate-400 font-bold mb-10 leading-relaxed max-w-xl mx-auto">Dapatkan update terbaru, laporkan keluhan, dan cari teman mabar di grup resmi kami.</p>
                     
                     <div class="flex flex-col md:flex-row justify-center gap-4">
-                        <a href="https://discord.gg/DRFDkKRkxR" target="_blank" class="mc-btn bg-[#5865F2] hover:bg-[#4752C4] border-b-4 border-[#3c45a5] px-6 md:px-8 py-3 md:py-4 text-sm md:text-lg shadow-xl">
+                        <a href="https://discord.gg/DRFDkKRkxR" target="_blank" class="mc-btn bg-[#5865F2] hover:bg-[#4752C4] border-b-4 border-[#3c45a5] px-8 py-4 text-lg shadow-xl">
                             <i class="fab fa-discord mr-3"></i> DISCORD
                         </a>
-                        <a href="https://chat.whatsapp.com/DVxDPtshA4jDTKAxglTQMt" target="_blank" class="mc-btn bg-[#25D366] hover:bg-[#1DA851] border-b-4 border-[#1E8E47] px-6 md:px-8 py-3 md:py-4 text-sm md:text-lg shadow-xl">
+                        <a href="https://chat.whatsapp.com/DVxDPtshA4jDTKAxglTQMt" target="_blank" class="mc-btn bg-[#25D366] hover:bg-[#1DA851] border-b-4 border-[#1E8E47] px-8 py-4 text-lg shadow-xl">
                             <i class="fab fa-whatsapp mr-3"></i> WHATSAPP
                         </a>
                     </div>
@@ -852,7 +877,7 @@
         </div>
     </div>
 
-    <!-- Script versioning v26 -->
-    <script src="script.js?v=26"></script>
+    <!-- Script versioning v27 -->
+    <script src="script.js?v=27"></script>
 </body>
 </html>
